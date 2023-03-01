@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
+import { generate } from './api/generate';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,4 +16,14 @@ export default function Home() {
       Earnings v3?🚀
     </>
   );
+}
+
+export async function getServerSideProps() {
+  let data = await generate();
+
+  return {
+    props: {
+      ...data,
+    }, // will be passed to the page component as props
+  };
 }
