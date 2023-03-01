@@ -1,4 +1,4 @@
-import { useTable } from 'react-table';
+import { useTable, usePagination } from 'react-table';
 import React, { useMemo } from 'react';
 import { generate } from './api/generate';
 
@@ -45,16 +45,31 @@ export default function Projects({ sheetData }: { sheetData: any }) {
   );
   const data = useMemo(() => sheetData, [sheetData]);
 
-  const table = useTable({ columns: columns, data: data });
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    page,
+    nextPage,
+    canNextPage,
+    previousPage,
+    canPreviousPage,
+    prepareRow,
+    pageOptions,
+    setPageSize,
+    state,
+  } = useTable(
+    { columns: columns, data: data, initialState: { pageSize: 15 } },
+    usePagination
+  );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    table;
+  const { pageIndex } = state;
 
   return (
     <>
       <table
         {...getTableProps}
-        className="table-auto font-sans border-separate border-spacing-y-3 p-4 mx-8 border-0
+        className="w-[90%] mx-auto table-auto font-sans border-separate border-spacing-y-3 p-4 border-0
         bg-[#0F131A]"
       >
         <thead>
@@ -73,7 +88,7 @@ export default function Projects({ sheetData }: { sheetData: any }) {
           ))}
         </thead>
         <tbody {...getTableBodyProps}>
-          {rows.map((row, i) => {
+          {page.map((row, i) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()} className="drop-shadow-lg">
@@ -81,7 +96,7 @@ export default function Projects({ sheetData }: { sheetData: any }) {
                   return (
                     <td
                       {...cell.getCellProps}
-                      className="bg-[#0E1218] drop-shadow-md text-[#DFE4EC] p-4 first:rounded-l-lg last:rounded-r-lg border-t  first:border-l last:border-r border-[#21252a]"
+                      className="bg-[#0E1218] drop-shadow-md text-[#DFE4EC] p-5 first:rounded-l-lg last:rounded-r-lg border-t  first:border-l last:border-r border-[#21252a]"
                     >
                       {cell.render('Cell')}
                     </td>
@@ -92,6 +107,25 @@ export default function Projects({ sheetData }: { sheetData: any }) {
           })}
         </tbody>
       </table>
+      <div className="text-white text-center">
+        <div className="flex justify-evenly">
+          <button
+            onClick={() => previousPage()}
+            disabled={!canPreviousPage}
+            className="text-white"
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => nextPage()}
+            disabled={!canNextPage}
+            className="text-white"
+          >
+            Next
+          </button>
+        </div>
+        Page {pageIndex + 1} of {pageOptions.length}
+      </div>
     </>
   );
 }
