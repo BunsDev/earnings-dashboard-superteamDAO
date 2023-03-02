@@ -46,48 +46,31 @@ export async function generate() {
   // generate Sponsor list
   let sponsors: any = genList(sheetData, 'Sponsor');
 
-  // sorted rainmakers
-  let sortedRainmakers = Object.keys(rainmakers)
-    .sort((a: any, b: any) => {
-      return rainmakers[b] - rainmakers[a];
-    })
-    .filter((ele) => ele != 'null' && ele != 'undefined');
-
-  // sorted sponsors
-  let sortedSponsors = Object.keys(sponsors)
-    .sort((a: any, b: any) => {
-      return sponsors[b] - sponsors[a];
-    })
-    .filter((ele) => ele != 'null' && ele != 'undefined');
-
   return {
     graphData,
     sheetData: false || sheetData.reverse(),
     rainmakers,
     sponsors,
     totalEarning,
-    sortedRainmakers,
-    sortedSponsors,
   };
 }
 
 const genList = (sheetData: any, key: any) => {
-  let rainMakers = [
-    ...new Map(...[sheetData.map((elm: any) => [elm[key], 0])]),
-  ];
-  rainMakers = (() => {
-    let rm = {};
-    rainMakers.forEach((elm) => {
-      rm[elm[0]] = 0;
-    });
-    return rm;
-  })();
+  let rainMakers: { Name: string; USD: number }[] = [];
 
   sheetData.forEach((elm: any) => {
-    let usd = elm['Total Earnings USD']
+    let USD = elm['Total Earnings USD']
       ? parseInt(elm['Total Earnings USD'])
       : 0;
-    rainMakers[elm[key]] = rainMakers[elm[key]] + usd;
+    let Name = elm[key] || 'Unknown';
+
+    let index = rainMakers.findIndex((rm) => rm.Name === Name);
+    if (index === -1) {
+      rainMakers.push({ Name, USD });
+    } else {
+      rainMakers[index].USD += USD;
+    }
+    rainMakers.sort((a, b) => b.USD - a.USD);
   });
   return rainMakers;
 };

@@ -25,4 +25,34 @@ export const projectColumns = [
     Header: 'Country/Region',
     accessor: 'Country/Region',
   },
+  {
+    Header: 'Token',
+    accessor: 'Token',
+  },
+  {
+    Header: 'USD',
+    accessor: 'Total Earnings USD',
+  },
+];
+
+export const rainmakerColumns = [
+  {
+    Header: 'Rainmaker',
+    accessor: 'Name',
+  },
+  {
+    Header: 'USD',
+    accessor: 'USD',
+  },
+];
+
+export const sponsorColumns = [
+  {
+    Header: 'Sponsor',
+    accessor: 'Name',
+  },
+  {
+    Header: 'USD',
+    accessor: 'USD',
+  },
 ];

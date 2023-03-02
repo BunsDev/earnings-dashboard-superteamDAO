@@ -4,14 +4,6 @@ import { generate } from './api/generate';
 import Table from '@/components/Table';
 import { projectColumns } from '@/constants/columns';
 
-interface Project {
-  Project: string;
-  Type: string;
-  Rainmaker: string;
-  'Date Given': string;
-  'Country/Region': string;
-}
-
 export default function Projects({ sheetData }: { sheetData: any }) {
   console.log(sheetData);
   const columns = useMemo(() => projectColumns, []);
