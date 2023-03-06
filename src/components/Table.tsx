@@ -27,8 +27,8 @@ export default function Table({
               {headerGroup.headers.map((column) => (
                 <th
                   {...column.getHeaderProps}
-                  className="text-[#d0d1d3] px-4 py-6 text-left font-medium bg-[#161A22]
-                  first:rounded-l-lg last:rounded-r-lg drop-shadow-xl m-0"
+                  className={`text-[#d0d1d3] px-4 py-6 text-left font-medium bg-[#161A22]
+                  first:rounded-l-lg last:rounded-r-lg drop-shadow-xl md:text-base text-sm m-0`}
                 >
                   {column.render('Header')}
                 </th>
@@ -45,7 +45,9 @@ export default function Table({
                   return (
                     <td
                       {...cell.getCellProps}
-                      className="bg-[#0E1218] drop-shadow-md text-[#DFE4EC] p-5 first:rounded-l-lg last:rounded-r-lg border-t  first:border-l last:border-r border-[#21252a]"
+                      className={`bg-[#0E1218] drop-shadow-md text-[#DFE4EC] p-5 first:rounded-l-lg last:rounded-r-lg border-t md:text-base text-sm first:border-l last:border-r border-[#21252a]
+                      last:whitespace-nowrap
+                      `}
                     >
                       {cell.render('Cell')}
                     </td>

@@ -28,6 +28,11 @@ export default function Projects({ sheetData }: { sheetData: any }) {
 
   const { pageIndex } = state;
 
+  const uniqueCoins = [
+    ...new Set(sheetData.map((item: any) => item['Country/Region'])),
+  ];
+  console.log(uniqueCoins);
+
   return (
     <Table
       getTableProps={getTableProps}
