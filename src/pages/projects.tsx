@@ -34,19 +34,26 @@ export default function Projects({ sheetData }: { sheetData: any }) {
   console.log(uniqueCoins);
 
   return (
-    <Table
-      getTableProps={getTableProps}
-      headerGroups={headerGroups}
-      page={page}
-      prepareRow={prepareRow}
-      getTableBodyProps={getTableBodyProps}
-      canNextPage={canNextPage}
-      nextPage={nextPage}
-      canPreviousPage={canPreviousPage}
-      previousPage={previousPage}
-      pageIndex={pageIndex}
-      pageOptions={pageOptions}
-    />
+    <div className="">
+      <div className="overflow-auto custom-scrollbar z-0">
+        <div className="w-[900px] md:w-[1200px] mx-auto">
+          <Table
+            getTableProps={getTableProps}
+            headerGroups={headerGroups}
+            page={page}
+            prepareRow={prepareRow}
+            getTableBodyProps={getTableBodyProps}
+            canNextPage={canNextPage}
+            nextPage={nextPage}
+            canPreviousPage={canPreviousPage}
+            previousPage={previousPage}
+            pageIndex={pageIndex}
+            pageOptions={pageOptions}
+          />
+        </div>
+      </div>
+      hello
+    </div>
   );
 }
 

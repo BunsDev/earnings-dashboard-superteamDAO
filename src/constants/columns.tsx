@@ -1,6 +1,7 @@
 import Tag from '@/components/Tag';
 import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
 import { India, Vietnam, Turkey, Germany } from '@/dynamic/countries';
+import overflowText from '@/utils/overflow';
 
 export const projectColumns = [
   {
@@ -12,6 +13,11 @@ export const projectColumns = [
   {
     Header: 'Project',
     accessor: 'Project',
+    Cell: ({ value }: { value: string }) => {
+      if (value) {
+        return <p>{overflowText(value, 42)}</p>;
+      }
+    },
   },
   {
     // Header: 'Type',
@@ -39,7 +45,7 @@ export const projectColumns = [
       if (value === 'SOL') {
         return <Solana />;
       } else {
-        return <p>{value}</p>;
+        return <p className="text-center text-[10px] font-light">{value}</p>;
       }
     },
   },
