@@ -6,20 +6,20 @@ export default function Tag({ value }: any) {
 
   switch (value) {
     case 'Bounty':
-      color = 'text-[#F6A50B] border-[#F6A50B] bg-[#312B1F]';
+      color = 'text-[#ff61fa] border-[#ff61fa24] bg-[#1f0d26]';
       break;
-    case 'Mission':
-      color = 'text-[#00A9D0] border-[#00A9D0] bg-[#132b37]';
+    case 'Mission ':
+      color = 'text-[#00c3f0] border-[#00c3f024] bg-[#132b37]';
       break;
     case 'Instagrant':
-      color = 'text-[#F000E8] border-[#F000E8] bg-[#2E1738]';
+      color = 'text-[#14d7a0] border-[#14d7a024] bg-[#162f30]';
       break;
   }
 
   return (
     <>
       <div
-        className={`text-[10px] text-center font-light ${color} border ${bgColor} px-2 rounded-full`}
+        className={`text-[11px] text-center font-medium ${color} border-2 ${bgColor} px-2 rounded-full`}
       >
         {value}
       </div>

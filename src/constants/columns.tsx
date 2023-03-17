@@ -12,16 +12,14 @@ export const projectColumns = [
   },
   {
     Header: 'Project',
-    accessor: 'Project',
+    accessor: 'fields.Name',
     Cell: ({ value }: { value: string }) => {
-      if (value) {
-        return <p>{overflowText(value, 42)}</p>;
-      }
+      return <p className="font-bold">{overflowText(value, 42)}</p>;
     },
   },
   {
     // Header: 'Type',
-    accessor: 'Type',
+    accessor: 'fields.Type',
     Cell: ({ value }: { value: any }) => {
       if (value) {
         return <Tag value={value} />;
@@ -30,7 +28,7 @@ export const projectColumns = [
   },
   {
     // Header: 'Token',
-    accessor: 'Token',
+    accessor: 'fields.Currency',
     width: 16,
     Cell: ({ value }: { value: string }) => {
       if (value === 'USDC') {
@@ -51,36 +49,65 @@ export const projectColumns = [
   },
   {
     Header: 'USD',
-    accessor: 'Total Earnings USD',
-    Cell: ({ value }: { value: string }) => {
-      return <span>${value}</span>;
+    accessor: 'fields.Total Earnings USD',
+    Cell: ({ value }: { value: any }) => {
+      if (value) {
+        if (value?.toString().substring(0, 1) === '-') {
+          return (
+            <p className="text-right text-red-800">
+              <span>- ${value.toString().substring(1)}</span>
+            </p>
+          );
+        } else
+          return (
+            <p className="text-right">
+              <span>${value}</span>
+            </p>
+          );
+      }
     },
   },
   {
     Header: 'Rainmaker',
-    accessor: 'Rainmaker',
+    accessor: 'fields.Rainmaker',
+    Cell: ({ value }: { value: string }) => {
+      return <p className="text-sm uppercase">{value}</p>;
+    },
   },
   {
     // Header: 'Country',
-    accessor: 'Country/Region',
+    accessor: 'fields.Region',
     Cell: ({ value }: { value: string }) => {
-      if (value === 'India') {
+      if (value == 'reckMKOOQ59TFRk6n') {
         return <India />;
       }
-      if (value === 'Vietnam') {
+      if (value == 'recJXKIOEDvUjIv9Z') {
         return <Vietnam />;
       }
-      if (value === 'Turkey') {
+      if (value == 'reciIV94eES6oiIY2') {
         return <Turkey />;
       }
-      if (value === 'Germany') {
+      if (value == 'recEdv0ihUicz158R') {
         return <Germany />;
-      }
+      } else return <p>{value}</p>;
+
+      // if (value === 'Vietnam') {
+      //   return <Vietnam />;
+      // }
+      // if (value === 'reciIV94eES6oiIY2') {
+      //   return <Turkey />;
+      // }
+      // if (value === 'Germany') {
+      //   return <Germany />;
+      // }
     },
   },
   {
     Header: 'Date Given',
-    accessor: 'Date Given',
+    accessor: 'fields.Date',
+    Cell: ({ value }: { value: string }) => {
+      return <p className="text-sm">{value}</p>;
+    },
   },
 ];
 

@@ -4,10 +4,10 @@ import { generate } from './api/generate';
 import Table from '@/components/Table';
 import { projectColumns } from '@/constants/columns';
 
-export default function Projects({ sheetData }: { sheetData: any }) {
-  console.log(sheetData);
+export default function Projects({ projects }: { projects: any }) {
+  console.log(projects);
   const columns = useMemo(() => projectColumns, []);
-  const data = useMemo(() => sheetData, [sheetData]);
+  const data = useMemo(() => projects, [projects]);
 
   const {
     getTableProps,
@@ -29,7 +29,7 @@ export default function Projects({ sheetData }: { sheetData: any }) {
   const { pageIndex } = state;
 
   const uniqueCoins = [
-    ...new Set(sheetData.map((item: any) => item['Country/Region'])),
+    ...new Set(projects.map((item: any) => item['Country/Region'])),
   ];
   console.log(uniqueCoins);
 
@@ -57,12 +57,15 @@ export default function Projects({ sheetData }: { sheetData: any }) {
   );
 }
 
-export async function getServerSideProps() {
-  let data = await generate();
-
+export const getStaticProps = async (context: any) => {
+  const res = await fetch(
+    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/${process.env.AIRTABLE_TABLE}`,
+    { headers: { Authorization: `Bearer ${process.env.AIRTABLE_KEY}` } }
+  );
+  const projects = await res.json();
   return {
     props: {
-      ...data,
-    }, // will be passed to the page component as props
+      projects: projects.records,
+    },
   };
-}
+};

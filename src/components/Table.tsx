@@ -18,7 +18,7 @@ export default function Table({
     <table
       {...getTableProps}
       className=" mx-auto table-auto font-sans border-separate border-spacing-y-3 border-0
-        bg-[#0F131A] p-6 "
+        bg-[#0F131A] p-2"
     >
       <thead className="sticky top-0 z-[500]">
         {headerGroups.map((headerGroup: HeaderGroup) => (
@@ -26,7 +26,7 @@ export default function Table({
             {headerGroup.headers.map((column) => (
               <th
                 {...column.getHeaderProps}
-                className={`text-[#d0d1d3] px-5 py-6 text-left font-medium bg-[#161A22]
+                className={`text-[#d0d1d3] px-6 py-6 text-left font-medium bg-[#161A22]
                   first:rounded-l-lg last:rounded-r-lg drop-shadow-xl md:text-base text-sm m-0`}
               >
                 {column.render('Header')}
