@@ -1,11 +1,13 @@
 import { useTable, usePagination } from 'react-table';
-import React, { useMemo } from 'react';
+import React, { createContext, useContext, useMemo } from 'react';
 import { generate } from './api/generate';
 import Table from '@/components/Table';
 import { projectColumns } from '@/constants/columns';
+import cache from '@/utils/cache';
 
-export default function Projects({ projects }: { projects: any }) {
-  console.log(projects);
+const EarnerDataContext = React.createContext({});
+
+export default function Projects({ projects }: any) {
   const columns = useMemo(() => projectColumns, []);
   const data = useMemo(() => projects, [projects]);
 
@@ -27,11 +29,6 @@ export default function Projects({ projects }: { projects: any }) {
   );
 
   const { pageIndex } = state;
-
-  const uniqueCoins = [
-    ...new Set(projects.map((item: any) => item['Country/Region'])),
-  ];
-  console.log(uniqueCoins);
 
   return (
     <div className="">
@@ -59,13 +56,49 @@ export default function Projects({ projects }: { projects: any }) {
 
 export const getStaticProps = async (context: any) => {
   const res = await fetch(
-    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/${process.env.AIRTABLE_TABLE}`,
-    { headers: { Authorization: `Bearer ${process.env.AIRTABLE_KEY}` } }
+    `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
+      },
+    }
   );
+
   const projects = await res.json();
+  const records = projects.records;
+
+  const earners = [
+    ...new Set<string>(
+      records.flatMap((project: any) => project.fields.Earner).filter(Boolean)
+    ),
+  ];
+
+  const fetcher = async (earner: any) => {
+    const res = await fetch(
+      `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}/${earner}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
+        },
+      }
+    );
+    const data = await res.json();
+    const earnerName = data?.fields?.Title;
+    return earnerName;
+  };
+  const earnerData: { [key: string]: any } = {};
+  for (const earner of earners) {
+    const key = `earner:${earner}`;
+    const result = await cache.fetch(key, () => fetcher(earner));
+    earnerData[earner] = result;
+  }
+
+  console.log(earnerData);
+
   return {
     props: {
       projects: projects.records,
+      earnerData: earnerData,
     },
   };
 };

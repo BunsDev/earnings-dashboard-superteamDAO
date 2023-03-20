@@ -2,6 +2,7 @@ import Tag from '@/components/Tag';
 import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
 import { India, Vietnam, Turkey, Germany } from '@/dynamic/countries';
 import overflowText from '@/utils/overflow';
+import cache from '@/utils/cache';
 
 export const projectColumns = [
   {
@@ -23,6 +24,15 @@ export const projectColumns = [
     Cell: ({ value }: { value: any }) => {
       if (value) {
         return <Tag value={value} />;
+      }
+    },
+  },
+  {
+    Header: 'Earners',
+    accessor: 'fields.Earner',
+    Cell: ({ value }: { value: any }) => {
+      if (value) {
+        return <p className="text-right">{value}</p>;
       }
     },
   },
@@ -90,16 +100,6 @@ export const projectColumns = [
       if (value == 'recEdv0ihUicz158R') {
         return <Germany />;
       } else return <p>{value}</p>;
-
-      // if (value === 'Vietnam') {
-      //   return <Vietnam />;
-      // }
-      // if (value === 'reciIV94eES6oiIY2') {
-      //   return <Turkey />;
-      // }
-      // if (value === 'Germany') {
-      //   return <Germany />;
-      // }
     },
   },
   {
