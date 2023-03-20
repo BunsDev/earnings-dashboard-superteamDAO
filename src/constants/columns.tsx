@@ -1,8 +1,9 @@
 import Tag from '@/components/Tag';
+import { earnerAtom } from '@/context/earners';
 import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
 import { India, Vietnam, Turkey, Germany } from '@/dynamic/countries';
 import overflowText from '@/utils/overflow';
-import cache from '@/utils/cache';
+import { useAtom } from 'jotai';
 
 export const projectColumns = [
   {
@@ -30,9 +31,20 @@ export const projectColumns = [
   {
     Header: 'Earners',
     accessor: 'fields.Earner',
-    Cell: ({ value }: { value: any }) => {
+    Cell: ({ value }: { value: [] }) => {
       if (value) {
-        return <p className="text-right">{value}</p>;
+        const [earner] = useAtom(earnerAtom);
+        const names = value.map((key) => earner[key]);
+        console;
+        return (
+          <p className="text-right">
+            {names.map((name, index) => (
+              <p key={index} className="text-yellow-100">
+                {name}
+              </p>
+            ))}
+          </p>
+        );
       }
     },
   },

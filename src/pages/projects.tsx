@@ -1,15 +1,21 @@
 import { useTable, usePagination } from 'react-table';
-import React, { createContext, useContext, useMemo } from 'react';
-import { generate } from './api/generate';
+import React, { createContext, useContext, useEffect, useMemo } from 'react';
 import Table from '@/components/Table';
 import { projectColumns } from '@/constants/columns';
 import cache from '@/utils/cache';
+import { useAtom } from 'jotai';
+import { earnerAtom } from '@/context/earners';
 
 const EarnerDataContext = React.createContext({});
 
-export default function Projects({ projects }: any) {
+export default function Projects({ projects, earnerData }: any) {
   const columns = useMemo(() => projectColumns, []);
   const data = useMemo(() => projects, [projects]);
+  const [earners, setEarners] = useAtom(earnerAtom);
+
+  useEffect(() => {
+    setEarners(earnerData);
+  }, []);
 
   const {
     getTableProps,
