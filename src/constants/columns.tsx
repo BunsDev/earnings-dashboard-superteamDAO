@@ -4,6 +4,7 @@ import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
 import { India, Vietnam, Turkey, Germany } from '@/dynamic/countries';
 import overflowText from '@/utils/overflow';
 import { useAtom } from 'jotai';
+import { CellProps, Column } from 'react-table';
 
 export const projectColumns = [
   {
@@ -37,13 +38,13 @@ export const projectColumns = [
         const names = value.map((key) => earner[key]);
         console;
         return (
-          <p className="text-right">
+          <div className="">
             {names.map((name, index) => (
               <p key={index} className="text-sm">
                 {name}
               </p>
             ))}
-          </p>
+          </div>
         );
       }
     },
@@ -131,6 +132,9 @@ export const rainmakerColumns = [
   {
     Header: 'USD',
     accessor: 'USD',
+    Cell: ({ value }: { value: any }) => {
+      if (value) return <span>$ {value}</span>;
+    },
   },
 ];
 
@@ -142,5 +146,8 @@ export const sponsorColumns = [
   {
     Header: 'USD',
     accessor: 'USD',
+    Cell: ({ value }: any) => {
+      if (value) return <span>$ {value}</span>;
+    },
   },
 ];
