@@ -44,7 +44,7 @@ export default function Table({
                 return (
                   <td
                     {...cell.getCellProps}
-                    className={`bg-[#0E1218] drop-shadow-md text-[#DFE4EC] py-4 px-6  first:rounded-l-lg last:rounded-r-lg border-t md:text-base text-sm first:border-l last:border-r border-[#21252a]
+                    className={`bg-[#0E1218] drop-shadow-md text-[#DFE4EC] py-4 px-6 h-20  first:rounded-l-lg last:rounded-r-lg border-t md:text-base text-sm first:border-l last:border-r border-[#21252a]
                       whitespace-nowrap
                       `}
                   >

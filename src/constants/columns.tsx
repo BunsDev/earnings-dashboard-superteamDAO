@@ -39,7 +39,7 @@ export const projectColumns = [
         return (
           <p className="text-right">
             {names.map((name, index) => (
-              <p key={index} className="text-yellow-100">
+              <p key={index} className="text-sm">
                 {name}
               </p>
             ))}

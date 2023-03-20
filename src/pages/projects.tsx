@@ -1,12 +1,10 @@
 import { useTable, usePagination } from 'react-table';
-import React, { createContext, useContext, useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import Table from '@/components/Table';
 import { projectColumns } from '@/constants/columns';
 import cache from '@/utils/cache';
 import { useAtom } from 'jotai';
 import { earnerAtom } from '@/context/earners';
-
-const EarnerDataContext = React.createContext({});
 
 export default function Projects({ projects, earnerData }: any) {
   const columns = useMemo(() => projectColumns, []);
@@ -39,7 +37,7 @@ export default function Projects({ projects, earnerData }: any) {
   return (
     <div className="">
       <div className="overflow-auto custom-scrollbar z-0">
-        <div className="w-[900px] md:w-[1200px] mx-auto">
+        <div className="w-[900px] md:w-[1400px] mx-auto">
           <Table
             getTableProps={getTableProps}
             headerGroups={headerGroups}
@@ -98,8 +96,6 @@ export const getStaticProps = async (context: any) => {
     const result = await cache.fetch(key, () => fetcher(earner));
     earnerData[earner] = result;
   }
-
-  console.log(earnerData);
 
   return {
     props: {
