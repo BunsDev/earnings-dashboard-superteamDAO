@@ -21,7 +21,8 @@ export default function Rainmakers({ rainmakers }: any) {
     prepareRow,
     pageOptions,
     state,
-  } = useTable<SponsorColumn>(
+  } = useTable(
+    // @ts-ignore
     { columns: columns, data: data, initialState: { pageSize: 15 } },
     usePagination
   );

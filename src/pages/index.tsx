@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import { Inter } from '@next/font/google';
 import { generate } from './api/generate';
-
-const inter = Inter({ subsets: ['latin'] });
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -13,7 +11,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Earnings v3?🚀
+      <div className="p-16">
+        <p className="text-white font-bold text-5xl mb-12">Earnings v3? 🚀🚧</p>
+        <Link href="/projects" className="text-white underline text-2xl block">
+          projects
+        </Link>
+        <Link
+          href="/rainmakers"
+          className="text-white underline text-2xl block"
+        >
+          rainmakers
+        </Link>
+        <Link href="/sponsors" className="text-white underline text-2xl block">
+          sponsors
+        </Link>
+      </div>
     </>
   );
 }

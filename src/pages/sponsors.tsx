@@ -22,6 +22,7 @@ export default function Sponsors({ sponsors }: any) {
     pageOptions,
     state,
   } = useTable(
+    // @ts-ignore
     { columns: columns, data: data, initialState: { pageSize: 15 } },
     usePagination
   );

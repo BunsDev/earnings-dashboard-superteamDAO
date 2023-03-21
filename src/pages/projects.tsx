@@ -27,6 +27,7 @@ export default function Projects({ projects, earnerData }: any) {
     pageOptions,
     state,
   } = useTable(
+    // @ts-ignore
     { columns: columns, data: data, initialState: { pageSize: 15 } },
     usePagination
   );

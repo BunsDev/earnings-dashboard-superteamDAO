@@ -17,7 +17,7 @@ export const projectColumns = [
     Header: 'Project',
     accessor: 'fields.Name',
     Cell: ({ value }: { value: string }) => {
-      return <p className="font-bold">{overflowText(value, 42)}</p>;
+      return <p className="font-medium">{overflowText(value, 42)}</p>;
     },
   },
   {
