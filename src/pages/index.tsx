@@ -12,17 +12,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="p-16">
-        <p className="text-white font-bold text-5xl mb-12">Earnings v3? 🚀🚧</p>
-        <Link href="/projects" className="text-white underline text-2xl block">
+        <p className="mb-12 text-5xl font-bold text-white">Earnings v3? 🚀🚧</p>
+        <Link href="/projects" className="block text-2xl text-white underline">
           projects
         </Link>
         <Link
           href="/rainmakers"
-          className="text-white underline text-2xl block"
+          className="block text-2xl text-white underline"
         >
           rainmakers
         </Link>
-        <Link href="/sponsors" className="text-white underline text-2xl block">
+        <Link href="/sponsors" className="block text-2xl text-white underline">
           sponsors
         </Link>
       </div>

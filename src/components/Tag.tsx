@@ -19,7 +19,7 @@ export default function Tag({ value }: any) {
   return (
     <>
       <div
-        className={`text-[11px] text-center font-medium ${color} border-2 ${bgColor} px-2 rounded-full`}
+        className={`text-center text-[11px] font-medium ${color} border-2 ${bgColor} rounded-full px-2`}
       >
         {value}
       </div>

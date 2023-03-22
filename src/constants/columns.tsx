@@ -33,8 +33,8 @@ export const projectColumns = [
     Header: 'Earners',
     accessor: 'fields.Earner',
     Cell: ({ value }: { value: [] }) => {
+      const [earner] = useAtom(earnerAtom);
       if (value) {
-        const [earner] = useAtom(earnerAtom);
         const names = value.map((key) => earner[key]);
         console;
         return (

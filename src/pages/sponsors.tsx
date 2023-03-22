@@ -31,21 +31,22 @@ export default function Sponsors({ sponsors }: any) {
 
   return (
     <>
-      <div className="overflow-auto custom-scrollbar z-0">
+      <div className="custom-scrollbar z-0 overflow-auto">
         <div className=" mx-auto">
           <table
             {...getTableProps}
-            className=" mx-auto table-fixed font-sans border-separate border-spacing-y-3 border-0
-        bg-[#0F131A] p-2 w-[96%] md:w-[800px]"
+            className=" mx-auto w-[96%] table-fixed border-separate border-spacing-y-3 border-0
+        bg-[#0F131A] p-2 font-sans md:w-[800px]"
           >
             <thead className="sticky top-0 z-[500]">
-              {headerGroups.map((headerGroup: HeaderGroup) => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                  {headerGroup.headers.map((column) => (
+              {headerGroups.map((headerGroup: HeaderGroup, i) => (
+                <tr {...headerGroup.getHeaderGroupProps()} key={i}>
+                  {headerGroup.headers.map((column, i) => (
                     <th
+                      key={i}
                       {...column.getHeaderProps}
-                      className={`text-[#d0d1d3] px-6 md:px-16 py-6 text-left font-medium bg-[#161A22]
-                  first:rounded-l-lg last:rounded-r-lg drop-shadow-xl m-0 last:text-right`}
+                      className={`m-0 bg-[#161A22] p-6 text-left font-medium text-[#d0d1d3]
+                  drop-shadow-xl first:rounded-l-lg last:rounded-r-lg last:text-right md:px-16`}
                     >
                       {column.render('Header')}
                     </th>
@@ -54,17 +55,18 @@ export default function Sponsors({ sponsors }: any) {
               ))}
             </thead>
             <tbody {...getTableBodyProps}>
-              {page.map((row: Row) => {
+              {page.map((row: Row, i) => {
                 prepareRow(row);
                 return (
-                  <tr {...row.getRowProps()} className="drop-shadow-lg">
-                    {row.cells.map((cell) => {
+                  <tr {...row.getRowProps()} className="drop-shadow-lg" key={i}>
+                    {row.cells.map((cell, i) => {
                       return (
                         <td
+                          key={i}
                           {...cell.getCellProps}
-                          className={`bg-[#0E1218] drop-shadow-md text-[#DFE4EC] md:py-4 px-6 md:px-16 h-20  first:rounded-l-lg last:rounded-r-lg border-t first:border-l last:border-r border-[#21252a]
-                      whitespace-nowrap
-                      last:text-right
+                          className={`h-20 whitespace-nowrap border-t border-[#21252a] bg-[#0E1218] px-6 text-[#DFE4EC]  drop-shadow-md first:rounded-l-lg first:border-l last:rounded-r-lg last:border-r last:text-right
+                      md:py-4
+                      md:px-16
                       `}
                         >
                           {cell.render('Cell')}
@@ -76,7 +78,7 @@ export default function Sponsors({ sponsors }: any) {
               })}
             </tbody>
           </table>
-          <div className="text-white text-center">
+          <div className="text-center text-white">
             <div className="flex justify-evenly">
               <button
                 onClick={() => previousPage()}
