@@ -77,14 +77,14 @@ export const projectColumns = [
       if (value) {
         if (value?.toString().substring(0, 1) === '-') {
           return (
-            <p className="text-right text-red-800">
-              <span>- ${value.toString().substring(1)}</span>
+            <p className="ml-auto mr-0 text-right text-red-800">
+              <span>- ${value.toLocaleString().substring(1)}</span>
             </p>
           );
         } else
           return (
             <p className="text-right">
-              <span>${value}</span>
+              <span>${value.toLocaleString()}</span>
             </p>
           );
       }
