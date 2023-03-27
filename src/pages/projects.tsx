@@ -1,18 +1,42 @@
 import { useTable, usePagination, HeaderGroup, Row } from 'react-table';
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { projectColumns } from '@/constants/columns';
 import cache from '@/utils/cache';
 import { useAtom } from 'jotai';
 import { earnerAtom } from '@/context/earners';
+import { rowAtom } from '@/context/rowInfo';
+import {
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+} from '@chakra-ui/react';
 
 export default function Projects({ projects, earnerData }: any) {
   const columns = useMemo(() => projectColumns, []);
   const data = useMemo(() => projects, [projects]);
   const [earners, setEarners] = useAtom(earnerAtom);
+  const [rowInfo, setRowInfo] = useAtom(rowAtom);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Open modal when rowInfo changes
+  useEffect(() => {
+    setIsModalOpen(!!rowInfo);
+  }, [rowInfo]);
+
+  const handleCloseModal = () => {
+    setRowInfo({});
+  };
 
   useEffect(() => {
     setEarners(earnerData);
   }, []);
+
+  useEffect(() => {
+    console.log(rowInfo);
+  }, [rowInfo]);
 
   const {
     getTableProps,
@@ -27,8 +51,15 @@ export default function Projects({ projects, earnerData }: any) {
     pageOptions,
     state,
   } = useTable(
-    // @ts-ignore
-    { columns: columns, data: data, initialState: { pageSize: 15 } },
+    {
+      // @ts-ignore
+      columns: columns,
+      data: data,
+      initialState: {
+        pageSize: 15,
+        hiddenColumns: ['fields.Sponsor', 'fields.Rainmaker'],
+      },
+    },
     usePagination
   );
 
@@ -36,8 +67,38 @@ export default function Projects({ projects, earnerData }: any) {
 
   return (
     <div className="">
+      {/* there's a glitch in the table that only allows colors present in the codebase to be rendered, this section is to render those colors  */}
+      <p className="hidden text-right text-xs font-semibold text-[#f83b31] transition-all duration-500 hover:underline">
+        hello
+      </p>
+      <p className="hidden cursor-pointer text-xs font-medium text-neutral-400">
+        hello
+      </p>
+
+      {Object.keys(rowInfo).length > 0 && (
+        <Modal isOpen={!!rowInfo} onClose={handleCloseModal}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{rowInfo.fields.Name}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <p>currency: {rowInfo.fields.Currency}</p>
+              <p>date: {rowInfo.fields.Date}</p>
+              <p>earner:</p>
+              <p>rainmaker:{rowInfo.fields.Rainmaker}</p>
+              <p>region: </p>
+              <p>sponsor:{rowInfo.fields.Sponsor}</p>
+              <p>$ : {rowInfo.fields['Total Earnings USD']}</p>
+              <p>amount: {rowInfo.fields.Amount}</p>
+              <p>type: {rowInfo.fields.Type}</p>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      )}
+
+      {/*  */}
       <div className="custom-scrollbar z-0 overflow-auto">
-        <div className="mx-auto w-[900px] md:w-[1400px]">
+        <div className="mx-auto w-[900px] md:w-[1280px]">
           <table
             {...getTableProps}
             className=" mx-auto table-auto border-separate border-spacing-y-3 border-0 bg-[#0F131A]
@@ -109,7 +170,7 @@ export default function Projects({ projects, earnerData }: any) {
 
 export const getStaticProps = async (context: any) => {
   const res = await fetch(
-    `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}`,
+    `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}?sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc`,
     {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,

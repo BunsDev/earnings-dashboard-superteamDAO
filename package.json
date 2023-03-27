@@ -10,6 +10,9 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.5.3",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@next/font": "13.1.6",
     "@tanstack/react-table": "^8.7.9",
     "@types/node": "18.13.0",
@@ -19,6 +22,7 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "eslint-plugin-prettier": "^4.2.1",
+    "framer-motion": "^10.9.1",
     "ioredis": "^5.3.1",
     "jotai": "^2.0.3",
     "next": "13.1.6",

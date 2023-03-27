@@ -1977,8 +1977,8 @@ export default function Mexico() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(11.0636 20.385) rotate(16.1064) scale(13.5703 14.7654)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#F15770" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#F15770" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_227_165"
@@ -1988,8 +1988,8 @@ export default function Mexico() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20.8651 -19.9737) rotate(-96.5857) scale(11.248 17.5296)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#F15770" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#F15770" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_227_165"
@@ -1999,8 +1999,8 @@ export default function Mexico() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1.6858 33.8809) rotate(51.6895) scale(7.58088 7.05609)"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#F15770" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#F15770" />
         </radialGradient>
       </defs>
     </svg>

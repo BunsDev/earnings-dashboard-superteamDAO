@@ -16,13 +16,15 @@ export default function Tag({ value }: any) {
       break;
   }
 
-  return (
-    <>
-      <div
-        className={`text-center text-[11px] font-medium ${color} border-2 ${bgColor} rounded-full px-2`}
-      >
-        {value}
-      </div>
-    </>
-  );
+  if (value) {
+    return (
+      <>
+        <div
+          className={`text-center text-[11px] font-medium ${color} border-2 ${bgColor} rounded-full px-2`}
+        >
+          {value}
+        </div>
+      </>
+    );
+  }
 }
