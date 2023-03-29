@@ -76,21 +76,28 @@ export default function Projects({ projects, earnerData }: any) {
       </p>
 
       {Object.keys(rowInfo).length > 0 && (
-        <Modal isOpen={!!rowInfo} onClose={handleCloseModal}>
+        <Modal isOpen={!!rowInfo} onClose={handleCloseModal} size="4xl">
           <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>{rowInfo.fields.Name}</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <p>currency: {rowInfo.fields.Currency}</p>
-              <p>date: {rowInfo.fields.Date}</p>
-              <p>earner:</p>
-              <p>rainmaker:{rowInfo.fields.Rainmaker}</p>
-              <p>region: </p>
-              <p>sponsor:{rowInfo.fields.Sponsor}</p>
-              <p>$ : {rowInfo.fields['Total Earnings USD']}</p>
-              <p>amount: {rowInfo.fields.Amount}</p>
-              <p>type: {rowInfo.fields.Type}</p>
+          <ModalContent bg="#0e1218" w="80%" px="10%" py="5%" maxW="600px">
+            <ModalHeader
+              fontSize="2xl"
+              fontFamily="Inter"
+              className="text-neutral-100"
+            >
+              {rowInfo.fields.Name}
+            </ModalHeader>
+            <ModalCloseButton color="#c1c2c3" />
+            <ModalBody className="text-lg text-neutral-200" paddingBottom={8}>
+              <p className="py-6">Currency: {rowInfo.fields.Currency}</p>
+              <p className="py-6">Date: {rowInfo.fields.Date}</p>
+              <p className="py-6">Earner:</p>
+              <p className="py-6">Rainmaker:{rowInfo.fields.Rainmaker}</p>
+              <p className="py-6">Region: </p>
+              <p className="py-6">Sponsor:{rowInfo.fields.Sponsor}</p>
+              <p className="py-6">
+                Total Earnings : ${rowInfo.fields['Total Earnings USD']}
+              </p>
+              <p className="py-6">Type: {rowInfo.fields.Type}</p>
             </ModalBody>
           </ModalContent>
         </Modal>

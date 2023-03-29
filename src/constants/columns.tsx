@@ -45,12 +45,17 @@ export const projectColumns = [
   {
     Header: 'Earners',
     accessor: 'fields.Earner',
-    Cell: ({ value }: { value: [] }) => {
+    Cell: (props: any) => {
       const [earner] = useAtom(earnerAtom);
+      const [rowInfo, setRowInfo] = useAtom(rowAtom);
+      const handleShow = (cell: any) => {
+        setRowInfo(cell?.row?.original);
+        console.log(rowInfo);
+      };
+      const value = props.value;
       if (value) {
         const names = value.slice(0, 2).map((key) => earner[key]);
-        const numAdditionalEarners = value.length - names.length;
-        console;
+        const numAdditionalEarners = props.value.length - names.length;
         return (
           <div className="">
             {names.map((name, index) => (
@@ -58,7 +63,10 @@ export const projectColumns = [
                 {name}
               </p>
             ))}
-            <p className="text-xs font-semibold text-neutral-400">
+            <p
+              className="text-xs font-semibold text-neutral-400 hover:underline"
+              onClick={() => handleShow(props)}
+            >
               {numAdditionalEarners ? '+' + numAdditionalEarners : null}
             </p>
           </div>
