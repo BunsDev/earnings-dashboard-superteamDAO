@@ -104,11 +104,36 @@ export default function Rainmakers({ rainmakers }: any) {
 }
 
 export async function getServerSideProps() {
-  let data = await generate();
+  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
+  const projectsData = await projects.json();
+
+  const groupedByRainmaker = projectsData.reduce(
+    (groups: any, project: any) => {
+      const rainmaker = project.fields.Rainmaker;
+      if (!groups[rainmaker]) {
+        groups[rainmaker] = [];
+      }
+      groups[rainmaker].push(project);
+      return groups;
+    },
+    {}
+  );
+
+  const rainmakerTotal = Object.entries(groupedByRainmaker)
+    .map(([rainmaker, projects]: [string, any]) => {
+      const rainmadeSum = projects.reduce((sum: number, project: any) => {
+        return sum + (project.fields['Total Earnings USD'] || 0);
+      }, 0);
+      return {
+        Name: rainmaker,
+        USD: rainmadeSum,
+      };
+    })
+    .sort((a: any, b: any) => b.USD - a.USD);
 
   return {
     props: {
-      ...data,
-    }, // will be passed to the page component as props
+      rainmakers: rainmakerTotal,
+    },
   };
 }

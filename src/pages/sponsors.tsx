@@ -104,11 +104,33 @@ export default function Sponsors({ sponsors }: any) {
 }
 
 export async function getServerSideProps() {
-  let data = await generate();
+  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
+  const projectsData = await projects.json();
+
+  const groupedBySponsor = projectsData.reduce((groups: any, project: any) => {
+    const sponsor = project.fields.Sponsor;
+    if (!groups[sponsor]) {
+      groups[sponsor] = [];
+    }
+    groups[sponsor].push(project);
+    return groups;
+  }, {});
+
+  const sponsorTotal = Object.entries(groupedBySponsor)
+    .map(([sponsor, projects]: [string, any]) => {
+      const sponsoredSum = projects.reduce((sum: number, project: any) => {
+        return sum + (project.fields['Total Earnings USD'] || 0);
+      }, 0);
+      return {
+        Name: sponsor,
+        USD: sponsoredSum,
+      };
+    })
+    .sort((a: any, b: any) => b.USD - a.USD);
 
   return {
     props: {
-      ...data,
-    }, // will be passed to the page component as props
+      sponsors: sponsorTotal,
+    },
   };
 }

@@ -18,4 +18,5 @@ const set = async <T>(key: string, fetcher: () => T): Promise<T> => {
   return value;
 };
 
-export default { fetch, get, set };
+const cache = { fetch, get, set };
+export default cache;

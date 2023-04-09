@@ -64,7 +64,7 @@ export const projectColumns = [
               </p>
             ))}
             <p
-              className="text-xs font-semibold text-neutral-400 hover:underline"
+              className="cursor-pointer text-xs font-semibold text-neutral-400 hover:underline"
               onClick={() => handleShow(props)}
             >
               {numAdditionalEarners ? '+' + numAdditionalEarners : null}

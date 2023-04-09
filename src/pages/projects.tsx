@@ -13,6 +13,7 @@ import {
   ModalHeader,
   ModalOverlay,
 } from '@chakra-ui/react';
+import { getDatabase } from '@/utils/getDabase';
 
 export default function Projects({ projects, earnerData }: any) {
   const columns = useMemo(() => projectColumns, []);
@@ -21,7 +22,6 @@ export default function Projects({ projects, earnerData }: any) {
   const [rowInfo, setRowInfo] = useAtom(rowAtom);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Open modal when rowInfo changes
   useEffect(() => {
     setIsModalOpen(!!rowInfo);
   }, [rowInfo]);
@@ -75,7 +75,7 @@ export default function Projects({ projects, earnerData }: any) {
         hello
       </p>
 
-      {Object.keys(rowInfo).length > 0 && (
+      {rowInfo && Object.keys(rowInfo).length > 0 && (
         <Modal isOpen={!!rowInfo} onClose={handleCloseModal} size="4xl">
           <ModalOverlay />
           <ModalContent bg="#0e1218" w="80%" px="10%" py="5%" maxW="600px">
@@ -84,20 +84,25 @@ export default function Projects({ projects, earnerData }: any) {
               fontFamily="Inter"
               className="text-neutral-100"
             >
-              {rowInfo.fields.Name}
+              {(rowInfo as any).fields.Name}
             </ModalHeader>
             <ModalCloseButton color="#c1c2c3" />
             <ModalBody className="text-lg text-neutral-200" paddingBottom={8}>
-              <p className="py-6">Currency: {rowInfo.fields.Currency}</p>
-              <p className="py-6">Date: {rowInfo.fields.Date}</p>
-              <p className="py-6">Earner:</p>
-              <p className="py-6">Rainmaker:{rowInfo.fields.Rainmaker}</p>
-              <p className="py-6">Region: </p>
-              <p className="py-6">Sponsor:{rowInfo.fields.Sponsor}</p>
               <p className="py-6">
-                Total Earnings : ${rowInfo.fields['Total Earnings USD']}
+                Currency: {(rowInfo as any).fields.Currency}
               </p>
-              <p className="py-6">Type: {rowInfo.fields.Type}</p>
+              <p className="py-6">Date: {(rowInfo as any).fields.Date}</p>
+              <p className="py-6">Earner:</p>
+              <p className="py-6">
+                Rainmaker:{(rowInfo as any).fields.Rainmaker}
+              </p>
+              <p className="py-6">Region: </p>
+              <p className="py-6">Sponsor:{(rowInfo as any).fields.Sponsor}</p>
+              <p className="py-6">
+                Total Earnings : $
+                {(rowInfo as any).fields['Total Earnings USD']}
+              </p>
+              <p className="py-6">Type: {(rowInfo as any).fields.Type}</p>
             </ModalBody>
           </ModalContent>
         </Modal>
@@ -176,37 +181,26 @@ export default function Projects({ projects, earnerData }: any) {
 }
 
 export const getStaticProps = async (context: any) => {
-  const res = await fetch(
-    `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}?sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
-      },
-    }
-  );
+  const base = getDatabase();
+  const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
 
-  const projects = await res.json();
-  const records = projects.records;
+  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
+  const projectsData = await projects.json();
 
   const earners = [
     ...new Set<string>(
-      records.flatMap((project: any) => project.fields.Earner).filter(Boolean)
+      projectsData
+        .flatMap((project: any) => project.fields.Earner)
+        .filter(Boolean)
     ),
   ];
 
   const fetcher = async (earner: any) => {
-    const res = await fetch(
-      `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}/${earner}`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
-        },
-      }
-    );
-    const data = await res.json();
-    const earnerName = data?.fields?.Title;
+    const record = await table.find(earner);
+    const earnerName = record?.fields?.Title;
     return earnerName;
   };
+
   const earnerData: { [key: string]: any } = {};
   for (const earner of earners) {
     const key = `earner:${earner}`;
@@ -216,7 +210,7 @@ export const getStaticProps = async (context: any) => {
 
   return {
     props: {
-      projects: projects.records,
+      projects: projectsData,
       earnerData: earnerData,
     },
   };
