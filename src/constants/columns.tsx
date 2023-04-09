@@ -46,7 +46,7 @@ export const projectColumns = [
     Header: 'Earners',
     accessor: 'fields.Earner',
     Cell: (props: any) => {
-      const [earner] = useAtom(earnerAtom);
+      const [earner] = useAtom<any>(earnerAtom);
       const [rowInfo, setRowInfo] = useAtom(rowAtom);
       const handleShow = (cell: any) => {
         setRowInfo(cell?.row?.original);
@@ -54,11 +54,11 @@ export const projectColumns = [
       };
       const value = props.value;
       if (value) {
-        const names = value.slice(0, 2).map((key) => earner[key]);
+        const names = value.slice(0, 2).map((key: number) => earner[key]);
         const numAdditionalEarners = props.value.length - names.length;
         return (
           <div className="">
-            {names.map((name, index) => (
+            {names.map((name: string, index: number) => (
               <p key={index} className="text-sm font-semibold text-neutral-200">
                 {name}
               </p>
