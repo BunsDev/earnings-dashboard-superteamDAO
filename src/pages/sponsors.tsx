@@ -1,7 +1,6 @@
 import { sponsorColumns } from '@/constants/columns';
 import React, { useMemo } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
-import { generate } from './api/generate';
 
 export default function Sponsors({ sponsors }: any) {
   console.log('sponsors:', sponsors);

@@ -88,21 +88,35 @@ export default function Projects({ projects, earnerData }: any) {
             </ModalHeader>
             <ModalCloseButton color="#c1c2c3" />
             <ModalBody className="text-lg text-neutral-200" paddingBottom={8}>
-              <p className="py-6">
-                Currency: {(rowInfo as any).fields.Currency}
-              </p>
-              <p className="py-6">Date: {(rowInfo as any).fields.Date}</p>
+              {(rowInfo as any).fields.Currency && (
+                <p className="py-6">
+                  Currency: {(rowInfo as any).fields.Currency}
+                </p>
+              )}
+              {(rowInfo as any).fields.Date && (
+                <p className="py-6">Date: {(rowInfo as any).fields.Date}</p>
+              )}
               <p className="py-6">Earner:</p>
-              <p className="py-6">
-                Rainmaker:{(rowInfo as any).fields.Rainmaker}
-              </p>
+              {(rowInfo as any).fields.Rainmaker && (
+                <p className="py-6">
+                  Rainmaker: {(rowInfo as any).fields.Rainmaker}
+                </p>
+              )}
               <p className="py-6">Region: </p>
-              <p className="py-6">Sponsor:{(rowInfo as any).fields.Sponsor}</p>
-              <p className="py-6">
-                Total Earnings : $
-                {(rowInfo as any).fields['Total Earnings USD']}
-              </p>
-              <p className="py-6">Type: {(rowInfo as any).fields.Type}</p>
+              {(rowInfo as any).fields.Sponsor && (
+                <p className="py-6">
+                  Sponsor: {(rowInfo as any).fields.Sponsor}
+                </p>
+              )}
+              {(rowInfo as any).fields['Total Earnings USD'] && (
+                <p className="py-6">
+                  Total Earnings: $
+                  {(rowInfo as any).fields['Total Earnings USD']}
+                </p>
+              )}
+              {(rowInfo as any).fields.Type && (
+                <p className="py-6">Type: {(rowInfo as any).fields.Type}</p>
+              )}
             </ModalBody>
           </ModalContent>
         </Modal>

@@ -1,7 +1,6 @@
 import { rainmakerColumns } from '@/constants/columns';
 import React, { useMemo } from 'react';
 import { Column, HeaderGroup, Row, usePagination, useTable } from 'react-table';
-import { generate } from './api/generate';
 
 export default function Rainmakers({ rainmakers }: any) {
   console.log('rainmakers:', rainmakers);
