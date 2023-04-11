@@ -3,11 +3,11 @@ import { earnerAtom } from '@/context/earners';
 import { rainmakersAtom } from '@/context/rainmakers';
 import { rowAtom } from '@/context/rowInfo';
 import { sponsorAtom } from '@/context/sponsors';
-import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
-import { India, Vietnam, Turkey, Germany, Mexico } from '@/dynamic/countries';
+import { getCoin } from '@/utils/getCoin';
+import { getCountry } from '@/utils/getCountry';
 import overflowText from '@/utils/overflow';
 import { useAtom } from 'jotai';
-import { useState } from 'react';
+import { useCallback, useMemo } from 'react';
 
 export const projectColumns = [
   {
@@ -25,7 +25,6 @@ export const projectColumns = [
       const [rowInfo, setRowInfo] = useAtom(rowAtom);
       const handleShow = (cell: any) => {
         setRowInfo(cell?.row?.original);
-        console.log(rowInfo);
       };
       return (
         <p
@@ -38,7 +37,6 @@ export const projectColumns = [
     },
   },
   {
-    // Header: 'Type',
     accessor: 'fields.Type',
     Cell: Tag,
   },
@@ -48,15 +46,21 @@ export const projectColumns = [
     Cell: (props: any) => {
       const [earner] = useAtom<any>(earnerAtom);
       const [rowInfo, setRowInfo] = useAtom(rowAtom);
-      const handleShow = (cell: any) => {
-        setRowInfo(cell?.row?.original);
-        console.log(rowInfo);
-      };
+      const handleShow = useCallback(
+        (cell: any) => {
+          setRowInfo(cell?.row?.original);
+          console.log(rowInfo);
+        },
+        [setRowInfo, rowInfo]
+      );
       const value = props.value;
-      if (value) {
-        const names = value.slice(0, 2).map((key: number) => earner[key]);
-        const numAdditionalEarners = props.value.length - names.length;
-        return (
+
+      const names = useMemo(() => {
+        return value?.slice(0, 2).map((key: number) => earner[key]) ?? [];
+      }, [value, earner]);
+      const numAdditionalEarners = value?.length - names.length;
+      return useMemo(
+        () => (
           <div className="">
             {names.map((name: string, index: number) => (
               <p key={index} className="text-sm font-semibold text-neutral-200">
@@ -70,30 +74,15 @@ export const projectColumns = [
               {numAdditionalEarners ? '+' + numAdditionalEarners : null}
             </p>
           </div>
-        );
-      }
+        ),
+        [names, numAdditionalEarners, handleShow, props]
+      );
     },
   },
   {
-    // Header: 'Token',
     accessor: 'fields.Currency',
     width: 16,
-    Cell: ({ value }: { value: string }) => {
-      if (value === 'USDC') {
-        return <Usdc />;
-      }
-      if (value === 'USDT') {
-        return <Usdt />;
-      }
-      if (value === 'BONK') {
-        return <Bonk />;
-      }
-      if (value === 'SOL') {
-        return <Solana />;
-      } else {
-        return <p className="text-center text-[10px] font-light">{value}</p>;
-      }
-    },
+    Cell: ({ value }: { value: string }) => getCoin(value),
   },
   {
     Header: 'USD',
@@ -126,32 +115,11 @@ export const projectColumns = [
     },
   },
   {
-    // Header: 'Rainmaker',
     accessor: 'fields.Rainmaker',
-    // Cell: ({ value }: { value: string }) => {
-    //   return <p className="text-sm uppercase">{value}</p>;
-    // },
   },
   {
-    // Header: 'Country',
     accessor: 'fields.Region',
-    Cell: ({ value }: { value: string }) => {
-      if (value == 'reckMKOOQ59TFRk6n') {
-        return <India />;
-      }
-      if (value == 'recJXKIOEDvUjIv9Z') {
-        return <Vietnam />;
-      }
-      if (value == 'reciIV94eES6oiIY2') {
-        return <Turkey />;
-      }
-      if (value == 'recEdv0ihUicz158R') {
-        return <Germany />;
-      }
-      if (value == 'recQuDC0wLiJCdTiH') {
-        return <Mexico />;
-      }
-    },
+    Cell: ({ value }: { value: string }) => getCountry(value),
   },
   {
     Header: 'Date Given',
@@ -162,9 +130,6 @@ export const projectColumns = [
   },
   {
     accessor: 'fields.Sponsor',
-    // Cell: ({ value }) => {
-    //   <p>{value}</p>;
-    // },
   },
 ];
 
@@ -219,18 +184,6 @@ export const rainmakerColumns = [
       if (value) return <span>$ {value}</span>;
     },
   },
-  // {
-  //   Header: '',
-  //   id: 'button',
-  //   // accessor: 'USD',
-  //   Cell: () => {
-  //     return (
-  //       <span>
-  //         <p className="text-xs">View Recent Projects</p>
-  //       </span>
-  //     );
-  //   },
-  // },
 ];
 
 export const sponsorColumns = [

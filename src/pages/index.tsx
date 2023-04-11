@@ -25,6 +25,10 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+import { useDatesAndEarnings } from '@/utils/getDatesAndEarnings';
+import { useAtom } from 'jotai';
+import { projectsAtom } from '@/context/projects';
+import useProjects from '@/utils/useProjects';
 
 const moment = require('moment');
 
@@ -33,152 +37,71 @@ interface DatesAndEarnings {
   totalEarnings: number;
 }
 
-export default function Home() {
-  const [datesAndEarnings, setDatesAndEarnings] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [chartData, setChartData] = useState<ChartData<'line'>>();
-  const [chartOptions] = useState<ChartOptions<'line'>>({
-    responsive: true,
-    scales: {
-      y: {
-        ticks: {
-          color: '#4B6181',
-        },
-      },
-      x: {
-        ticks: {
-          color: '#4B6181',
-        },
-      },
-    },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      title: {
-        display: false,
-      },
-    },
-  });
+type TimeFilterButtonProps = {
+  label: string;
+  isSelected: boolean;
+  onClick: () => void;
+};
 
-  const [selectedOption, setSelectedOption] = useState('Last30Days');
+const TimeFilterButton = ({
+  label,
+  isSelected,
+  onClick,
+}: TimeFilterButtonProps) => (
+  <Button
+    onClick={onClick}
+    variant={isSelected ? 'solid' : 'filled'}
+    bgColor={isSelected ? '#2F3B51' : ''}
+    color="white"
+    _hover={{ backgroundColor: '#2F3B51' }}
+  >
+    {label}
+  </Button>
+);
+
+type SelectedOption = 'Last30Days' | 'YTD' | 'Yearly' | 'All';
+
+export default function Home() {
+  const projects = useProjects();
+  const [chartData, setChartData] = useState<ChartData<'line'>>();
+
+  const [selectedOption, setSelectedOption] =
+    useState<SelectedOption>('Last30Days');
+
+  const chartOptions = useMemo<ChartOptions<'line'>>(() => {
+    return {
+      responsive: true,
+      scales: {
+        y: {
+          ticks: {
+            color: '#4B6181',
+          },
+        },
+        x: {
+          ticks: {
+            color: '#4B6181',
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+      },
+    };
+  }, []);
+  const getDatesAndEarnings = useDatesAndEarnings(selectedOption);
+
   const filteredDatesAndEarnings = useMemo<DatesAndEarnings[]>(() => {
     return getDatesAndEarnings(projects);
-  }, [projects, selectedOption]);
-
-  function getDatesAndEarnings(projectsData: any) {
-    const groupedByDate = projectsData.reduce((acc: any, obj: any) => {
-      const date = obj.fields.Date;
-      if (!acc[date]) {
-        acc[date] = [];
-      }
-      acc[date].push(obj);
-      return acc;
-    }, {});
-
-    let accumulatedEarnings = 0;
-    const datesAndEarnings: any = [];
-
-    Object.keys(groupedByDate)
-      .sort()
-      .forEach((dateString) => {
-        const group = groupedByDate[dateString];
-        const totalEarnings = group.reduce(
-          (sum: any, obj: any) => sum + obj.fields['Total Earnings USD'],
-          0
-        );
-        accumulatedEarnings += totalEarnings;
-        datesAndEarnings.push({
-          date: moment(dateString, 'YYYY-MM-DD').format(),
-          totalEarnings: accumulatedEarnings,
-        });
-      });
-
-    function resampleData(datesAndEarnings: any, gapInDays: number) {
-      const resampledData: any = [];
-      let accumulatedEarnings = 0;
-      if (datesAndEarnings.length > 0) {
-        let currentDate = moment(datesAndEarnings[0].date).startOf('day');
-        let nextDate = moment(datesAndEarnings[0].date)
-          .startOf('day')
-          .add(gapInDays, 'days');
-
-        datesAndEarnings.forEach(
-          ({ date, totalEarnings }: { date: any; totalEarnings: number }) => {
-            const dateObj = moment(date);
-            while (dateObj.isAfter(nextDate)) {
-              resampledData.push({
-                date: nextDate.format(),
-                totalEarnings: accumulatedEarnings,
-              });
-              currentDate = nextDate;
-              nextDate = currentDate.add(gapInDays, 'days');
-            }
-            accumulatedEarnings = totalEarnings;
-          }
-        );
-      }
-
-      // Handle the last date if it doesn't align with the gap
-      if (
-        !moment(resampledData[resampledData.length - 1]?.date)?.isSame(
-          moment(datesAndEarnings[datesAndEarnings.length - 1]?.date)
-        )
-      ) {
-        resampledData.push({
-          date: moment(
-            datesAndEarnings[datesAndEarnings.length - 1]?.date
-          ).format(),
-          totalEarnings: accumulatedEarnings,
-        });
-      }
-
-      return resampledData;
-    }
-
-    const monthData = resampleData(datesAndEarnings, 30);
-    const weeklyData = resampleData(datesAndEarnings, 7);
-    const threeDayData = resampleData(datesAndEarnings, 3);
-
-    if (selectedOption === 'All') {
-      return monthData;
-    } else if (selectedOption === 'Yearly') {
-      const startDate = moment().subtract(1, 'year').startOf('day');
-      const endDate = moment().startOf('day');
-      return monthData.filter((obj: DatesAndEarnings) =>
-        moment(obj.date).isBetween(startDate, endDate, 'day', '[]')
-      );
-    } else if (selectedOption === 'YTD') {
-      const thisYear = moment().year();
-      return weeklyData.filter(
-        (obj: DatesAndEarnings) => moment(obj.date).year() === thisYear
-      );
-    } else if (selectedOption === 'Last30Days') {
-      const startDate = moment().subtract(29, 'days').startOf('day');
-      const endDate = moment();
-      return threeDayData.filter((obj: DatesAndEarnings) =>
-        moment(obj.date).isBetween(startDate, endDate, 'day', '[]')
-      );
-    }
-  }
+  }, [projects, getDatesAndEarnings]);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await fetch(`/api/projects`);
-        const projectsData = await res.json();
-        setProjects(projectsData);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    setChartData({
-      labels: filteredDatesAndEarnings.map((obj, index) => {
+    const chartDataDetails = {
+      labels: filteredDatesAndEarnings?.map((obj, index) => {
         const date = moment(obj.date);
         if (selectedOption === 'Last30Days' || selectedOption === 'YTD') {
           return date.format('DD MMM');
@@ -197,7 +120,8 @@ export default function Home() {
           tension: 0.1,
         },
       ],
-    });
+    };
+    setChartData(chartDataDetails);
   }, [filteredDatesAndEarnings, selectedOption]);
 
   return (
@@ -230,42 +154,26 @@ export default function Home() {
                 Superteam Earnings Graph
               </h1>
               <ButtonGroup>
-                <Button
-                  onClick={() => setSelectedOption('All')}
-                  variant={selectedOption === 'All' ? 'solid' : 'filled'}
-                  bgColor={selectedOption === 'All' ? '#2F3B51' : ''}
-                  color="white"
-                  _hover={{ backgroundColor: '#2F3B51' }}
-                >
-                  All
-                </Button>
-                <Button
-                  onClick={() => setSelectedOption('Yearly')}
-                  variant={selectedOption === 'Yearly' ? 'solid' : 'filled'}
-                  bgColor={selectedOption === 'Yearly' ? '#2F3B51' : ''}
-                  color="white"
-                  _hover={{ backgroundColor: '#2F3B51' }}
-                >
-                  1 Y
-                </Button>
-                <Button
-                  onClick={() => setSelectedOption('YTD')}
-                  variant={selectedOption === 'YTD' ? 'solid' : 'filled'}
-                  bgColor={selectedOption === 'YTD' ? '#2F3B51' : ''}
-                  color="white"
-                  _hover={{ backgroundColor: '#2F3B51' }}
-                >
-                  YTD
-                </Button>
-                <Button
+                <TimeFilterButton
+                  label="30 D"
+                  isSelected={selectedOption === 'Last30Days'}
                   onClick={() => setSelectedOption('Last30Days')}
-                  variant={selectedOption === 'Last30Days' ? 'solid' : 'filled'}
-                  bgColor={selectedOption === 'Last30Days' ? '#2F3B51' : ''}
-                  color="white"
-                  _hover={{ backgroundColor: '#2F3B51' }}
-                >
-                  30 D
-                </Button>
+                />
+                <TimeFilterButton
+                  label="YTD"
+                  isSelected={selectedOption === 'YTD'}
+                  onClick={() => setSelectedOption('YTD')}
+                />
+                <TimeFilterButton
+                  label="1 Y"
+                  isSelected={selectedOption === 'Yearly'}
+                  onClick={() => setSelectedOption('Yearly')}
+                />
+                <TimeFilterButton
+                  label="All"
+                  isSelected={selectedOption === 'All'}
+                  onClick={() => setSelectedOption('All')}
+                />
               </ButtonGroup>
             </div>
             <AspectRatio ratio={2 / 1}>
