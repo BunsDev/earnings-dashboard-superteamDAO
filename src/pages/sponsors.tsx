@@ -1,12 +1,44 @@
 import { sponsorColumns } from '@/constants/columns';
-import React, { useMemo } from 'react';
+import useProjects from '@/utils/useProjects';
+import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 
-export default function Sponsors({ sponsors }: any) {
-  console.log('sponsors:', sponsors);
+export default function Sponsors() {
+  const projects = useProjects();
+  const [groupedBySponsor, setGroupedBySponsor] = useState({});
+
+  useEffect(() => {
+    const newGroupedBySponsor = projects.reduce((groups: any, project: any) => {
+      const sponsor = project.fields.Sponsor;
+      if (!groups[sponsor]) {
+        groups[sponsor] = [];
+      }
+      groups[sponsor].push(project);
+      return groups;
+    }, {});
+
+    setGroupedBySponsor(newGroupedBySponsor);
+  }, [projects]);
+
+  const sponsors: any[] = useMemo(() => {
+    return Object.entries(groupedBySponsor)
+      .map(([sponsor, projects]) => {
+        const rainmadeSum = (projects as any).reduce(
+          (sum: number, project: any) => {
+            return sum + (project.fields['Total Earnings USD'] || 0);
+          },
+          0
+        );
+        return {
+          Name: sponsor,
+          USD: rainmadeSum,
+        };
+      })
+      .sort((a: any, b: any) => b.USD - a.USD);
+  }, [groupedBySponsor]);
 
   const columns = useMemo(() => sponsorColumns, []);
-  const data = useMemo(() => sponsors, [sponsors]);
+  const data: any[] = useMemo(() => sponsors, [sponsors]);
 
   const {
     getTableProps,
@@ -100,36 +132,4 @@ export default function Sponsors({ sponsors }: any) {
       </div>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
-  const projectsData = await projects.json();
-
-  const groupedBySponsor = projectsData.reduce((groups: any, project: any) => {
-    const sponsor = project.fields.Sponsor;
-    if (!groups[sponsor]) {
-      groups[sponsor] = [];
-    }
-    groups[sponsor].push(project);
-    return groups;
-  }, {});
-
-  const sponsorTotal = Object.entries(groupedBySponsor)
-    .map(([sponsor, projects]: [string, any]) => {
-      const sponsoredSum = projects.reduce((sum: number, project: any) => {
-        return sum + (project.fields['Total Earnings USD'] || 0);
-      }, 0);
-      return {
-        Name: sponsor,
-        USD: sponsoredSum,
-      };
-    })
-    .sort((a: any, b: any) => b.USD - a.USD);
-
-  return {
-    props: {
-      sponsors: sponsorTotal,
-    },
-  };
 }

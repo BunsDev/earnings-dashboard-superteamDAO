@@ -150,10 +150,10 @@ export default function Home() {
         {chartData ? (
           <div className="rounded-lg border border-[#0E1218] bg-[#0F1320] p-8">
             <div className="flex items-center justify-between">
-              <h1 className="text-xl font-semibold text-[#DFE4EC]">
-                Superteam Earnings Graph
+              <h1 className="mb-12 text-xl font-semibold text-[#DFE4EC]">
+                SuperteamDAO Earnings Graph
               </h1>
-              <ButtonGroup>
+              <ButtonGroup mb={12}>
                 <TimeFilterButton
                   label="30 D"
                   isSelected={selectedOption === 'Last30Days'}

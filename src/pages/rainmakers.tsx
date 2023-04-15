@@ -1,12 +1,47 @@
 import { rainmakerColumns } from '@/constants/columns';
-import React, { useMemo } from 'react';
+import useProjects from '@/utils/useProjects';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Column, HeaderGroup, Row, usePagination, useTable } from 'react-table';
 
-export default function Rainmakers({ rainmakers }: any) {
-  console.log('rainmakers:', rainmakers);
+export default function Rainmakers() {
+  const projects = useProjects();
+  const [groupedByRainmaker, setGroupedByRainmaker] = useState({});
+
+  useEffect(() => {
+    const newGroupedByRainmaker = projects.reduce(
+      (groups: any, project: any) => {
+        const rainmaker = project.fields.Rainmaker;
+        if (!groups[rainmaker]) {
+          groups[rainmaker] = [];
+        }
+        groups[rainmaker].push(project);
+        return groups;
+      },
+      {}
+    );
+
+    setGroupedByRainmaker(newGroupedByRainmaker);
+  }, [projects]);
+
+  const rainmakers: any[] = useMemo(() => {
+    return Object.entries(groupedByRainmaker)
+      .map(([rainmaker, projects]) => {
+        const rainmadeSum = (projects as any).reduce(
+          (sum: number, project: any) => {
+            return sum + (project.fields['Total Earnings USD'] || 0);
+          },
+          0
+        );
+        return {
+          Name: rainmaker,
+          USD: rainmadeSum,
+        };
+      })
+      .sort((a: any, b: any) => b.USD - a.USD);
+  }, [groupedByRainmaker]);
 
   const columns = useMemo(() => rainmakerColumns, []);
-  const data: Array<any> = useMemo(() => rainmakers, [rainmakers]);
+  const data: any[] = useMemo(() => rainmakers, [rainmakers]);
 
   const {
     getTableProps,
@@ -100,39 +135,4 @@ export default function Rainmakers({ rainmakers }: any) {
       </div>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
-  const projectsData = await projects.json();
-
-  const groupedByRainmaker = projectsData.reduce(
-    (groups: any, project: any) => {
-      const rainmaker = project.fields.Rainmaker;
-      if (!groups[rainmaker]) {
-        groups[rainmaker] = [];
-      }
-      groups[rainmaker].push(project);
-      return groups;
-    },
-    {}
-  );
-
-  const rainmakerTotal = Object.entries(groupedByRainmaker)
-    .map(([rainmaker, projects]: [string, any]) => {
-      const rainmadeSum = projects.reduce((sum: number, project: any) => {
-        return sum + (project.fields['Total Earnings USD'] || 0);
-      }, 0);
-      return {
-        Name: rainmaker,
-        USD: rainmadeSum,
-      };
-    })
-    .sort((a: any, b: any) => b.USD - a.USD);
-
-  return {
-    props: {
-      rainmakers: rainmakerTotal,
-    },
-  };
 }

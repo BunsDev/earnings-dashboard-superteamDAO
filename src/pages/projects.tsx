@@ -1,5 +1,5 @@
 import { useTable, usePagination, HeaderGroup, Row } from 'react-table';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { projectColumns } from '@/constants/columns';
 import cache from '@/utils/cache';
 import { useAtom } from 'jotai';
@@ -13,30 +13,44 @@ import {
   ModalHeader,
   ModalOverlay,
 } from '@chakra-ui/react';
-import { getDatabase } from '@/utils/getDabase';
+import { getDatabase } from '@/utils/getDatabase';
+import useProjects from '@/utils/useProjects';
 
-export default function Projects({ projects, earnerData }: any) {
+export default function Projects() {
   const columns = useMemo(() => projectColumns, []);
+  const projects = useProjects();
   const data = useMemo(() => projects, [projects]);
   const [earners, setEarners] = useAtom(earnerAtom);
   const [rowInfo, setRowInfo] = useAtom(rowAtom);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
+    if (data) {
+      const fetchEarnerData = async () => {
+        const res = await fetch(`/api/earners`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ projects: data }),
+        });
+
+        const earnerData = await res.json();
+        const earners = earnerData.earnerData;
+        setEarners(earners);
+      };
+
+      fetchEarnerData();
+    }
+  }, [data, setEarners]);
+
+  useEffect(() => {
     setIsModalOpen(!!rowInfo);
   }, [rowInfo]);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setRowInfo({});
-  };
-
-  useEffect(() => {
-    setEarners(earnerData);
-  }, []);
-
-  useEffect(() => {
-    console.log(rowInfo);
-  }, [rowInfo]);
+  }, [setRowInfo]);
 
   const {
     getTableProps,
@@ -193,39 +207,3 @@ export default function Projects({ projects, earnerData }: any) {
     </div>
   );
 }
-
-export const getStaticProps = async (context: any) => {
-  const base = getDatabase();
-  const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
-
-  const projects = await fetch(`${process.env.BASE_URL}/api/projects`);
-  const projectsData = await projects.json();
-
-  const earners = [
-    ...new Set<string>(
-      projectsData
-        .flatMap((project: any) => project.fields.Earner)
-        .filter(Boolean)
-    ),
-  ];
-
-  const fetcher = async (earner: any) => {
-    const record = await table.find(earner);
-    const earnerName = record?.fields?.Title;
-    return earnerName;
-  };
-
-  const earnerData: { [key: string]: any } = {};
-  for (const earner of earners) {
-    const key = `earner:${earner}`;
-    const result = await cache.fetch(key, () => fetcher(earner));
-    earnerData[earner] = result;
-  }
-
-  return {
-    props: {
-      projects: projectsData,
-      earnerData: earnerData,
-    },
-  };
-};
