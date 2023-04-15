@@ -1,4 +1,3 @@
-// /pages/api/getStaticProps.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDatabase } from '@/utils/getDatabase';
 import cache from '@/utils/cache';
@@ -28,11 +27,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   };
 
   const earnerData: { [key: string]: any } = {};
-  for (const earner of earners) {
+
+  const fetchCachedEarners = async (earner: string) => {
     const key = `earner:${earner}`;
     const result = await cache.fetch(key, () => fetcher(earner));
     earnerData[earner] = result;
-  }
+  };
+
+  await Promise.all(earners.map(fetchCachedEarners));
 
   res.status(200).json({ earnerData: earnerData });
 };
