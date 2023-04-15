@@ -93,7 +93,14 @@ export default function Home() {
       },
     };
   }, []);
-  const getDatesAndEarnings = useDatesAndEarnings(selectedOption);
+
+  const totalEarningsUSD = projects.reduce((sum: number, project: any) => {
+    return sum + (project.fields['Total Earnings USD'] || 0);
+  }, 0);
+  const getDatesAndEarnings = useDatesAndEarnings(
+    selectedOption,
+    totalEarningsUSD
+  );
 
   const filteredDatesAndEarnings = useMemo<DatesAndEarnings[]>(() => {
     return getDatesAndEarnings(projects);

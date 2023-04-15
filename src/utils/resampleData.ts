@@ -7,7 +7,8 @@ interface DatesAndEarnings {
 
 export function resampleData(
   datesAndEarnings: DatesAndEarnings[],
-  gapInDays: number
+  gapInDays: number,
+  totalEarningsUSD: number
 ): DatesAndEarnings[] {
   if (datesAndEarnings.length === 0) {
     return [];
@@ -17,28 +18,37 @@ export function resampleData(
   let currentDate = moment(datesAndEarnings[0].date).startOf('day');
   let nextDate = currentDate.clone().add(gapInDays, 'days');
   let accumulatedEarnings = 0;
+  const lastDate = datesAndEarnings[datesAndEarnings.length - 1];
 
   for (const { date, totalEarnings } of datesAndEarnings) {
     const dateObj = moment(date);
 
     while (dateObj.isAfter(nextDate)) {
-      resampledData.push({
-        date: nextDate.format(),
-        totalEarnings: accumulatedEarnings,
-      });
+      if (nextDate.isValid() && accumulatedEarnings !== null) {
+        resampledData.push({
+          date: nextDate.format(),
+          totalEarnings: accumulatedEarnings,
+        });
+      }
       currentDate = nextDate;
       nextDate = currentDate.clone().add(gapInDays, 'days');
     }
 
     accumulatedEarnings = totalEarnings;
 
-    // Add the last date if it's the last iteration and doesn't align with the gap
-    if (
-      date === datesAndEarnings[datesAndEarnings.length - 1].date &&
-      !nextDate.isSame(dateObj)
-    ) {
-      resampledData.push({ date, totalEarnings: accumulatedEarnings });
+    if (date === lastDate.date && !nextDate.isSame(dateObj)) {
+      if (dateObj.isValid() && accumulatedEarnings !== null) {
+        resampledData.push({ date, totalEarnings: accumulatedEarnings });
+      }
     }
+  }
+
+  const today = moment().startOf('day');
+  if (!today.isSame(currentDate)) {
+    resampledData.push({
+      date: today.format(),
+      totalEarnings: totalEarningsUSD,
+    });
   }
 
   return resampledData;

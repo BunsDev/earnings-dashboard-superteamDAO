@@ -16,7 +16,10 @@ interface DatesAndEarnings {
 
 type SelectedOption = 'Yearly' | 'YTD' | 'Last30Days' | 'All';
 
-export const useDatesAndEarnings = (selectedOption: SelectedOption) => {
+export const useDatesAndEarnings = (
+  selectedOption: SelectedOption,
+  totalEarningsUSD: number
+) => {
   const getDatesAndEarnings = useCallback(
     (projectsData: Project[]) => {
       const groupedByDate = projectsData.reduce(
@@ -47,9 +50,12 @@ export const useDatesAndEarnings = (selectedOption: SelectedOption) => {
           };
         });
 
-      const monthData = resampleData(datesAndEarnings, 30);
-      const weeklyData = resampleData(datesAndEarnings, 7);
-      const threeDayData = resampleData(datesAndEarnings, 3);
+      const monthData = resampleData(datesAndEarnings, 30, totalEarningsUSD);
+      // console.log(datesAndEarnings);
+      console.log(monthData);
+      const weeklyData = resampleData(datesAndEarnings, 7, totalEarningsUSD);
+      const threeDayData = resampleData(datesAndEarnings, 3, totalEarningsUSD);
+      // console.log(threeDayData);
 
       const filterData = (
         data: DatesAndEarnings[],
@@ -81,7 +87,7 @@ export const useDatesAndEarnings = (selectedOption: SelectedOption) => {
           return monthData;
       }
     },
-    [selectedOption]
+    [selectedOption, totalEarningsUSD]
   );
 
   return getDatesAndEarnings;
