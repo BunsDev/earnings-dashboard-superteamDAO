@@ -24,11 +24,13 @@ export const useDatesAndEarnings = (
     (projectsData: Project[]) => {
       const groupedByDate = projectsData.reduce(
         (acc: Record<string, Project[]>, obj: Project) => {
-          const date = obj.fields.Date;
-          if (!acc[date]) {
-            acc[date] = [];
+          if ('Total Earnings USD' in obj.fields) {
+            const date = obj.fields.Date;
+            if (!acc[date]) {
+              acc[date] = [];
+            }
+            acc[date].push(obj);
           }
-          acc[date].push(obj);
           return acc;
         },
         {}
@@ -50,12 +52,12 @@ export const useDatesAndEarnings = (
           };
         });
 
+      console.log(datesAndEarnings);
+
       const monthData = resampleData(datesAndEarnings, 30, totalEarningsUSD);
-      // console.log(datesAndEarnings);
-      console.log(monthData);
       const weeklyData = resampleData(datesAndEarnings, 7, totalEarningsUSD);
       const threeDayData = resampleData(datesAndEarnings, 3, totalEarningsUSD);
-      // console.log(threeDayData);
+      console.log(threeDayData);
 
       const filterData = (
         data: DatesAndEarnings[],

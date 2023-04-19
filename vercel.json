@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/fetchSolanaPrice",
+      "schedule": "0 1 * * *"
+    }
+  ]
+}

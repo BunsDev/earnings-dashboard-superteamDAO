@@ -10,14 +10,14 @@ import { useAtom } from 'jotai';
 import { useCallback, useMemo } from 'react';
 
 export const projectColumns = [
-  {
-    id: 'id',
-    Cell: ({ row, flatRows }: any) => {
-      return (
-        <p className="text-sm text-neutral-400">{flatRows.indexOf(row) + 1}</p>
-      );
-    },
-  },
+  // {
+  //   id: 'id',
+  //   Cell: ({ row, flatRows }: any) => {
+  //     return (
+  //       <p className="text-sm text-neutral-400">{flatRows.indexOf(row) + 1}</p>
+  //     );
+  //   },
+  // },
   {
     Header: 'Project',
     accessor: 'fields.Name',

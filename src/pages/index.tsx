@@ -14,7 +14,7 @@ import {
   Title,
   Legend,
 } from 'chart.js';
-import { AspectRatio, Button, ButtonGroup } from '@chakra-ui/react';
+import { AspectRatio, Box, Button, ButtonGroup } from '@chakra-ui/react';
 
 ChartJS.register(
   CategoryScale,
@@ -26,8 +26,6 @@ ChartJS.register(
   Legend
 );
 import { useDatesAndEarnings } from '@/utils/getDatesAndEarnings';
-import { useAtom } from 'jotai';
-import { projectsAtom } from '@/context/projects';
 import useProjects from '@/utils/useProjects';
 
 const moment = require('moment');
@@ -76,10 +74,16 @@ export default function Home() {
           ticks: {
             color: '#4B6181',
           },
+          grid: {
+            color: '#121726',
+          },
         },
         x: {
           ticks: {
             color: '#4B6181',
+          },
+          grid: {
+            color: '#121726',
           },
         },
       },
@@ -139,23 +143,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-auto w-[96%] max-w-[1300px]">
-        <p className="mb-12 text-5xl font-bold text-white">Earnings v3? 🚀🚧</p>
-        <Link href="/projects" className="block text-2xl text-white underline">
-          projects
-        </Link>
-        <Link
-          href="/rainmakers"
-          className="block text-2xl text-white underline"
-        >
-          rainmakers
-        </Link>
-        <Link href="/sponsors" className="block text-2xl text-white underline">
-          sponsors
-        </Link>
-
+      <div className="mx-auto w-[96%] max-w-[1200px] pt-16">
         {chartData ? (
-          <div className="rounded-lg border border-[#0E1218] bg-[#0F1320] p-8">
+          <Box
+            rounded="md"
+            border="1px"
+            bg="#0F1320"
+            p={8}
+            borderColor="#0E1218"
+            boxShadow="0px 2px 1px rgba(255, 255, 255, 0.08), inset 0px 2px 4px rgba(0, 0, 0, 0.48)"
+          >
             <div className="flex items-center justify-between">
               <h1 className="mb-12 text-xl font-semibold text-[#DFE4EC]">
                 SuperteamDAO Earnings Graph
@@ -186,7 +183,7 @@ export default function Home() {
             <AspectRatio ratio={2 / 1}>
               <Line data={chartData} options={chartOptions} />
             </AspectRatio>
-          </div>
+          </Box>
         ) : (
           <div>loading...</div>
         )}
