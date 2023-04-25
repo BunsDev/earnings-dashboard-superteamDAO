@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import useProjects from '@/utils/useProjects';
 import { PageNumber } from '@/components/PageNumber';
+import Head from 'next/head';
 
 export default function Projects() {
   const columns = useMemo(() => projectColumns, []);
@@ -96,8 +97,26 @@ export default function Projects() {
     }
   };
 
+  type RegionMapping = {
+    [key: string]: string;
+  };
+
+  const regionMapping: RegionMapping = {
+    reckMKOOQ59TFRk6n: 'India',
+    recJXKIOEDvUjIv9Z: 'Vietnam',
+    reciIV94eES6oiIY2: 'Turkey',
+    recEdv0ihUicz158R: 'Germany',
+    recQuDC0wLiJCdTiH: 'Mexico',
+  };
+
   return (
     <div className="">
+      <Head>
+        <title>Projects | Superteam Earnings</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* there's a glitch in the table that only allows colors present in the codebase to be rendered, this section is to render those colors  */}
       <p className="hidden text-right text-xs font-semibold text-[#f83b31] transition-all duration-500 hover:underline">
         hello
@@ -167,12 +186,14 @@ export default function Projects() {
                   )}
                 </div>
                 <div>
-                  <>
-                    <p className="mt-6 text-sm text-white">REGION</p>
-                    <p className="text-lg font-medium text-white">
-                      Coming soon
-                    </p>
-                  </>
+                  {(rowInfo as any).fields.Region && (
+                    <>
+                      <p className="mt-6 text-sm text-white">COUNTRY</p>
+                      <p className="text-lg font-medium text-white">
+                        {regionMapping[(rowInfo as any).fields.Region[0]]}
+                      </p>
+                    </>
+                  )}
                   {(rowInfo as any).fields.Sponsor && (
                     <>
                       <p className="mt-6 text-sm text-white">SPONSOR</p>

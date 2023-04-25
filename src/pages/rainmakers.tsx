@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
+import Head from 'next/head';
 
 export default function Rainmakers() {
   const projects = useProjects();
@@ -91,11 +92,17 @@ export default function Rainmakers() {
 
   return (
     <>
+      <Head>
+        <title>Rainmaker Leaderboard | Superteam Earnings</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="custom-scrollbar z-0 overflow-auto">
         <div className="mx-auto">
           <div className="mx-auto w-[96%]">
             <h1 className="mt-10 text-center text-2xl font-semibold text-white">
-              Rainmakers
+              Rainmaker Leaderboard
             </h1>
             <Box
               w="fit-content"

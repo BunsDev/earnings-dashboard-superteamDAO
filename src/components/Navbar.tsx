@@ -51,10 +51,7 @@ export default function Navbar() {
       <div className="border-b border-[#1C2430] py-6 lg:py-8">
         <div className="mx-auto flex w-[96%] max-w-[1200px] items-center">
           <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center">
-            <div
-              className="h-[21px] w-[159px] cursor-pointer"
-              onClick={() => router.push('/')}
-            >
+            <div className="cursor-pointer" onClick={() => router.push('/')}>
               <Logo />
             </div>
             <div className="flex gap-2">
