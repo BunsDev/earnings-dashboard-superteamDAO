@@ -4,7 +4,6 @@ import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { PageNumber } from '@/components/PageNumber';
-import { supabase } from '@/lib/supabase';
 import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
 
 export default function Sponsors() {
@@ -77,8 +76,6 @@ export default function Sponsors() {
       };
     });
   }, [groupedBySponsor, weeklySponsorData]);
-
-  console.log(sponsors);
 
   const columns = useMemo(() => sponsorColumns, []);
   const data: any[] = useMemo(() => sponsors, [sponsors]);

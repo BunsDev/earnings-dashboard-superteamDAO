@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import Logo from '@/svgs/logo';
-import Link from 'next/link';
 import useProjects from '@/utils/useProjects';
 import { useRouter } from 'next/router';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';

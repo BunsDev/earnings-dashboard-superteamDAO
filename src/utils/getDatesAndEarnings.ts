@@ -52,12 +52,9 @@ export const useDatesAndEarnings = (
           };
         });
 
-      console.log(datesAndEarnings);
-
       const monthData = resampleData(datesAndEarnings, 30, totalEarningsUSD);
       const weeklyData = resampleData(datesAndEarnings, 7, totalEarningsUSD);
       const threeDayData = resampleData(datesAndEarnings, 3, totalEarningsUSD);
-      console.log(threeDayData);
 
       const filterData = (
         data: DatesAndEarnings[],

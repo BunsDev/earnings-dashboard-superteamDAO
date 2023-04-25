@@ -1,10 +1,9 @@
 import { rainmakerColumns } from '@/constants/columns';
 import useProjects from '@/utils/useProjects';
 import { Box } from '@chakra-ui/react';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Column, HeaderGroup, Row, usePagination, useTable } from 'react-table';
+import React, { useEffect, useMemo, useState } from 'react';
+import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
-import { supabase } from '@/lib/supabase';
 
 export default function Rainmakers() {
   const projects = useProjects();
@@ -79,8 +78,6 @@ export default function Rainmakers() {
       };
     });
   }, [groupedByRainmaker, weeklyRainmakerData]);
-
-  console.log(rainmakers);
 
   const columns = useMemo(() => rainmakerColumns, []);
   const data: any[] = useMemo(() => rainmakers, [rainmakers]);

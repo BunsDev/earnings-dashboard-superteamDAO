@@ -20,20 +20,8 @@ export function calculateRankDifference(
     (entry) => entry.Name === currentName
   );
 
-  console.log('currentName:', currentName);
-  console.log('currentRank:', currentRank);
-  console.log('previousData:', previousData);
-  console.log('previousEntry:', previousEntry);
-
   if (!previousEntry) {
     return null;
   }
-
-  console.log('previousEntry.Rank:', previousEntry.Rank);
-  console.log(
-    'previousEntry.Rank - currentRank:',
-    previousEntry.Rank - currentRank
-  );
-
   return previousEntry.Rank - currentRank;
 }

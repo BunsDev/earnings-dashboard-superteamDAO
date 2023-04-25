@@ -1,8 +1,6 @@
 import Tag from '@/components/Tag';
 import { earnerAtom } from '@/context/earnerAtom';
-import { rainmakersAtom } from '@/context/rainmakerAtom';
 import { rowAtom } from '@/context/rowInfoAtom';
-import { sponsorAtom } from '@/context/sponsorAtom';
 import { getCoin } from '@/utils/getCoin';
 import { getCountry } from '@/utils/getCountry';
 import overflowText from '@/utils/overflow';
@@ -10,14 +8,6 @@ import { useAtom } from 'jotai';
 import { useCallback, useMemo } from 'react';
 
 export const projectColumns = [
-  // {
-  //   id: 'id',
-  //   Cell: ({ row, flatRows }: any) => {
-  //     return (
-  //       <p className="text-sm text-neutral-400">{flatRows.indexOf(row) + 1}</p>
-  //     );
-  //   },
-  // },
   {
     Header: 'Project',
     accessor: 'fields.Name',
@@ -49,9 +39,8 @@ export const projectColumns = [
       const handleShow = useCallback(
         (cell: any) => {
           setRowInfo(cell?.row?.original);
-          console.log(rowInfo);
         },
-        [setRowInfo, rowInfo]
+        [setRowInfo]
       );
       const value = props.value;
 
@@ -148,31 +137,8 @@ export const rainmakerColumns = [
     Header: 'Rainmaker',
     accessor: 'Name',
     Cell: ({ value }: { value: string }) => {
-      const [rainmaker, setRainmaker] = useAtom(rainmakersAtom);
-
-      const handleSponsorClick = async () => {
-        try {
-          const res = await fetch(
-            `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}?filterByFormula=Rainmaker="${value}"`,
-            {
-              headers: {
-                Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
-              },
-            }
-          );
-          const data = await res.json();
-          setRainmaker(data.records);
-          console.log(rainmaker);
-        } catch (error) {
-          console.log(error);
-        }
-      };
-
       return (
-        <p
-          className="cursor-pointer text-white transition-all duration-500 hover:underline"
-          onClick={handleSponsorClick}
-        >
+        <p className="cursor-pointer text-white transition-all duration-500 hover:underline">
           {value}
         </p>
       );
@@ -205,31 +171,8 @@ export const sponsorColumns = [
     Header: 'Sponsor',
     accessor: 'Name',
     Cell: ({ value }: { value: string }) => {
-      const [sponsor, setSponsor] = useAtom(sponsorAtom);
-
-      const handleSponsorClick = async () => {
-        try {
-          const res = await fetch(
-            `https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE}?filterByFormula=Sponsor="${value}"`,
-            {
-              headers: {
-                Authorization: `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_KEY}`,
-              },
-            }
-          );
-          const data = await res.json();
-          setSponsor(data.records);
-          console.log(sponsor);
-        } catch (error) {
-          console.log(error);
-        }
-      };
-
       return (
-        <p
-          className="cursor-pointer text-white transition-all duration-500 hover:underline"
-          onClick={handleSponsorClick}
-        >
+        <p className="cursor-pointer text-white transition-all duration-500 hover:underline">
           {value}
         </p>
       );
