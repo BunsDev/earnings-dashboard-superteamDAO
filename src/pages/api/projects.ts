@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDatabase } from '@/utils/getDatabase';
-import fs from 'fs';
-import path from 'path';
+import { supabase } from '@/lib/supabase';
 import { verifySignature } from '@upstash/qstash/nextjs';
 
 const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -25,8 +24,22 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
     }));
 
     const jsonProjectsData = JSON.stringify(projectsData, null, 2);
-    const filePath = path.join(process.cwd(), 'public', 'projects.json');
-    fs.writeFileSync(filePath, jsonProjectsData);
+
+    const { error } = await supabase.storage
+      .from('earnings')
+      .upload(
+        'projects.json',
+        new Blob([jsonProjectsData], { type: 'application/json' }),
+        { upsert: true }
+      );
+
+    if (error) {
+      console.error('Error uploading file to Supabase:', error);
+      res
+        .status(500)
+        .json({ message: 'Error uploading file to Supabase', error });
+      return;
+    }
 
     res.status(200).json(projectsData);
   } catch (error) {

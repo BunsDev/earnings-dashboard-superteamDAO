@@ -15,6 +15,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@next/font": "13.1.6",
+    "@supabase/supabase-js": "^2.21.0",
     "@tanstack/react-table": "^8.7.9",
     "@types/node": "18.13.0",
     "@types/node-schedule": "^2.1.0",
