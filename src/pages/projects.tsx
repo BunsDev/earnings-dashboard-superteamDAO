@@ -2,8 +2,8 @@ import { useTable, usePagination, HeaderGroup, Row } from 'react-table';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { projectColumns } from '@/constants/columns';
 import { useAtom } from 'jotai';
-import { earnerAtom } from '@/context/earners';
-import { rowAtom } from '@/context/rowInfo';
+import { earnerAtom } from '@/context/earnerAtom';
+import { rowAtom } from '@/context/rowInfoAtom';
 import {
   Box,
   Modal,
@@ -13,8 +13,8 @@ import {
   ModalHeader,
   ModalOverlay,
 } from '@chakra-ui/react';
-import { getDatabase } from '@/utils/getDatabase';
 import useProjects from '@/utils/useProjects';
+import { PageNumber } from '@/components/PageNumber';
 
 export default function Projects() {
   const columns = useMemo(() => projectColumns, []);
@@ -52,15 +52,16 @@ export default function Projects() {
     setRowInfo({});
   }, [setRowInfo]);
 
+  const earnerKeys = (rowInfo as any)?.fields?.Earner;
+  const earnerNames = earnerKeys?.map((key: number) => earners[key]) ?? [];
+
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     page,
     nextPage,
-    canNextPage,
     previousPage,
-    canPreviousPage,
     prepareRow,
     pageOptions,
     gotoPage,
@@ -95,21 +96,6 @@ export default function Projects() {
     }
   };
 
-  const PageNumber: React.FC<{
-    pageNumber: number;
-    onClick: () => void;
-    isActive?: boolean;
-  }> = ({ pageNumber, onClick, isActive }) => (
-    <li
-      className={`w-12 cursor-pointer select-none rounded border py-2 text-center ${
-        isActive ? 'border-[#4B6181]' : 'border-[#263040] text-white/70'
-      }`}
-      onClick={onClick}
-    >
-      {pageNumber}
-    </li>
-  );
-
   return (
     <div className="">
       {/* there's a glitch in the table that only allows colors present in the codebase to be rendered, this section is to render those colors  */}
@@ -123,7 +109,14 @@ export default function Projects() {
       {rowInfo && Object.keys(rowInfo).length > 0 && (
         <Modal isOpen={!!rowInfo} onClose={handleCloseModal} size="4xl">
           <ModalOverlay />
-          <ModalContent bg="#0e1218" w="80%" px="10%" py="5%" maxW="600px">
+          <ModalContent
+            bg="#14192A"
+            w="80%"
+            px="32px"
+            py="52px"
+            maxW="480px"
+            borderRadius="2xl"
+          >
             <ModalHeader
               fontSize="2xl"
               fontFamily="Inter"
@@ -133,35 +126,79 @@ export default function Projects() {
             </ModalHeader>
             <ModalCloseButton color="#c1c2c3" />
             <ModalBody className="text-lg text-neutral-200" paddingBottom={8}>
-              {(rowInfo as any).fields.Currency && (
-                <p className="py-6">
-                  Currency: {(rowInfo as any).fields.Currency}
-                </p>
-              )}
-              {(rowInfo as any).fields.Date && (
-                <p className="py-6">Date: {(rowInfo as any).fields.Date}</p>
-              )}
-              <p className="py-6">Earner:</p>
-              {(rowInfo as any).fields.Rainmaker && (
-                <p className="py-6">
-                  Rainmaker: {(rowInfo as any).fields.Rainmaker}
-                </p>
-              )}
-              <p className="py-6">Region: </p>
-              {(rowInfo as any).fields.Sponsor && (
-                <p className="py-6">
-                  Sponsor: {(rowInfo as any).fields.Sponsor}
-                </p>
-              )}
-              {(rowInfo as any).fields['Total Earnings USD'] && (
-                <p className="py-6">
-                  Total Earnings: $
-                  {(rowInfo as any).fields['Total Earnings USD']}
-                </p>
-              )}
-              {(rowInfo as any).fields.Type && (
-                <p className="py-6">Type: {(rowInfo as any).fields.Type}</p>
-              )}
+              <div className="flex justify-between">
+                <div>
+                  {(rowInfo as any).fields.Currency && (
+                    <>
+                      <p className="mt-6 text-sm text-white">CURRENCY</p>
+                      <p className="text-lg font-medium text-white">
+                        {(rowInfo as any).fields.Currency}
+                      </p>
+                    </>
+                  )}
+                  {(rowInfo as any).fields.Date && (
+                    <>
+                      <p className="mt-6 text-sm text-white">DATE</p>
+                      <p className="text-lg font-medium text-white">
+                        {(rowInfo as any).fields.Date}
+                      </p>
+                    </>
+                  )}
+                  {(rowInfo as any).fields.Earner && (
+                    <>
+                      <p className="mt-6 text-sm text-white">EARNER</p>
+                      {earnerNames.map((name: string, index: number) => (
+                        <p
+                          key={index}
+                          className="text-lg font-medium text-white"
+                        >
+                          {name}
+                        </p>
+                      ))}
+                    </>
+                  )}
+                  {(rowInfo as any).fields.Rainmaker && (
+                    <>
+                      <p className="mt-6 text-sm text-white">RAINMAKER</p>
+                      <p className="text-lg font-medium text-white">
+                        {(rowInfo as any).fields.Rainmaker}
+                      </p>
+                    </>
+                  )}
+                </div>
+                <div>
+                  <>
+                    <p className="mt-6 text-sm text-white">REGION</p>
+                    <p className="text-lg font-medium text-white">
+                      Coming soon
+                    </p>
+                  </>
+                  {(rowInfo as any).fields.Sponsor && (
+                    <>
+                      <p className="mt-6 text-sm text-white">SPONSOR</p>
+                      <p className="text-lg font-medium text-white">
+                        {(rowInfo as any).fields.Sponsor}
+                      </p>
+                    </>
+                  )}
+                  {(rowInfo as any).fields['Total Earnings USD'] && (
+                    <>
+                      <p className="mt-6 text-sm text-white">TOTAL EARNINGS</p>
+                      <p className="text-lg font-medium text-white">
+                        ${(rowInfo as any).fields['Total Earnings USD']}
+                      </p>
+                    </>
+                  )}
+                  {(rowInfo as any).fields.Type && (
+                    <>
+                      <p className="mt-6 text-sm text-white">TYPE</p>
+                      <p className="text-lg font-medium text-white">
+                        {(rowInfo as any).fields.Type}
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
             </ModalBody>
           </ModalContent>
         </Modal>
@@ -169,16 +206,18 @@ export default function Projects() {
 
       {/*  */}
       <div className="custom-scrollbar z-0 overflow-auto">
-        <div className="mx-auto md:w-[1200px]">
+        <div className="mx-auto md:min-w-[1200px]">
           <div className="mx-auto w-[96%]">
-            <h1 className="mt-10 text-2xl font-semibold text-white">
+            <h1 className="mt-10 text-center text-2xl font-semibold text-white">
               Projects
             </h1>
             <Box
-              w={{ base: 'fit-content', md: '1200px' }}
-              py={6}
-              px={4}
+              minW={{ base: '100%', md: '1200px' }}
+              w={{ base: 'fit-content', md: 'fit-content' }}
+              py={{ base: 1, lg: 6 }}
+              px={{ base: 1, lg: 4 }}
               mt={8}
+              mx="auto"
               rounded="lg"
               bg="#121726"
               boxShadow="0px 2px 1px rgba(255, 255, 255, 0.08), inset 0px 2px 4px rgba(0, 0, 0, 0.48)"

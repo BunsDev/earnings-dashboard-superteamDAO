@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import {
@@ -51,6 +50,7 @@ const TimeFilterButton = ({
     variant={isSelected ? 'solid' : 'filled'}
     bgColor={isSelected ? '#2F3B51' : ''}
     color="white"
+    fontSize={{ base: 'xs', md: 'md' }}
     _hover={{ backgroundColor: '#2F3B51' }}
   >
     {label}
@@ -73,6 +73,15 @@ export default function Home() {
         y: {
           ticks: {
             color: '#4B6181',
+            callback: (value: any) => {
+              if (value >= 1e6) {
+                return '$' + (value / 1e6).toFixed(2) + 'M';
+              } else if (value >= 1e3) {
+                return '$' + value / 1e3 + 'k';
+              } else {
+                return '$' + value;
+              }
+            },
           },
           grid: {
             color: '#121726',
@@ -143,21 +152,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-auto w-[96%] max-w-[1200px] pt-16">
+      <div className="mx-auto w-[96%] max-w-[1200px] pt-4">
+        <h1 className="my-6 text-3xl font-semibold text-white">
+          Superteam Earnings Dashboard
+        </h1>
         {chartData ? (
           <Box
             rounded="md"
             border="1px"
             bg="#0F1320"
-            p={8}
+            p={{ base: 4, lg: 8 }}
             borderColor="#0E1218"
             boxShadow="0px 2px 1px rgba(255, 255, 255, 0.08), inset 0px 2px 4px rgba(0, 0, 0, 0.48)"
           >
-            <div className="flex items-center justify-between">
-              <h1 className="mb-12 text-xl font-semibold text-[#DFE4EC]">
+            <div className="mb-12 flex flex-col items-center justify-between lg:flex-row">
+              <h1 className="mb-4 text-xl text-[#DFE4EC] lg:mb-0 lg:font-semibold">
                 SuperteamDAO Earnings Graph
               </h1>
-              <ButtonGroup mb={12}>
+              <ButtonGroup>
                 <TimeFilterButton
                   label="30 D"
                   isSelected={selectedOption === 'Last30Days'}

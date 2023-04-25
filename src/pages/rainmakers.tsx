@@ -1,7 +1,17 @@
 import { rainmakerColumns } from '@/constants/columns';
+import { sponsorAtom } from '@/context/sponsorAtom';
 import useProjects from '@/utils/useProjects';
-import { Box } from '@chakra-ui/react';
-import React, { useEffect, useMemo, useState } from 'react';
+import {
+  Box,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+} from '@chakra-ui/react';
+import { useAtom } from 'jotai';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Column, HeaderGroup, Row, usePagination, useTable } from 'react-table';
 
 export default function Rainmakers() {
@@ -44,56 +54,12 @@ export default function Rainmakers() {
   const columns = useMemo(() => rainmakerColumns, []);
   const data: any[] = useMemo(() => rainmakers, [rainmakers]);
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    page,
-    nextPage,
-    canNextPage,
-    previousPage,
-    canPreviousPage,
-    prepareRow,
-    pageOptions,
-    gotoPage,
-    state,
-  } = useTable(
-    // @ts-ignore
-    { columns: columns, data: data, initialState: { pageSize: 50 } },
-    usePagination
-  );
-
-  const totalEntries = React.useMemo(() => data.length, [data]);
-  const { pageIndex } = state;
-  const entriesStart = pageIndex * 15 + 1;
-  const entriesEnd = Math.min(entriesStart + 14, totalEntries);
-  const currentPage = pageIndex + 1;
-  const totalPages = pageOptions.length;
-
-  const handlePageChange = (pageNumber: number) => {
-    if (pageNumber === currentPage - 1) {
-      previousPage();
-    } else if (pageNumber === currentPage + 1) {
-      nextPage();
-    } else {
-      gotoPage(pageNumber - 1);
-    }
-  };
-
-  const PageNumber: React.FC<{
-    pageNumber: number;
-    onClick: () => void;
-    isActive?: boolean;
-  }> = ({ pageNumber, onClick, isActive }) => (
-    <li
-      className={`w-12 cursor-pointer select-none rounded border py-2 text-center ${
-        isActive ? 'border-[#4B6181]' : 'border-[#263040] text-white/70'
-      }`}
-      onClick={onClick}
-    >
-      {pageNumber}
-    </li>
-  );
+  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
+    useTable(
+      // @ts-ignore
+      { columns: columns, data: data, initialState: { pageSize: 50 } },
+      usePagination
+    );
 
   return (
     <>

@@ -1,8 +1,8 @@
 import Tag from '@/components/Tag';
-import { earnerAtom } from '@/context/earners';
-import { rainmakersAtom } from '@/context/rainmakers';
-import { rowAtom } from '@/context/rowInfo';
-import { sponsorAtom } from '@/context/sponsors';
+import { earnerAtom } from '@/context/earnerAtom';
+import { rainmakersAtom } from '@/context/rainmakerAtom';
+import { rowAtom } from '@/context/rowInfoAtom';
+import { sponsorAtom } from '@/context/sponsorAtom';
 import { getCoin } from '@/utils/getCoin';
 import { getCountry } from '@/utils/getCountry';
 import overflowText from '@/utils/overflow';

@@ -3,6 +3,7 @@ import useProjects from '@/utils/useProjects';
 import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
+import { PageNumber } from '@/components/PageNumber';
 
 export default function Sponsors() {
   const projects = useProjects();
@@ -76,21 +77,6 @@ export default function Sponsors() {
       gotoPage(pageNumber - 1);
     }
   };
-
-  const PageNumber: React.FC<{
-    pageNumber: number;
-    onClick: () => void;
-    isActive?: boolean;
-  }> = ({ pageNumber, onClick, isActive }) => (
-    <li
-      className={`w-12 cursor-pointer select-none rounded border py-2 text-center ${
-        isActive ? 'border-[#4B6181]' : 'border-[#263040] text-white/70'
-      }`}
-      onClick={onClick}
-    >
-      {pageNumber}
-    </li>
-  );
 
   return (
     <>
