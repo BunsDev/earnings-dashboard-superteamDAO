@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getDatabase } from '@/utils/getDatabase';
 import { supabase } from '@/lib/supabase';
 import { verifySignature } from '@upstash/qstash/nextjs';
 import groupBy from 'lodash/groupBy';
+import axios from 'axios';
 
 interface Project {
   id: string;
@@ -17,16 +17,13 @@ const isNumber = (value: any): value is number => typeof value === 'number';
 
 const getRainmakers = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const base = getDatabase();
-    const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
+    const projects = axios.get(
+      'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/projects.json'
+    );
 
-    const records = await table
-      .select({
-        sort: [{ field: 'Date', direction: 'desc' }],
-      })
-      .all();
+    const records = (await projects).data;
 
-    const projectsData = records.map((record) => ({
+    const projectsData = records.map((record: any) => ({
       id: record.id,
       fields: record.fields,
     })) as Project[];
@@ -39,12 +36,16 @@ const getRainmakers = async (req: NextApiRequest, res: NextApiResponse) => {
     const rainmakers = Object.entries(groupedByRainmaker)
       .map(([rainmaker, projects]) => ({
         Name: rainmaker,
-        USD: projects.reduce(
-          (sum, project) =>
-            isNumber(project.fields['Total Earnings USD'])
-              ? sum + project.fields['Total Earnings USD']
-              : sum,
-          0
+        USD: parseFloat(
+          projects
+            .reduce(
+              (sum, project) =>
+                isNumber(project.fields['Total Earnings USD'])
+                  ? sum + project.fields['Total Earnings USD']
+                  : sum,
+              0
+            )
+            .toFixed(2)
         ),
       }))
       .sort((a, b) => b.USD - a.USD)

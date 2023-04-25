@@ -119,7 +119,8 @@ export const projectColumns = [
   },
   {
     accessor: 'fields.Region',
-    Cell: ({ value }: { value: string }) => getCountry(value),
+    Cell: ({ value }: { value: string[] }) =>
+      value && value.length > 0 ? getCountry(value[0]) : null,
   },
   {
     Header: 'Date Given',

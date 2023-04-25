@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import Logo from '@/svgs/logo';
 import Link from 'next/link';
@@ -69,15 +70,15 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden gap-8 whitespace-nowrap lg:flex">
-            <Link href="/projects" className="text-white">
+            <a href="/projects" className="text-white">
               <p className="text-[1.1rem] font-medium">Projects</p>
-            </Link>
-            <Link href="/rainmakers" className="text-white">
+            </a>
+            <a href="/rainmakers" className="text-white">
               <p className="text-[1.1rem] font-medium">Rainmakers</p>
-            </Link>
-            <Link href="/sponsors" className="text-white">
+            </a>
+            <a href="/sponsors" className="text-white">
               <p className="text-[1.1rem] font-medium">Sponsors</p>
-            </Link>
+            </a>
           </div>
           <div className="lg:hidden">
             <AnimatePresence mode="wait">
@@ -122,15 +123,15 @@ export default function Navbar() {
             variants={navLinksVariants}
           >
             <Stack as={'nav'} spacing={3}>
-              <Link href="/projects" className="text-white">
+              <a href="/projects" className="text-white">
                 <p className="text-[1.1rem] font-medium">Projects</p>
-              </Link>
-              <Link href="/rainmakers" className="text-white">
+              </a>
+              <a href="/rainmakers" className="text-white">
                 <p className="text-[1.1rem] font-medium">Rainmakers</p>
-              </Link>
-              <Link href="/sponsors" className="text-white">
+              </a>
+              <a href="/sponsors" className="text-white">
                 <p className="text-[1.1rem] font-medium">Sponsors</p>
-              </Link>
+              </a>
             </Stack>
           </MotionBox>
         </Collapse>

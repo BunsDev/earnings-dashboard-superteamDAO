@@ -123,7 +123,7 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default getProjects;
+export default verifySignature(getProjects);
 
 export const config = {
   api: {

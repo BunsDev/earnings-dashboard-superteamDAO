@@ -15,14 +15,13 @@ export default function Rainmakers() {
     const fetchHistoricalRainmakerData = async () => {
       if (projects.length === 0) {
         try {
-          const { data, error } = await supabase.storage
-            .from('earnings')
-            .download('rainmakers.json');
-          if (error) throw error;
-          if (data) {
-            const jsonData = await new Response(data).json();
-            setWeeklyRainmakerData(jsonData);
-          }
+          const response = await fetch(
+            'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/rainmakers.json'
+          );
+          if (!response.ok) throw new Error('Error fetching data');
+
+          const jsonData = await response.json();
+          setWeeklyRainmakerData(jsonData);
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -75,7 +74,7 @@ export default function Rainmakers() {
       return {
         Rank: currentRank,
         Name: rainmaker.Name,
-        USD: rainmaker.USD,
+        USD: parseFloat(rainmaker.USD.toFixed(2)).toString(),
         rankDifference: getRankDifference(rankDifference),
       };
     });

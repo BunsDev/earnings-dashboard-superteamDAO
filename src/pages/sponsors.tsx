@@ -16,14 +16,13 @@ export default function Sponsors() {
     const fetchHistoricalSponsorData = async () => {
       if (projects.length === 0) {
         try {
-          const { data, error } = await supabase.storage
-            .from('earnings')
-            .download('sponsors.json');
-          if (error) throw error;
-          if (data) {
-            const jsonData = await new Response(data).json();
-            setWeeklySponsorData(jsonData);
-          }
+          const response = await fetch(
+            'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/sponsors.json'
+          );
+          if (!response.ok) throw new Error('Error fetching data');
+
+          const jsonData = await response.json();
+          setWeeklySponsorData(jsonData);
         } catch (error) {
           console.error('Error fetching data:', error);
         }
@@ -73,7 +72,7 @@ export default function Sponsors() {
       return {
         Rank: currentRank,
         Name: sponsor.Name,
-        USD: sponsor.USD,
+        USD: parseFloat(sponsor.USD.toFixed(2)).toString(),
         rankDifference: getRankDifference(rankDifference),
       };
     });
