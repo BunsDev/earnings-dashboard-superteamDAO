@@ -5812,30 +5812,30 @@
   {
     "id": "recHKkS8NWGcxqyWa",
     "fields": {
-      "Name": "Wormhole Deep Dive",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Wormhole",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-11-15",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rec1JiMwa0RlPVM0O",
         "rec7yxtZMdMkR9Wvm",
         "rec371ymejnSSlMSb"
       ],
+      "Date": "2022-11-15",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Wormhole",
+      "Rainmaker": "neilshroff",
+      "Name": "Wormhole Deep Dive",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -5845,28 +5845,28 @@
   {
     "id": "recuh680oUTfI3S8J",
     "fields": {
-      "Name": "khelius - Kotlin Android library for Helius APIs",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 4000,
-      "Total Earnings USD": 4000,
-      "Date": "2022-11-12",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reciTP4ewxrtK2Eg4"
+      ],
+      "Date": "2022-11-12",
+      "Total Earnings USD": 4000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "khelius - Kotlin Android library for Helius APIs",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -5876,28 +5876,28 @@
   {
     "id": "recnFcavHGMnmPOho",
     "fields": {
-      "Name": "Token swap on seahorse",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2000,
-      "Total Earnings USD": 2000,
-      "Date": "2022-11-05",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reczig7HTNYOk8VWT"
+      ],
+      "Date": "2022-11-05",
+      "Total Earnings USD": 2000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Token swap on seahorse",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -5907,28 +5907,28 @@
   {
     "id": "recfLDAt3lu1SlIDx",
     "fields": {
-      "Name": "Metapass Full Stack Development (2nd half)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1200,
-      "Total Earnings USD": 1200,
-      "Date": "2022-11-05",
-      "Rainmaker": "daksh",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recJLFWXOjX7sIYVj"
+      ],
+      "Date": "2022-11-05",
+      "Total Earnings USD": 1200,
+      "Sponsor": "Metapass",
+      "Rainmaker": "daksh",
+      "Name": "Metapass Full Stack Development (2nd half)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reclH7J2CTZDavcWR"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reclH7J2CTZDavcWR"
       ],
       "Title (from Rainmaker Name)": [
         "daksh#0109"
@@ -5938,28 +5938,28 @@
   {
     "id": "recPfQtnY6GipEUlq",
     "fields": {
-      "Name": "Metapass Full Stack Development (1st half)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1200,
-      "Total Earnings USD": 1200,
-      "Date": "2022-11-05",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recJLFWXOjX7sIYVj"
+      ],
+      "Date": "2022-11-05",
+      "Total Earnings USD": 1200,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Metapass Full Stack Development (1st half)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -5969,30 +5969,30 @@
   {
     "id": "rec1M9ntQRimRL8Ar",
     "fields": {
-      "Name": "Pyth Network Deep Dive",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Pyth",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-11-02",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rec1JiMwa0RlPVM0O",
         "rec371ymejnSSlMSb",
         "rec7yxtZMdMkR9Wvm"
       ],
+      "Date": "2022-11-02",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Pyth",
+      "Rainmaker": "neilshroff",
+      "Name": "Pyth Network Deep Dive",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6002,28 +6002,28 @@
   {
     "id": "rec4Cq4R0MrCwKV7u",
     "fields": {
-      "Name": "Supermeets",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2000,
-      "Total Earnings USD": 2000,
-      "Date": "2022-11-02",
-      "Rainmaker": "drprk.eth ",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-11-02",
+      "Total Earnings USD": 2000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "drprk.eth ",
+      "Name": "Supermeets",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recFBcR6bcbQAwe0D"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recFBcR6bcbQAwe0D"
       ],
       "Title (from Rainmaker Name)": [
         "drprk.eth#1527"
@@ -6033,28 +6033,28 @@
   {
     "id": "recyL7fgaHN7PMKm1",
     "fields": {
-      "Name": "Seahorse-TicTacToe",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 750,
-      "Total Earnings USD": 750,
-      "Date": "2022-11-02",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reckDhwgNvVYJwz1g"
+      ],
+      "Date": "2022-11-02",
+      "Total Earnings USD": 750,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Seahorse-TicTacToe",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6064,28 +6064,28 @@
   {
     "id": "recrzbwCS65ZWwtJ3",
     "fields": {
-      "Name": "Superteam Lisbon Merch Design",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 200,
-      "Total Earnings USD": 200,
-      "Date": "2022-11-01",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-11-01",
+      "Total Earnings USD": 200,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "Superteam Lisbon Merch Design",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -6095,28 +6095,28 @@
   {
     "id": "recz9NV3Z23S56HPp",
     "fields": {
-      "Name": "Wordcel's Seahorse version ",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1200,
-      "Total Earnings USD": 1200,
-      "Date": "2022-11-01",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reczig7HTNYOk8VWT"
+      ],
+      "Date": "2022-11-01",
+      "Total Earnings USD": 1200,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Wordcel's Seahorse version ",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "November 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6126,31 +6126,31 @@
   {
     "id": "rec3aNXsdk170Cn1u",
     "fields": {
-      "Name": "Mesha Community Advisory Board",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Mesha",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 4000,
-      "Total Earnings USD": 4000,
-      "Date": "2022-10-31",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recNG6gulkXB2An4i",
         "rec1P3kXnPlhMXviZ",
         "recesnYsaD3LoS0AY",
         "reckd2HcK9blcOfeH"
       ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 4000,
+      "Sponsor": "Mesha",
+      "Rainmaker": "Kash",
+      "Name": "Mesha Community Advisory Board",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6160,28 +6160,28 @@
   {
     "id": "rec4ubxcTpx51J4zI",
     "fields": {
-      "Name": "PerpCrypto",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 5000,
-      "Total Earnings USD": 5000,
-      "Date": "2022-10-31",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recKuM8hjZmVx2KST"
+      ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 5000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "PerpCrypto",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6191,31 +6191,31 @@
   {
     "id": "rec5EwLCqO58MTidV",
     "fields": {
-      "Name": "Checkout by CandyPay",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 6500,
-      "Total Earnings USD": 6500,
-      "Date": "2022-10-31",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recqLlXP7ZmT6sLSz",
         "recodE3wrquCWBkM9",
         "recmq9yD3lEK3ubvs",
         "recy5oC1C4ouGLXTD"
       ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 6500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Checkout by CandyPay",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6225,28 +6225,28 @@
   {
     "id": "recdZJcnKpixcRfxQ",
     "fields": {
-      "Name": "Fomo Fix",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 5000,
-      "Total Earnings USD": 5000,
-      "Date": "2022-10-31",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rec5rZncAxbx7Jqqc"
+      ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 5000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Fomo Fix",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6256,29 +6256,29 @@
   {
     "id": "recgYYChxlR6yN5vj",
     "fields": {
-      "Name": "DefiOS",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 5000,
-      "Total Earnings USD": 5000,
-      "Date": "2022-10-31",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recbqluq1qMWibh6Z",
         "recck2LP01V2Ae6zp"
       ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 5000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "DefiOS",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6288,28 +6288,28 @@
   {
     "id": "reckbXDsKXc86cQbl",
     "fields": {
-      "Name": "Flows of Wormhole",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 8800,
-      "Total Earnings USD": 8800,
-      "Date": "2022-10-31",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recC0Ls95nz4JwmwH"
+      ],
+      "Date": "2022-10-31",
+      "Total Earnings USD": 8800,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Flows of Wormhole",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6319,19 +6319,8 @@
   {
     "id": "recrqVs1RPcXgZe4h",
     "fields": {
-      "Name": "Wordcel Payouts (Historical 2022)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Wordcel",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 16000,
-      "Total Earnings USD": 16000,
-      "Date": "2022-10-30",
-      "Rainmaker": "Shek.dev",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1P3kXnPlhMXviZ",
         "recncuOZOl6fM2Vrx",
@@ -6339,12 +6328,23 @@
         "recKlxmpnXIR21MfB",
         "recEOM9aZCoD2jNrv"
       ],
+      "Date": "2022-10-30",
+      "Total Earnings USD": 16000,
+      "Sponsor": "Wordcel",
+      "Rainmaker": "Shek.dev",
+      "Name": "Wordcel Payouts (Historical 2022)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckxja99GAutBato"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckxja99GAutBato"
       ],
       "Title (from Rainmaker Name)": [
         "shek.dev#5143"
@@ -6354,19 +6354,8 @@
   {
     "id": "recphl4Srg7LYUSH2",
     "fields": {
-      "Name": "Superteam Earn Payouts part 3",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 13600,
-      "Total Earnings USD": 13600,
-      "Date": "2022-10-25",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recwny8aUtB3K3lyk",
         "recuU98oHQ0B6fW5V",
@@ -6375,12 +6364,23 @@
         "rec79BKTNpIXw1JAM",
         "recJmW7IeEyFTiDwn"
       ],
+      "Date": "2022-10-25",
+      "Total Earnings USD": 13600,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Superteam Earn Payouts part 3",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6390,27 +6390,27 @@
   {
     "id": "recGL5TrFhUSR711E",
     "fields": {
-      "Name": "Product & Market Mechanism research for a Solana-based Stealth Prediction Market",
-      "Type": "Permissionless Bounty",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-10-25",
-      "Rainmaker": "yashhsm",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1JiMwa0RlPVM0O"
+      ],
+      "Date": "2022-10-25",
+      "Total Earnings USD": 1000,
+      "Rainmaker": "yashhsm",
+      "Name": "Product & Market Mechanism research for a Solana-based Stealth Prediction Market",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recLbkmzctoeT7R1b"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recLbkmzctoeT7R1b"
       ],
       "Title (from Rainmaker Name)": [
         "yashhsm#9203"
@@ -6420,28 +6420,28 @@
   {
     "id": "recM8HjiktyCYHWV9",
     "fields": {
-      "Name": "[WIP] New Wordcel client",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 6000,
-      "Total Earnings USD": 6000,
-      "Date": "2022-10-22",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rec6MX6eaMbQZX3jF"
+      ],
+      "Date": "2022-10-22",
+      "Total Earnings USD": 6000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "[WIP] New Wordcel client",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6451,28 +6451,28 @@
   {
     "id": "recju4Zfw2hJcWuJu",
     "fields": {
-      "Name": "Cross platform mobile application development in React Native at AtlantisDAO, working in Regenerative Finance. ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Atlantis",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 700,
-      "Total Earnings USD": 700,
-      "Date": "2022-10-19",
-      "Rainmaker": "Ujjwal Gupta",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec4SyZ8n2aH4yEW5"
+      ],
+      "Date": "2022-10-19",
+      "Total Earnings USD": 700,
+      "Sponsor": "Atlantis",
+      "Rainmaker": "Ujjwal Gupta",
+      "Name": "Cross platform mobile application development in React Native at AtlantisDAO, working in Regenerative Finance. ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "rec4SyZ8n2aH4yEW5"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "rec4SyZ8n2aH4yEW5"
       ],
       "Title (from Rainmaker Name)": [
         "Ujjwal Gupta#2523"
@@ -6482,28 +6482,28 @@
   {
     "id": "recRaoaI3vnG9dQme",
     "fields": {
-      "Name": "Grant Bot and Dashboard Development",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-10-19",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recwny8aUtB3K3lyk"
+      ],
+      "Date": "2022-10-19",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Grant Bot and Dashboard Development",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6513,28 +6513,28 @@
   {
     "id": "recUAnCflZLv8FNMO",
     "fields": {
-      "Name": "Sphere",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10000,
-      "Total Earnings USD": 10000,
-      "Date": "2022-10-15",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recZu5C0StNIgilTI"
+      ],
+      "Date": "2022-10-15",
+      "Total Earnings USD": 10000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Sphere",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6544,29 +6544,29 @@
   {
     "id": "recVA2RYVdMsRulhg",
     "fields": {
-      "Name": "User Experience redefined for crypto wallets – A playbook ",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-10-12",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recRSv9q6aaA3D6OO",
         "rec1JiMwa0RlPVM0O"
       ],
+      "Date": "2022-10-12",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "User Experience redefined for crypto wallets – A playbook ",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6576,28 +6576,28 @@
   {
     "id": "recv6fKtVyCVDRWdQ",
     "fields": {
-      "Name": "Dao Talents Club - Supercollabs",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Supercollabs",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 135,
-      "Total Earnings USD": 135,
-      "Date": "2022-10-12",
-      "Rainmaker": "drprk.eth ",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reci3YJSYsIqg6k38"
+      ],
+      "Date": "2022-10-12",
+      "Total Earnings USD": 135,
+      "Sponsor": "Supercollabs",
+      "Rainmaker": "drprk.eth ",
+      "Name": "Dao Talents Club - Supercollabs",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recFBcR6bcbQAwe0D"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recFBcR6bcbQAwe0D"
       ],
       "Title (from Rainmaker Name)": [
         "drprk.eth#1527"
@@ -6607,28 +6607,28 @@
   {
     "id": "recLVWvqcyXWANFgo",
     "fields": {
-      "Name": "Supermeet Mumbai",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 200,
-      "Total Earnings USD": 200,
-      "Date": "2022-10-12",
-      "Rainmaker": "Abbas",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reci3YJSYsIqg6k38"
+      ],
+      "Date": "2022-10-12",
+      "Total Earnings USD": 200,
+      "Sponsor": "Gari",
+      "Rainmaker": "Abbas",
+      "Name": "Supermeet Mumbai",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckd2HcK9blcOfeH"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckd2HcK9blcOfeH"
       ],
       "Title (from Rainmaker Name)": [
         "abbas#5286"
@@ -6638,28 +6638,28 @@
   {
     "id": "recP6FmvxFuuvCtex",
     "fields": {
-      "Name": "ksol - Native android library for Solana & SolPay",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-10-11",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reciTP4ewxrtK2Eg4"
+      ],
+      "Date": "2022-10-11",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "ksol - Native android library for Solana & SolPay",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6669,28 +6669,28 @@
   {
     "id": "recw3ZEnFq60wlvOg",
     "fields": {
-      "Name": "Create tutorials for Seahorse Lang ",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 500,
-      "Total Earnings USD": 500,
-      "Date": "2022-10-10",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recn5yJusTrohSc1X"
+      ],
+      "Date": "2022-10-10",
+      "Total Earnings USD": 500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Create tutorials for Seahorse Lang ",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -6700,28 +6700,28 @@
   {
     "id": "rec5zwfZuh8aomSj7",
     "fields": {
-      "Name": "Social Media for the Dilli HH",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 435,
-      "Total Earnings USD": 435,
-      "Date": "2022-10-07",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recUw6gypgdvsTzVa"
+      ],
+      "Date": "2022-10-07",
+      "Total Earnings USD": 435,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Social Media for the Dilli HH",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6731,28 +6731,28 @@
   {
     "id": "recSrxkgrOcdkFymO",
     "fields": {
-      "Name": "Streaming Payments by Generating Streaming Link",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-10-06",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rec5WdHXt17kconLE"
+      ],
+      "Date": "2022-10-06",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Streaming Payments by Generating Streaming Link",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6762,28 +6762,28 @@
   {
     "id": "recpIKHf6ckqdIf8F",
     "fields": {
-      "Name": "Super internship: Handson internship experience in dune analytics & a comprehensive report on the DAOverse ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 850,
-      "Total Earnings USD": 850,
-      "Date": "2022-10-03",
-      "Rainmaker": "Saumya",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recdnvpe4uGs5Mb80"
+      ],
+      "Date": "2022-10-03",
+      "Total Earnings USD": 850,
+      "Sponsor": "Gari",
+      "Rainmaker": "Saumya",
+      "Name": "Super internship: Handson internship experience in dune analytics & a comprehensive report on the DAOverse ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "rec6X5g4MqkWlvJ9j"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "rec6X5g4MqkWlvJ9j"
       ],
       "Title (from Rainmaker Name)": [
         "saxenasaheb#2331"
@@ -6793,28 +6793,28 @@
   {
     "id": "receJrMOEP3aGrjOz",
     "fields": {
-      "Name": "Shuriken",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 3000,
-      "Total Earnings USD": 3000,
-      "Date": "2022-10-03",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recoHIQviudqCg0kq"
+      ],
+      "Date": "2022-10-03",
+      "Total Earnings USD": 3000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Shuriken",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6824,28 +6824,28 @@
   {
     "id": "recX8YBOVWlXOjW4b",
     "fields": {
-      "Name": "Supermeet Mumbai Standee & Poster Design",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 100,
-      "Total Earnings USD": 100,
-      "Date": "2022-10-01",
-      "Rainmaker": "Abbas",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-10-01",
+      "Total Earnings USD": 100,
+      "Sponsor": "Gari",
+      "Rainmaker": "Abbas",
+      "Name": "Supermeet Mumbai Standee & Poster Design",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckd2HcK9blcOfeH"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "October 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckd2HcK9blcOfeH"
       ],
       "Title (from Rainmaker Name)": [
         "abbas#5286"
@@ -6855,19 +6855,8 @@
   {
     "id": "recZLmrzjyoxQT5L0",
     "fields": {
-      "Name": "Wordcel Payouts (Historical 2022)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Wordcel",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 16000,
-      "Total Earnings USD": 16000,
-      "Date": "2022-09-30",
-      "Rainmaker": "Shek.dev",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1P3kXnPlhMXviZ",
         "recncuOZOl6fM2Vrx",
@@ -6875,12 +6864,23 @@
         "recKlxmpnXIR21MfB",
         "recEOM9aZCoD2jNrv"
       ],
+      "Date": "2022-09-30",
+      "Total Earnings USD": 16000,
+      "Sponsor": "Wordcel",
+      "Rainmaker": "Shek.dev",
+      "Name": "Wordcel Payouts (Historical 2022)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckxja99GAutBato"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckxja99GAutBato"
       ],
       "Title (from Rainmaker Name)": [
         "shek.dev#5143"
@@ -6890,29 +6890,29 @@
   {
     "id": "recd2yz63OjyzKSdd",
     "fields": {
-      "Name": "Superteam Security",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 5000,
-      "Total Earnings USD": 5000,
-      "Date": "2022-09-29",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recmmuY4Po45bOmsi",
         "recrlcrtR8A13FnI0"
       ],
+      "Date": "2022-09-29",
+      "Total Earnings USD": 5000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Superteam Security",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -6922,19 +6922,8 @@
   {
     "id": "recj8vHkQmBYLQ4To",
     "fields": {
-      "Name": "Superteam Earn Payments part 2",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10950,
-      "Total Earnings USD": 10950,
-      "Date": "2022-09-29",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recJmW7IeEyFTiDwn",
         "recEOM9aZCoD2jNrv",
@@ -6942,12 +6931,23 @@
         "recodE3wrquCWBkM9",
         "recwny8aUtB3K3lyk"
       ],
+      "Date": "2022-09-29",
+      "Total Earnings USD": 10950,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Superteam Earn Payments part 2",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6957,29 +6957,29 @@
   {
     "id": "recmH0h1c1fycabJ7",
     "fields": {
-      "Name": "Mesha Deep Dive Bounty",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Mesha",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-09-28",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1JiMwa0RlPVM0O",
         "recJoQzlQz43bxoBj"
       ],
+      "Date": "2022-09-28",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Mesha",
+      "Rainmaker": "Kash",
+      "Name": "Mesha Deep Dive Bounty",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -6989,30 +6989,30 @@
   {
     "id": "recYTCcpl4Ewc4bKT",
     "fields": {
-      "Name": "Lazy Trade Product Feedback Bounty",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Lazy Trade",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-09-28",
-      "Rainmaker": "Abbas",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recRSv9q6aaA3D6OO",
         "recMolQIW6jIlkqQL",
         "rec1JiMwa0RlPVM0O"
       ],
+      "Date": "2022-09-28",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Lazy Trade",
+      "Rainmaker": "Abbas",
+      "Name": "Lazy Trade Product Feedback Bounty",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "reckd2HcK9blcOfeH"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckd2HcK9blcOfeH"
       ],
       "Title (from Rainmaker Name)": [
         "abbas#5286"
@@ -7022,29 +7022,29 @@
   {
     "id": "recRf8bC8GsW1SmED",
     "fields": {
-      "Name": "Gari Payouts",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1600,
-      "Total Earnings USD": 1600,
-      "Date": "2022-09-28",
-      "Rainmaker": "drprk.eth ",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recBbgoGd6neBASmq",
         "rec6X5g4MqkWlvJ9j"
       ],
+      "Date": "2022-09-28",
+      "Total Earnings USD": 1600,
+      "Sponsor": "Gari",
+      "Rainmaker": "drprk.eth ",
+      "Name": "Gari Payouts",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recFBcR6bcbQAwe0D"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recFBcR6bcbQAwe0D"
       ],
       "Title (from Rainmaker Name)": [
         "drprk.eth#1527"
@@ -7054,28 +7054,28 @@
   {
     "id": "recrWRhWrspINW5Rd",
     "fields": {
-      "Name": "Seahorse Program Library",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-09-27",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recRZAcP3Y00S5YTc"
+      ],
+      "Date": "2022-09-27",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Seahorse Program Library",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7085,30 +7085,30 @@
   {
     "id": "recV9jrEtBfAbyXH1",
     "fields": {
-      "Name": "Amulet UI/UX Bounty",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Amulet",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 3250,
-      "Total Earnings USD": 3250,
-      "Date": "2022-09-27",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recQ4RRnmpwJzkQqp",
         "recJB5YGnrfRxTTMN",
         "rec9HLucLMEK1vUAo"
       ],
+      "Date": "2022-09-27",
+      "Total Earnings USD": 3250,
+      "Sponsor": "Amulet",
+      "Rainmaker": "Kash",
+      "Name": "Amulet UI/UX Bounty",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7118,28 +7118,28 @@
   {
     "id": "recnmrrGVRNKXU7YV",
     "fields": {
-      "Name": "Design work for CandyPay and Chess Champs ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Candypay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2600,
-      "Total Earnings USD": 2600,
-      "Date": "2022-09-24",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recEOM9aZCoD2jNrv"
+      ],
+      "Date": "2022-09-24",
+      "Total Earnings USD": 2600,
+      "Sponsor": "Candypay",
+      "Rainmaker": "Vampo",
+      "Name": "Design work for CandyPay and Chess Champs ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -7149,29 +7149,29 @@
   {
     "id": "recyfPiynvKVnBVtt",
     "fields": {
-      "Name": "Hired two devs for react and rust via Superteam",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solace Protocol",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2500,
-      "Total Earnings USD": 2500,
-      "Date": "2022-09-22",
-      "Rainmaker": "xxhwin",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recaG2oImxkBq02El",
         "rectXCKsz5W9fcCO6"
       ],
+      "Date": "2022-09-22",
+      "Total Earnings USD": 2500,
+      "Sponsor": "Solace Protocol",
+      "Rainmaker": "xxhwin",
+      "Name": "Hired two devs for react and rust via Superteam",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recT6Xees1hdzQPCK"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recT6Xees1hdzQPCK"
       ],
       "Title (from Rainmaker Name)": [
         "xxhwin#4685"
@@ -7181,30 +7181,30 @@
   {
     "id": "recC4olcccgCEG53b",
     "fields": {
-      "Name": "Seahorse Tutorials",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-09-22",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recwny8aUtB3K3lyk",
         "recRqoutZxuJtCtsQ",
         "recrlcrtR8A13FnI0"
       ],
+      "Date": "2022-09-22",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "Seahorse Tutorials",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -7214,28 +7214,28 @@
   {
     "id": "rec8ZEYANZUteYoAM",
     "fields": {
-      "Name": "Legit ",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10000,
-      "Total Earnings USD": 10000,
-      "Date": "2022-09-21",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recXznNVCbHSS33cM"
+      ],
+      "Date": "2022-09-21",
+      "Total Earnings USD": 10000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Legit ",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7245,28 +7245,28 @@
   {
     "id": "recQQTrcvDWP5erhs",
     "fields": {
-      "Name": "Zilch",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2500,
-      "Total Earnings USD": 2500,
-      "Date": "2022-09-21",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recMmOUMbok2RUtXq"
+      ],
+      "Date": "2022-09-21",
+      "Total Earnings USD": 2500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Zilch",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7276,28 +7276,28 @@
   {
     "id": "rec6itTU2ttb2cVpH",
     "fields": {
-      "Name": "Writers Grant Program - Samudai",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Samudai",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 200,
-      "Total Earnings USD": 200,
-      "Date": "2022-09-19",
-      "Rainmaker": "Abbas",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recLbkmzctoeT7R1b"
+      ],
+      "Date": "2022-09-19",
+      "Total Earnings USD": 200,
+      "Sponsor": "Samudai",
+      "Rainmaker": "Abbas",
+      "Name": "Writers Grant Program - Samudai",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "reckd2HcK9blcOfeH"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckd2HcK9blcOfeH"
       ],
       "Title (from Rainmaker Name)": [
         "abbas#5286"
@@ -7307,20 +7307,20 @@
   {
     "id": "recXXQoemAHILJmuE",
     "fields": {
-      "Name": "Strategy and Ops",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Atlantis",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 500,
-      "Total Earnings USD": 500,
-      "Date": "2022-09-15",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec4SyZ8n2aH4yEW5"
+      ],
+      "Date": "2022-09-15",
+      "Total Earnings USD": 500,
+      "Sponsor": "Atlantis",
+      "Name": "Strategy and Ops",
+      "Type": "Permissionless Bounty",
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
@@ -7331,28 +7331,28 @@
   {
     "id": "reciU1OWSWbP4zDFX",
     "fields": {
-      "Name": "Physical Location Research",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-09-15",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recn5yJusTrohSc1X"
+      ],
+      "Date": "2022-09-15",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Physical Location Research",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7362,25 +7362,25 @@
   {
     "id": "recjTJHYhf1OLZehq",
     "fields": {
+      "Currency": "USDC",
+      "Amount": 6000,
+      "Date": "2022-09-15",
+      "Total Earnings USD": 6000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Devaiah Bopanna",
       "Name": "Codies Video",
       "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
-      "Currency": "USDC",
+      "Rainmaker Name": [
+        "recGjulo4wWELE6rR"
+      ],
+      "Foundation": "Foundation",
       "USD Token Value": 1,
-      "Amount": 6000,
-      "Total Earnings USD": 6000,
-      "Date": "2022-09-15",
-      "Rainmaker": "Devaiah Bopanna",
       "Region": [
         "reckMKOOQ59TFRk6n"
       ],
-      "Foundation": "Foundation",
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recGjulo4wWELE6rR"
       ],
       "Title (from Rainmaker Name)": [
         "Devaiah Bopanna#5105"
@@ -7390,28 +7390,28 @@
   {
     "id": "recC5XY1jDrSXlHNT",
     "fields": {
-      "Name": "Integrate Squads to the Grape Dashboard",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Grape",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2000,
-      "Total Earnings USD": 2000,
-      "Date": "2022-09-15",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recZUyC9hpYGae5t9"
+      ],
+      "Date": "2022-09-15",
+      "Total Earnings USD": 2000,
+      "Sponsor": "Grape",
+      "Rainmaker": "Kash",
+      "Name": "Integrate Squads to the Grape Dashboard",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7421,28 +7421,28 @@
   {
     "id": "recRlgDSgYlhjPyY6",
     "fields": {
-      "Name": "HH Social Support for Dilli",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 435,
-      "Total Earnings USD": 435,
-      "Date": "2022-09-15",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recuIinWKpmRYxvWf"
+      ],
+      "Date": "2022-09-15",
+      "Total Earnings USD": 435,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "HH Social Support for Dilli",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7452,28 +7452,28 @@
   {
     "id": "recn9k8QpibpI4oZR",
     "fields": {
-      "Name": "Metapass Merch",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 143,
-      "Total Earnings USD": 143,
-      "Date": "2022-09-14",
-      "Rainmaker": "daksh",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reci3YJSYsIqg6k38"
+      ],
+      "Date": "2022-09-14",
+      "Total Earnings USD": 143,
+      "Sponsor": "Metapass",
+      "Rainmaker": "daksh",
+      "Name": "Metapass Merch",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reclH7J2CTZDavcWR"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reclH7J2CTZDavcWR"
       ],
       "Title (from Rainmaker Name)": [
         "daksh#0109"
@@ -7483,28 +7483,28 @@
   {
     "id": "recnfrO3XoubleD39",
     "fields": {
-      "Name": "Superparty Goa",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 300,
-      "Total Earnings USD": 300,
-      "Date": "2022-09-14",
-      "Rainmaker": "daksh",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-09-14",
+      "Total Earnings USD": 300,
+      "Sponsor": "Metapass",
+      "Rainmaker": "daksh",
+      "Name": "Superparty Goa",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reclH7J2CTZDavcWR"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reclH7J2CTZDavcWR"
       ],
       "Title (from Rainmaker Name)": [
         "daksh#0109"
@@ -7514,28 +7514,28 @@
   {
     "id": "recbICcFWU2LqNzfG",
     "fields": {
-      "Name": "Metapass Merch",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 143,
-      "Total Earnings USD": 143,
-      "Date": "2022-09-14",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reci3YJSYsIqg6k38"
+      ],
+      "Date": "2022-09-14",
+      "Total Earnings USD": 143,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Metapass Merch",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -7545,28 +7545,28 @@
   {
     "id": "reckxCgl2snkwMxrj",
     "fields": {
-      "Name": "Superparty Goa",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 300,
-      "Total Earnings USD": 300,
-      "Date": "2022-09-14",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-09-14",
+      "Total Earnings USD": 300,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Superparty Goa",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -7576,29 +7576,29 @@
   {
     "id": "recE9HxQpDLfgoUQr",
     "fields": {
-      "Name": "Superteam Earn Hype Video",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1300,
-      "Total Earnings USD": 1300,
-      "Date": "2022-09-12",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recvQnVgqlVPtQz8g",
         "recSoBFGSBCjeb3JC"
       ],
+      "Date": "2022-09-12",
+      "Total Earnings USD": 1300,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Superteam Earn Hype Video",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7608,28 +7608,28 @@
   {
     "id": "recczIQfdjK21ywrg",
     "fields": {
-      "Name": "Content Writing for CandyPay",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Candy Pay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 400,
-      "Total Earnings USD": 400,
-      "Date": "2022-09-06",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1JiMwa0RlPVM0O"
+      ],
+      "Date": "2022-09-06",
+      "Total Earnings USD": 400,
+      "Sponsor": "Candy Pay",
+      "Rainmaker": "Vampo",
+      "Name": "Content Writing for CandyPay",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -7639,31 +7639,31 @@
   {
     "id": "recIPy5kMEH7ItJun",
     "fields": {
-      "Name": "FTX Crypto Cup On-Chain Reputation NFTs",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10000,
-      "Total Earnings USD": 10000,
-      "Date": "2022-09-06",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recqLlXP7ZmT6sLSz",
         "recmq9yD3lEK3ubvs",
         "recy5oC1C4ouGLXTD",
         "recodE3wrquCWBkM9"
       ],
+      "Date": "2022-09-06",
+      "Total Earnings USD": 10000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "FTX Crypto Cup On-Chain Reputation NFTs",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7673,30 +7673,30 @@
   {
     "id": "recub6qX1zOnydKk2",
     "fields": {
-      "Name": "Pillow Fund Video Bounty",
-      "Type": "Permissioned Bounty",
-      "Sponsor": "Pillow",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-09-02",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reczEnpxS9XYVlihD",
         "recMolQIW6jIlkqQL",
         "recQt7nd8AOPlLahT"
       ],
+      "Date": "2022-09-02",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Pillow",
+      "Rainmaker": "Kash",
+      "Name": "Pillow Fund Video Bounty",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "September 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7706,19 +7706,8 @@
   {
     "id": "reclW5v7Lb8PfdyiH",
     "fields": {
-      "Name": "Wordcel Payouts",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Wordcel",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 16000,
-      "Total Earnings USD": 16000,
-      "Date": "2022-08-30",
-      "Rainmaker": "Shek.dev",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1P3kXnPlhMXviZ",
         "recncuOZOl6fM2Vrx",
@@ -7726,12 +7715,23 @@
         "recKlxmpnXIR21MfB",
         "recEOM9aZCoD2jNrv"
       ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 16000,
+      "Sponsor": "Wordcel",
+      "Rainmaker": "Shek.dev",
+      "Name": "Wordcel Payouts",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckxja99GAutBato"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckxja99GAutBato"
       ],
       "Title (from Rainmaker Name)": [
         "shek.dev#5143"
@@ -7741,28 +7741,28 @@
   {
     "id": "recZu74BNzuQsxV4k",
     "fields": {
-      "Name": "Reputation Sheriff (July-Sept)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2100,
-      "Total Earnings USD": 2100,
-      "Date": "2022-08-30",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recBbgoGd6neBASmq"
+      ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 2100,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Reputation Sheriff (July-Sept)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7772,28 +7772,28 @@
   {
     "id": "recg7C8AWD2D0sjrP",
     "fields": {
-      "Name": "Solana Education Design",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metacrafters",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 8000,
-      "Total Earnings USD": 8000,
-      "Date": "2022-08-30",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recSBafsScFQ58Fz5"
+      ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 8000,
+      "Sponsor": "Metacrafters",
+      "Rainmaker": "Kash",
+      "Name": "Solana Education Design",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7803,28 +7803,28 @@
   {
     "id": "recvuP5p93CoTkELu",
     "fields": {
-      "Name": "Sqlana",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 4000,
-      "Total Earnings USD": 4000,
-      "Date": "2022-08-30",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recd4XxBezNMaJxmJ"
+      ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 4000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Sqlana",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7834,28 +7834,28 @@
   {
     "id": "recGIg7XVDk5uLOwr",
     "fields": {
-      "Name": "Bounty Program",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-08-30",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Bounty Program",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -7865,19 +7865,8 @@
   {
     "id": "recJkr5QkFQNjzY0S",
     "fields": {
-      "Name": "Community Advisory Board (3 Months)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Capx",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10000,
-      "Total Earnings USD": 10000,
-      "Date": "2022-08-30",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH",
         "rec1P3kXnPlhMXviZ",
@@ -7885,12 +7874,23 @@
         "recNG6gulkXB2An4i",
         "recBbgoGd6neBASmq"
       ],
+      "Date": "2022-08-30",
+      "Total Earnings USD": 10000,
+      "Sponsor": "Capx",
+      "Rainmaker": "Kash",
+      "Name": "Community Advisory Board (3 Months)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7900,28 +7900,28 @@
   {
     "id": "recExo8YzgDo8DFnI",
     "fields": {
-      "Name": "Frontend development for No-Code Builder",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Candypay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-08-28",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recy5oC1C4ouGLXTD"
+      ],
+      "Date": "2022-08-28",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Candypay",
+      "Rainmaker": "Vampo",
+      "Name": "Frontend development for No-Code Builder",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -7931,28 +7931,28 @@
   {
     "id": "recgpVrH8DzotnueR",
     "fields": {
-      "Name": "Gasless NFT collection designing for Delhi HH drop",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-08-27",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-08-27",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Vampo",
+      "Name": "Gasless NFT collection designing for Delhi HH drop",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -7962,28 +7962,28 @@
   {
     "id": "recq7CwJYiGfP03R2",
     "fields": {
-      "Name": "Rust Development Continued (Historical)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Doge Track",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 13000,
-      "Total Earnings USD": 13000,
-      "Date": "2022-08-25",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recrv7dAc0uXR3G6M"
+      ],
+      "Date": "2022-08-25",
+      "Total Earnings USD": 13000,
+      "Sponsor": "Doge Track",
+      "Rainmaker": "Kash",
+      "Name": "Rust Development Continued (Historical)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -7993,28 +7993,28 @@
   {
     "id": "recX5iTGfCcFDw43J",
     "fields": {
-      "Name": "NiftyClick",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 6000,
-      "Total Earnings USD": 6000,
-      "Date": "2022-08-25",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "reccXHMN6UjuBWMKK"
+      ],
+      "Date": "2022-08-25",
+      "Total Earnings USD": 6000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "NiftyClick",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8024,31 +8024,31 @@
   {
     "id": "recyzxbAGIEp1G1rv",
     "fields": {
-      "Name": "Superteam Earn Payouts",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 5250,
-      "Total Earnings USD": 5250,
-      "Date": "2022-08-25",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "rectD9gZk1FMoCDzk",
         "recuU98oHQ0B6fW5V",
         "recEOM9aZCoD2jNrv",
         "recJmW7IeEyFTiDwn"
       ],
+      "Date": "2022-08-25",
+      "Total Earnings USD": 5250,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Kash",
+      "Name": "Superteam Earn Payouts",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -8058,28 +8058,28 @@
   {
     "id": "recBfpfVrQzfVzcDU",
     "fields": {
-      "Name": "Persistence stkSOL video",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Persistence One",
       "Currency": "USDT",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-08-25",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-08-25",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Persistence One",
+      "Rainmaker": "Kash",
+      "Name": "Persistence stkSOL video",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -8089,28 +8089,28 @@
   {
     "id": "rec7YflFFePxjjulJ",
     "fields": {
-      "Name": "New Superteam Website",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 2250,
-      "Total Earnings USD": 2250,
-      "Date": "2022-08-24",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recoYvPK3ckPJlSpz"
+      ],
+      "Date": "2022-08-24",
+      "Total Earnings USD": 2250,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "New Superteam Website",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8120,29 +8120,29 @@
   {
     "id": "rec427hegSktDnL4J",
     "fields": {
-      "Name": "Logo design for Hyperspace.xyz ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Hyperspace",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 500,
-      "Total Earnings USD": 500,
-      "Date": "2022-08-22",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recXJgfPgWkLb114v",
         "recw3PIvE4uB2NHHa"
       ],
+      "Date": "2022-08-22",
+      "Total Earnings USD": 500,
+      "Sponsor": "Hyperspace",
+      "Rainmaker": "Kash",
+      "Name": "Logo design for Hyperspace.xyz ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -8152,28 +8152,28 @@
   {
     "id": "recNBlnEARBDu3U2m",
     "fields": {
-      "Name": "Superparty Goa",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 350,
-      "Total Earnings USD": 350,
-      "Date": "2022-08-20",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-08-20",
+      "Total Earnings USD": 350,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Superparty Goa",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -8183,19 +8183,8 @@
   {
     "id": "recTWfHEBdjHJ1FfV",
     "fields": {
-      "Name": "SDC Audits",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 4500,
-      "Total Earnings USD": 4500,
-      "Date": "2022-08-18",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recd4XxBezNMaJxmJ",
         "recrlcrtR8A13FnI0",
@@ -8205,12 +8194,23 @@
         "rec1P3kXnPlhMXviZ",
         "recXa0ZL2bJjwZfGF"
       ],
+      "Date": "2022-08-18",
+      "Total Earnings USD": 4500,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "neilshroff",
+      "Name": "SDC Audits",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -8220,28 +8220,28 @@
   {
     "id": "recWlJkC7IgKvnH0U",
     "fields": {
-      "Name": "Delhi Hacker House Crusher Video",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 800,
-      "Total Earnings USD": 800,
-      "Date": "2022-08-17",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recQt7nd8AOPlLahT"
+      ],
+      "Date": "2022-08-17",
+      "Total Earnings USD": 800,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Delhi Hacker House Crusher Video",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8251,24 +8251,24 @@
   {
     "id": "rec1HxDa1PEJPympB",
     "fields": {
+      "Currency": "USDC",
+      "Amount": 4000,
+      "Date": "2022-08-16",
+      "Total Earnings USD": 4000,
+      "Rainmaker": "Kash",
       "Name": "Developed app features and Solana Rust program",
       "Type": "Permissionless Bounty",
-      "Currency": "USDC",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
       "USD Token Value": 1,
-      "Amount": 4000,
-      "Total Earnings USD": 4000,
-      "Date": "2022-08-16",
-      "Rainmaker": "Kash",
       "Region": [
         "reckMKOOQ59TFRk6n"
       ],
-      "Foundation": "Other",
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -8278,28 +8278,28 @@
   {
     "id": "rec764UDKIgRjvkpZ",
     "fields": {
-      "Name": "Solana StackExchange XP System",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-08-16",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recwny8aUtB3K3lyk"
+      ],
+      "Date": "2022-08-16",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Solana StackExchange XP System",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8309,30 +8309,30 @@
   {
     "id": "rec7uRV9DmHk4VsJ1",
     "fields": {
-      "Name": "Gari CAB July Payouts",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 3840,
-      "Total Earnings USD": 3840,
-      "Date": "2022-08-10",
-      "Rainmaker": "drprk.eth ",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rectD9gZk1FMoCDzk"
+      ],
+      "Date": "2022-08-10",
+      "Total Earnings USD": 3840,
+      "Sponsor": "Gari",
+      "Rainmaker": "drprk.eth ",
+      "Name": "Gari CAB July Payouts",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recFBcR6bcbQAwe0D"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "Doc's Comments": "change to 3840 for Pratik Saria only, the rest has been reported as GARI Payouts here: https://airtable.com/appl7cGgmube9qBrH/tblriwqCMk8D7INof/viwcMPzuF2Vyfm7DM/recRf8bC8GsW1SmED?copyLinkToCellOrRecordOrigin=gridView&blocks=hide ",
       "Kash Comments": "Sounds good, press ahead\n\n",
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recFBcR6bcbQAwe0D"
       ],
       "Title (from Rainmaker Name)": [
         "drprk.eth#1527"
@@ -8342,19 +8342,19 @@
   {
     "id": "recdGXkNKrr5vgAQy",
     "fields": {
-      "Name": "Wrote and creative directed hype video",
-      "Type": "Permissionless Bounty",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 150,
-      "Total Earnings USD": 150,
-      "Date": "2022-08-09",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recB0qeB9C8s3iztX"
+      ],
+      "Date": "2022-08-09",
+      "Total Earnings USD": 150,
+      "Name": "Wrote and creative directed hype video",
+      "Type": "Permissionless Bounty",
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
@@ -8365,28 +8365,28 @@
   {
     "id": "recyIawbNRnoBi5Db",
     "fields": {
-      "Name": "Teaser for CandyPay",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Candypay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 200,
-      "Total Earnings USD": 200,
-      "Date": "2022-08-08",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-08-08",
+      "Total Earnings USD": 200,
+      "Sponsor": "Candypay",
+      "Rainmaker": "Vampo",
+      "Name": "Teaser for CandyPay",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -8396,28 +8396,28 @@
   {
     "id": "recEMm75aWiv7uAPB",
     "fields": {
-      "Name": "Community Management & Content Strategy ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Samudai",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10500,
-      "Total Earnings USD": 10500,
-      "Date": "2022-08-02",
-      "Rainmaker": "neilshroff",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reckd2HcK9blcOfeH"
+      ],
+      "Date": "2022-08-02",
+      "Total Earnings USD": 10500,
+      "Sponsor": "Samudai",
+      "Rainmaker": "neilshroff",
+      "Name": "Community Management & Content Strategy ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recgZU2nz1HxNYvij"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "August 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recgZU2nz1HxNYvij"
       ],
       "Title (from Rainmaker Name)": [
         "neilshroff#2180"
@@ -8427,19 +8427,8 @@
   {
     "id": "recc5O2S03QX05bLC",
     "fields": {
-      "Name": "Wordcel Payouts",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Wordcel",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 16000,
-      "Total Earnings USD": 16000,
-      "Date": "2022-07-30",
-      "Rainmaker": "Shek.dev",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rec1P3kXnPlhMXviZ",
         "recncuOZOl6fM2Vrx",
@@ -8447,12 +8436,23 @@
         "recKlxmpnXIR21MfB",
         "recEOM9aZCoD2jNrv"
       ],
+      "Date": "2022-07-30",
+      "Total Earnings USD": 16000,
+      "Sponsor": "Wordcel",
+      "Rainmaker": "Shek.dev",
+      "Name": "Wordcel Payouts",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "reckxja99GAutBato"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "reckxja99GAutBato"
       ],
       "Title (from Rainmaker Name)": [
         "shek.dev#5143"
@@ -8462,30 +8462,30 @@
   {
     "id": "recnAbG3mz6sSaNHB",
     "fields": {
-      "Name": "Devlopment work for CandyPay ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Candypay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 450,
-      "Total Earnings USD": 450,
-      "Date": "2022-07-29",
-      "Rainmaker": "Vampo",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recmq9yD3lEK3ubvs",
         "recodE3wrquCWBkM9",
         "recqLlXP7ZmT6sLSz"
       ],
+      "Date": "2022-07-29",
+      "Total Earnings USD": 450,
+      "Sponsor": "Candypay",
+      "Rainmaker": "Vampo",
+      "Name": "Devlopment work for CandyPay ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recqLlXP7ZmT6sLSz"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recqLlXP7ZmT6sLSz"
       ],
       "Title (from Rainmaker Name)": [
         "Vampo#7152"
@@ -8495,28 +8495,28 @@
   {
     "id": "recxitiSonsQf8CBr",
     "fields": {
-      "Name": "Solana Vision Design",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Vision",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-07-27",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "reczke4IDn0tJHRx1"
+      ],
+      "Date": "2022-07-27",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Solana Vision",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "Solana Vision Design",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8526,27 +8526,27 @@
   {
     "id": "recFukxIL5Cr0XZBS",
     "fields": {
-      "Name": "Recruiting Referral for Sai",
-      "Type": "Permissioned Bounty",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-07-27",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recUecUIvgxkiz99s"
+      ],
+      "Date": "2022-07-27",
+      "Total Earnings USD": 1000,
+      "Rainmaker": "Kash",
+      "Name": "Recruiting Referral for Sai",
+      "Type": "Permissioned Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
@@ -8556,28 +8556,28 @@
   {
     "id": "recaFt5rNjOGJnUsE",
     "fields": {
-      "Name": "StellarSOL Logo Design",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "StellarSOL",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 100,
-      "Total Earnings USD": 100,
-      "Date": "2022-07-26",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recNsrv12jaMaXsFg"
+      ],
+      "Date": "2022-07-26",
+      "Total Earnings USD": 100,
+      "Sponsor": "StellarSOL",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "StellarSOL Logo Design",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8587,28 +8587,28 @@
   {
     "id": "recb0RwvSlr93eJaX",
     "fields": {
-      "Name": "Community management for Stellar Sol",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "StellarSOL",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 150,
-      "Total Earnings USD": 150,
-      "Date": "2022-07-26",
-      "Rainmaker": "Ujjwal Gupta",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recXa0ZL2bJjwZfGF"
+      ],
+      "Date": "2022-07-26",
+      "Total Earnings USD": 150,
+      "Sponsor": "StellarSOL",
+      "Rainmaker": "Ujjwal Gupta",
+      "Name": "Community management for Stellar Sol",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "rec4SyZ8n2aH4yEW5"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "rec4SyZ8n2aH4yEW5"
       ],
       "Title (from Rainmaker Name)": [
         "Ujjwal Gupta#2523"
@@ -8618,29 +8618,29 @@
   {
     "id": "recf0iKNhEjhwBXoZ",
     "fields": {
-      "Name": "StellarSOL Development",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "StellarSOL",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 3000,
-      "Total Earnings USD": 3000,
-      "Date": "2022-07-26",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recuU98oHQ0B6fW5V",
         "recncuOZOl6fM2Vrx"
       ],
+      "Date": "2022-07-26",
+      "Total Earnings USD": 3000,
+      "Sponsor": "StellarSOL",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "StellarSOL Development",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8650,28 +8650,28 @@
   {
     "id": "recrIFMCVC2Ml4hZn",
     "fields": {
-      "Name": "Design for Dashboard for Metapass",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1000,
-      "Total Earnings USD": 1000,
-      "Date": "2022-07-24",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recNYwhJHlOxwYF1y"
+      ],
+      "Date": "2022-07-24",
+      "Total Earnings USD": 1000,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Design for Dashboard for Metapass",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -8681,29 +8681,29 @@
   {
     "id": "recqEATnKLlSupyfn",
     "fields": {
-      "Name": "Solace Protocol",
-      "Type": "Instagrant",
-      "Sponsor": "Solana Foundation",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 10000,
-      "Total Earnings USD": 10000,
-      "Date": "2022-07-20",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recT6Xees1hdzQPCK",
         "recOer1RIlIQ3bcBw"
       ],
+      "Date": "2022-07-20",
+      "Total Earnings USD": 10000,
+      "Sponsor": "Solana Foundation",
+      "Rainmaker": "Akshay BD",
+      "Name": "Solace Protocol",
+      "Type": "Instagrant",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8713,28 +8713,28 @@
   {
     "id": "rec6TLWIXlZVxw3Un",
     "fields": {
-      "Name": "Metapass Wordcel Blog",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 150,
-      "Total Earnings USD": 150,
-      "Date": "2022-07-19",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rect5X9zh1hgepNQ9"
+      ],
+      "Date": "2022-07-19",
+      "Total Earnings USD": 150,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Metapass Wordcel Blog",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -8744,28 +8744,28 @@
   {
     "id": "reckKrch74h8JBMOl",
     "fields": {
-      "Name": "Metapass Newsletter",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Metapass",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 30,
-      "Total Earnings USD": 30,
-      "Date": "2022-07-19",
-      "Rainmaker": "Anoushk.sol",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recB0qeB9C8s3iztX"
+      ],
+      "Date": "2022-07-19",
+      "Total Earnings USD": 30,
+      "Sponsor": "Metapass",
+      "Rainmaker": "Anoushk.sol",
+      "Name": "Metapass Newsletter",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recd4XxBezNMaJxmJ"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recd4XxBezNMaJxmJ"
       ],
       "Title (from Rainmaker Name)": [
         "Anoushk#4210"
@@ -8775,28 +8775,28 @@
   {
     "id": "recX633qJETEsxPmp",
     "fields": {
-      "Name": "Wagmi Hype Video (Historical)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Wagmi.bio",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 300,
-      "Total Earnings USD": 300,
-      "Date": "2022-07-18",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-07-18",
+      "Total Earnings USD": 300,
+      "Sponsor": "Wagmi.bio",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "Wagmi Hype Video (Historical)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8806,29 +8806,29 @@
   {
     "id": "recaprc3E9QNcaVwK",
     "fields": {
-      "Name": "Solana Pay Market Research",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Solana Pay",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 1500,
-      "Total Earnings USD": 1500,
-      "Date": "2022-07-18",
-      "Rainmaker": "Akshay BD",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Foundation",
       "Earner": [
         "recLbkmzctoeT7R1b",
         "recOfpuE1xmO3Lwmw"
       ],
+      "Date": "2022-07-18",
+      "Total Earnings USD": 1500,
+      "Sponsor": "Solana Pay",
+      "Rainmaker": "Akshay BD",
+      "Name": "Solana Pay Market Research",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recwX9sY9inuBytZb"
+      ],
+      "Foundation": "Foundation",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recwX9sY9inuBytZb"
       ],
       "Title (from Rainmaker Name)": [
         "bd#8113"
@@ -8838,29 +8838,29 @@
   {
     "id": "recbj5fnsdHKpAJ5q",
     "fields": {
-      "Name": "Diswallet Website Design + Hype Video (Historical)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Diswallet",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 750,
-      "Total Earnings USD": 750,
-      "Date": "2022-07-18",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recpx9iAIZpDyKb7Y",
         "recvQnVgqlVPtQz8g"
       ],
+      "Date": "2022-07-18",
+      "Total Earnings USD": 750,
+      "Sponsor": "Diswallet",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "Diswallet Website Design + Hype Video (Historical)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8870,28 +8870,28 @@
   {
     "id": "recE7J4WtKuCqMQq9",
     "fields": {
-      "Name": "StellarSOL Hype Video (Historical)",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "StellarSOL",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 180,
-      "Total Earnings USD": 180,
-      "Date": "2022-07-18",
-      "Rainmaker": "Kunal Bagaria",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-07-18",
+      "Total Earnings USD": 180,
+      "Sponsor": "StellarSOL",
+      "Rainmaker": "Kunal Bagaria",
+      "Name": "StellarSOL Hype Video (Historical)",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recncuOZOl6fM2Vrx"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recncuOZOl6fM2Vrx"
       ],
       "Title (from Rainmaker Name)": [
         "Kunal Bagaria#0001"
@@ -8901,19 +8901,8 @@
   {
     "id": "recWRC1oB7PDkwi1T",
     "fields": {
-      "Name": "GARI Community Advisory Board",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Gari",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 4500,
-      "Total Earnings USD": 4500,
-      "Date": "2022-07-17",
-      "Rainmaker": "drprk.eth ",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "rectD9gZk1FMoCDzk",
         "recBbgoGd6neBASmq",
@@ -8924,12 +8913,23 @@
         "recLbkmzctoeT7R1b",
         "rect5X9zh1hgepNQ9"
       ],
+      "Date": "2022-07-17",
+      "Total Earnings USD": 4500,
+      "Sponsor": "Gari",
+      "Rainmaker": "drprk.eth ",
+      "Name": "GARI Community Advisory Board",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recFBcR6bcbQAwe0D"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
+      ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recFBcR6bcbQAwe0D"
       ],
       "Title (from Rainmaker Name)": [
         "drprk.eth#1527"
@@ -8939,28 +8939,28 @@
   {
     "id": "reccxu3OF5df2UVqD",
     "fields": {
-      "Name": "Squads Video Animations ",
-      "Type": "Permissionless Bounty",
-      "Sponsor": "Squads",
       "Currency": "USDC",
-      "USD Token Value": 1,
       "Amount": 500,
-      "Total Earnings USD": 500,
-      "Date": "2022-07-17",
-      "Rainmaker": "Kash",
-      "Region": [
-        "reckMKOOQ59TFRk6n"
-      ],
-      "Foundation": "Other",
       "Earner": [
         "recvQnVgqlVPtQz8g"
+      ],
+      "Date": "2022-07-17",
+      "Total Earnings USD": 500,
+      "Sponsor": "Squads",
+      "Rainmaker": "Kash",
+      "Name": "Squads Video Animations ",
+      "Type": "Permissionless Bounty",
+      "Rainmaker Name": [
+        "recczElh5Fqfv0rTM"
+      ],
+      "Foundation": "Other",
+      "USD Token Value": 1,
+      "Region": [
+        "reckMKOOQ59TFRk6n"
       ],
       "MM/YYYY": "July 2022",
       "Region Name": [
         "India"
-      ],
-      "Rainmaker Name": [
-        "recczElh5Fqfv0rTM"
       ],
       "Title (from Rainmaker Name)": [
         "Kash#4240"
