@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useAtom } from 'jotai';
 import { projectsAtom } from '@/context/projectsAtom';
+import { supabase } from '@/lib/supabase'; // Import supabase
 
 const useProjects = () => {
   const [projects, setProjects] = useAtom(projectsAtom);
@@ -9,9 +10,14 @@ const useProjects = () => {
     const fetchData = async () => {
       if (projects.length === 0) {
         try {
-          const res = await fetch('/projects.json');
-          const data: any[] = await res.json();
-          setProjects(data);
+          const { data, error } = await supabase.storage
+            .from('earnings')
+            .download('projects.json');
+          if (error) throw error;
+          if (data) {
+            const jsonData = await new Response(data).json();
+            setProjects(jsonData);
+          }
         } catch (error) {
           console.error('Error fetching data:', error);
         }

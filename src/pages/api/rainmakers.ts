@@ -76,8 +76,7 @@ const getRainmakers = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-// export default verifySignature(getSponsors);
-export default getRainmakers;
+export default verifySignature(getRainmakers);
 
 export const config = {
   api: {

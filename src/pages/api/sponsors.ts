@@ -76,8 +76,7 @@ const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-// export default verifySignature(getSponsors);
-export default getSponsors;
+export default verifySignature(getSponsors);
 
 export const config = {
   api: {
