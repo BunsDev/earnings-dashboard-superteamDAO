@@ -1,4 +1,4 @@
-import { Usdc, Usdt, Bonk, Solana } from '@/dynamic/coins';
+import { Usdc, Usdt, Bonk, Solana } from '@/svgs/coins';
 
 export const getCoin = (value: string) => {
   switch (value) {

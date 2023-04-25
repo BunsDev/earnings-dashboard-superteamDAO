@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from 'svg/logo';
+import Logo from '@/svgs/logo';
 import Link from 'next/link';
 import useProjects from '@/utils/useProjects';
 import { useRouter } from 'next/router';

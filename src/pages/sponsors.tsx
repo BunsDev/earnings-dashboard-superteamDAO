@@ -4,10 +4,34 @@ import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { PageNumber } from '@/components/PageNumber';
+import { supabase } from '@/lib/supabase';
+import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
 
 export default function Sponsors() {
   const projects = useProjects();
   const [groupedBySponsor, setGroupedBySponsor] = useState({});
+  const [weeklySponsorData, setWeeklySponsorData] = useState([]);
+
+  useEffect(() => {
+    const fetchHistoricalSponsorData = async () => {
+      if (projects.length === 0) {
+        try {
+          const { data, error } = await supabase.storage
+            .from('earnings')
+            .download('sponsors.json');
+          if (error) throw error;
+          if (data) {
+            const jsonData = await new Response(data).json();
+            setWeeklySponsorData(jsonData);
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+    };
+
+    fetchHistoricalSponsorData();
+  }, [projects, setWeeklySponsorData]);
 
   useEffect(() => {
     const newGroupedBySponsor = projects.reduce((groups: any, project: any) => {
@@ -23,9 +47,9 @@ export default function Sponsors() {
   }, [projects]);
 
   const sponsors: any[] = useMemo(() => {
-    return Object.entries(groupedBySponsor)
-      .map(([sponsor, projects]) => {
-        const rainmadeSum = (projects as any).reduce(
+    const sortedSponsors = Object.entries(groupedBySponsor)
+      .map(([sponsor, projects], index) => {
+        const sponsoredSum = (projects as any).reduce(
           (sum: number, project: any) => {
             return sum + (project.fields['Total Earnings USD'] || 0);
           },
@@ -33,11 +57,29 @@ export default function Sponsors() {
         );
         return {
           Name: sponsor,
-          USD: rainmadeSum,
+          USD: sponsoredSum,
         };
       })
       .sort((a: any, b: any) => b.USD - a.USD);
-  }, [groupedBySponsor]);
+
+    return sortedSponsors.map((sponsor, index) => {
+      const currentRank = index + 1;
+      const rankDifference = calculateRankDifference(
+        sponsor.Name,
+        currentRank,
+        weeklySponsorData
+      );
+
+      return {
+        Rank: currentRank,
+        Name: sponsor.Name,
+        USD: sponsor.USD,
+        rankDifference: getRankDifference(rankDifference),
+      };
+    });
+  }, [groupedBySponsor, weeklySponsorData]);
+
+  console.log(sponsors);
 
   const columns = useMemo(() => sponsorColumns, []);
   const data: any[] = useMemo(() => sponsors, [sponsors]);

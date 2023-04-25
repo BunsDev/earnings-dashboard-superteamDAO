@@ -136,7 +136,7 @@ export const projectColumns = [
 export const rainmakerColumns = [
   {
     id: 'id',
-    Header: '📈',
+    Header: 'Position',
     Cell: ({ row, flatRows }: any) => {
       return (
         <p className="text-sm text-neutral-400">{flatRows.indexOf(row) + 1}</p>
@@ -184,12 +184,16 @@ export const rainmakerColumns = [
       if (value) return <span>$ {value}</span>;
     },
   },
+  {
+    Header: '📈',
+    accessor: 'rankDifference',
+  },
 ];
 
 export const sponsorColumns = [
   {
     id: 'id',
-    Header: '📈',
+    Header: 'Position',
     Cell: ({ row, flatRows }: any) => {
       return (
         <p className="text-sm text-neutral-400">{flatRows.indexOf(row) + 1}</p>
@@ -236,5 +240,9 @@ export const sponsorColumns = [
     Cell: ({ value }: any) => {
       if (value) return <span>$ {value}</span>;
     },
+  },
+  {
+    Header: '📈',
+    accessor: 'rankDifference',
   },
 ];

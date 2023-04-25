@@ -1,4 +1,4 @@
-import { India, Vietnam, Turkey, Germany, Mexico } from '@/dynamic/countries';
+import { India, Vietnam, Turkey, Germany, Mexico } from '@/svgs/countries';
 
 export const getCountry = (value: string) => {
   switch (value) {

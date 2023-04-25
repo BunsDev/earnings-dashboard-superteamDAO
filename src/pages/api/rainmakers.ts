@@ -7,7 +7,7 @@ import groupBy from 'lodash/groupBy';
 interface Project {
   id: string;
   fields: {
-    Sponsor: string;
+    Rainmaker: string;
     'Total Earnings USD'?: number;
     Date: string;
   };
@@ -15,7 +15,7 @@ interface Project {
 
 const isNumber = (value: any): value is number => typeof value === 'number';
 
-const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
+const getRainmakers = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const base = getDatabase();
     const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
@@ -31,14 +31,14 @@ const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
       fields: record.fields,
     })) as Project[];
 
-    const groupedBySponsor = groupBy(
+    const groupedByRainmaker = groupBy(
       projectsData,
-      (project) => project.fields['Sponsor']
+      (project) => project.fields['Rainmaker']
     );
 
-    const sponsors = Object.entries(groupedBySponsor)
-      .map(([sponsor, projects]) => ({
-        Name: sponsor,
+    const rainmakers = Object.entries(groupedByRainmaker)
+      .map(([rainmaker, projects]) => ({
+        Name: rainmaker,
         USD: projects.reduce(
           (sum, project) =>
             isNumber(project.fields['Total Earnings USD'])
@@ -48,15 +48,15 @@ const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
         ),
       }))
       .sort((a, b) => b.USD - a.USD)
-      .map((sponsor, index) => ({ Rank: index + 1, ...sponsor }));
+      .map((rainmaker, index) => ({ Rank: index + 1, ...rainmaker }));
 
-    const jsonSponsorsData = JSON.stringify(sponsors, null, 2);
+    const jsonRainmakerData = JSON.stringify(rainmakers, null, 2);
 
     const { error } = await supabase.storage
       .from('earnings')
       .upload(
-        'sponsors.json',
-        new Blob([jsonSponsorsData], { type: 'application/json' }),
+        'rainmakers.json',
+        new Blob([jsonRainmakerData], { type: 'application/json' }),
         { upsert: true }
       );
 
@@ -67,7 +67,7 @@ const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
         .json({ message: 'Error uploading file to Supabase', error });
     }
 
-    return res.status(200).json(sponsors);
+    return res.status(200).json(rainmakers);
   } catch (error) {
     console.error('Error fetching projects data:', error);
     return res
@@ -77,7 +77,7 @@ const getSponsors = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 // export default verifySignature(getSponsors);
-export default getSponsors;
+export default getRainmakers;
 
 export const config = {
   api: {

@@ -1,22 +1,36 @@
 import { rainmakerColumns } from '@/constants/columns';
-import { sponsorAtom } from '@/context/sponsorAtom';
 import useProjects from '@/utils/useProjects';
-import {
-  Box,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-} from '@chakra-ui/react';
-import { useAtom } from 'jotai';
+import { Box } from '@chakra-ui/react';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Column, HeaderGroup, Row, usePagination, useTable } from 'react-table';
+import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
+import { supabase } from '@/lib/supabase';
 
 export default function Rainmakers() {
   const projects = useProjects();
   const [groupedByRainmaker, setGroupedByRainmaker] = useState({});
+  const [weeklyRainmakerData, setWeeklyRainmakerData] = useState([]);
+
+  useEffect(() => {
+    const fetchHistoricalRainmakerData = async () => {
+      if (projects.length === 0) {
+        try {
+          const { data, error } = await supabase.storage
+            .from('earnings')
+            .download('rainmakers.json');
+          if (error) throw error;
+          if (data) {
+            const jsonData = await new Response(data).json();
+            setWeeklyRainmakerData(jsonData);
+          }
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+    };
+
+    fetchHistoricalRainmakerData();
+  }, [projects, setWeeklyRainmakerData]);
 
   useEffect(() => {
     const newGroupedByRainmaker = projects.reduce(
@@ -35,8 +49,8 @@ export default function Rainmakers() {
   }, [projects]);
 
   const rainmakers: any[] = useMemo(() => {
-    return Object.entries(groupedByRainmaker)
-      .map(([rainmaker, projects]) => {
+    const sortedRainmakers = Object.entries(groupedByRainmaker)
+      .map(([rainmaker, projects], index) => {
         const rainmadeSum = (projects as any).reduce(
           (sum: number, project: any) => {
             return sum + (project.fields['Total Earnings USD'] || 0);
@@ -49,7 +63,25 @@ export default function Rainmakers() {
         };
       })
       .sort((a: any, b: any) => b.USD - a.USD);
-  }, [groupedByRainmaker]);
+
+    return sortedRainmakers.map((rainmaker, index) => {
+      const currentRank = index + 1;
+      const rankDifference = calculateRankDifference(
+        rainmaker.Name,
+        currentRank,
+        weeklyRainmakerData
+      );
+
+      return {
+        Rank: currentRank,
+        Name: rainmaker.Name,
+        USD: rainmaker.USD,
+        rankDifference: getRankDifference(rankDifference),
+      };
+    });
+  }, [groupedByRainmaker, weeklyRainmakerData]);
+
+  console.log(rainmakers);
 
   const columns = useMemo(() => rainmakerColumns, []);
   const data: any[] = useMemo(() => rainmakers, [rainmakers]);
@@ -82,7 +114,7 @@ export default function Rainmakers() {
               <table
                 {...getTableProps}
                 className=" mx-auto w-[96%] table-fixed border-separate border-spacing-y-3 border-0
-        bg-[#121726] p-2 font-sans md:w-[800px]"
+        bg-[#121726] p-2 font-sans md:w-[900px]"
               >
                 <thead className="sticky top-0 z-[500]">
                   {headerGroups.map((headerGroup: HeaderGroup, i) => (

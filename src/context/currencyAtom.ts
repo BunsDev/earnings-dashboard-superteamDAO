@@ -1,5 +1,5 @@
 import { atom } from 'jotai';
-import { Usdc } from '@/dynamic/coins';
+import { Usdc } from '@/svgs/coins';
 import React from 'react';
 
 export interface Currency {
