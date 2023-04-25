@@ -19,9 +19,11 @@ const MotionBox = motion(Box);
 export default function Navbar() {
   const projects = useProjects();
   const totalNumberOfProjects = projects.length;
-  const totalEarningsUSD = projects.reduce((sum: number, project: any) => {
-    return sum + (project.fields['Total Earnings USD'] || 0);
-  }, 0);
+  const totalEarningsUSD = projects
+    .reduce((sum: number, project: any) => {
+      return sum + (project.fields['Total Earnings USD'] || 0);
+    }, 0)
+    .toFixed(0);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const router = useRouter();

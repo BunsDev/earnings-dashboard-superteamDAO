@@ -91,7 +91,9 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
 
         const amount = project.fields.Amount;
         if (tokenPrice && typeof amount === 'number') {
-          project.fields['Total Earnings USD'] = amount * tokenPrice;
+          project.fields['Total Earnings USD'] = parseFloat(
+            (amount * tokenPrice).toFixed(2)
+          );
         }
       }
     }
@@ -121,7 +123,7 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 };
 
-export default verifySignature(getProjects);
+export default getProjects;
 
 export const config = {
   api: {
