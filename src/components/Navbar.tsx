@@ -19,11 +19,21 @@ const MotionBox = motion(Box);
 export default function Navbar() {
   const projects = useProjects();
   const totalNumberOfProjects = projects.length;
-  const totalEarningsUSD = projects
-    .reduce((sum: number, project: any) => {
-      return sum + (project.fields['Total Earnings USD'] || 0);
-    }, 0)
-    .toFixed(0);
+  const totalEarningsUSD = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(
+    Math.round(
+      projects.reduce(
+        (sum: number, project: any) =>
+          sum + (project.fields['Total Earnings USD'] || 0),
+        0
+      )
+    )
+  );
+
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const router = useRouter();
@@ -57,7 +67,7 @@ export default function Navbar() {
             <div className="flex gap-2">
               <p className="rounded-full border border-[#212945] bg-[#191F34]  py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7]">
                 Earnings:{' '}
-                <span className="text-[#F6A50B]">${totalEarningsUSD}</span>
+                <span className="text-[#F6A50B]">{totalEarningsUSD}</span>
               </p>
               <p className="rounded-full border border-[#212945] bg-[#191F34] py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7]">
                 Projects:{' '}
@@ -67,13 +77,13 @@ export default function Navbar() {
           </div>
           <div className="hidden gap-8 whitespace-nowrap lg:flex">
             <a href="/projects" className="text-white">
-              <p className="text-[1.1rem] font-medium">Projects</p>
+              <p className="text-[1.1rem]">Projects</p>
             </a>
             <a href="/rainmakers" className="text-white">
-              <p className="text-[1.1rem] font-medium">Rainmakers</p>
+              <p className="text-[1.1rem]">Rainmakers</p>
             </a>
             <a href="/sponsors" className="text-white">
-              <p className="text-[1.1rem] font-medium">Sponsors</p>
+              <p className="text-[1.1rem]">Sponsors</p>
             </a>
           </div>
           <div className="lg:hidden">

@@ -72,7 +72,12 @@ export default function Sponsors() {
       return {
         Rank: currentRank,
         Name: sponsor.Name,
-        USD: parseFloat(sponsor.USD.toFixed(2)).toString(),
+        USD: new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(Math.round(sponsor.USD)),
         rankDifference: getRankDifference(rankDifference),
       };
     });
@@ -144,7 +149,7 @@ export default function Sponsors() {
               <table
                 {...getTableProps}
                 className=" mx-auto w-[96%] table-fixed border-separate border-spacing-y-3 border-0
-        bg-[#121726] p-2 font-sans md:w-[800px]"
+        bg-[#121726] p-2 font-sans md:w-[900px]"
               >
                 <thead className="sticky top-0 z-[500]">
                   {headerGroups.map((headerGroup: HeaderGroup, i) => (

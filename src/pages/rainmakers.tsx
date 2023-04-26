@@ -74,7 +74,12 @@ export default function Rainmakers() {
       return {
         Rank: currentRank,
         Name: rainmaker.Name,
-        USD: parseFloat(rainmaker.USD.toFixed(2)).toString(),
+        USD: new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(Math.round(rainmaker.USD)),
         rankDifference: getRankDifference(rankDifference),
       };
     });
@@ -98,6 +103,9 @@ export default function Rainmakers() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <p className="hidden text-right text-xs font-semibold text-[#f83b31] transition-all duration-500 hover:underline">
+        hello
+      </p>
       <div className="custom-scrollbar z-0 overflow-auto">
         <div className="mx-auto">
           <div className="mx-auto w-[96%]">

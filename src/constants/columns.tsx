@@ -9,7 +9,7 @@ import { useCallback, useMemo } from 'react';
 
 export const projectColumns = [
   {
-    Header: 'Project',
+    Header: 'Project Name',
     accessor: 'fields.Name',
     Cell: (props: any) => {
       const [rowInfo, setRowInfo] = useAtom(rowAtom);
@@ -145,10 +145,19 @@ export const rainmakerColumns = [
     },
   },
   {
-    Header: 'USD',
+    Header: () => (
+      <div
+        style={{
+          textAlign: 'right',
+        }}
+      >
+        USD
+      </div>
+    ),
     accessor: 'USD',
+    headerClassName: 'text-right',
     Cell: ({ value }: { value: any }) => {
-      if (value) return <span>$ {value}</span>;
+      if (value) return <p className="w-full text-right">{value}</p>;
     },
   },
   {
@@ -179,10 +188,19 @@ export const sponsorColumns = [
     },
   },
   {
-    Header: 'USD',
+    Header: () => (
+      <div
+        style={{
+          textAlign: 'right',
+        }}
+      >
+        USD
+      </div>
+    ),
     accessor: 'USD',
-    Cell: ({ value }: any) => {
-      if (value) return <span>$ {value}</span>;
+    headerClassName: 'text-right',
+    Cell: ({ value }: { value: any }) => {
+      if (value) return <p className="w-full text-right">{value}</p>;
     },
   },
   {
