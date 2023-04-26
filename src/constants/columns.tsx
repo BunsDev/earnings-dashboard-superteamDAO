@@ -74,7 +74,15 @@ export const projectColumns = [
     Cell: ({ value }: { value: string }) => getCoin(value),
   },
   {
-    Header: 'USD',
+    Header: () => (
+      <div
+        style={{
+          textAlign: 'right',
+        }}
+      >
+        USD
+      </div>
+    ),
     accessor: 'fields.Total Earnings USD',
     Cell: ({ value }: { value: any }) => {
       if (value) {
@@ -137,11 +145,7 @@ export const rainmakerColumns = [
     Header: 'Rainmaker',
     accessor: 'Name',
     Cell: ({ value }: { value: string }) => {
-      return (
-        <p className="cursor-pointer text-white transition-all duration-500 hover:underline">
-          {value}
-        </p>
-      );
+      return <p className="text-white">{value}</p>;
     },
   },
   {
@@ -180,11 +184,7 @@ export const sponsorColumns = [
     Header: 'Sponsor',
     accessor: 'Name',
     Cell: ({ value }: { value: string }) => {
-      return (
-        <p className="cursor-pointer text-white transition-all duration-500 hover:underline">
-          {value}
-        </p>
-      );
+      return <p className="text-white">{value}</p>;
     },
   },
   {

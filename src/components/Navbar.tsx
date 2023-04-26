@@ -65,11 +65,11 @@ export default function Navbar() {
               <Logo />
             </div>
             <div className="flex gap-2">
-              <p className="rounded-full border border-[#212945] bg-[#191F34]  py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7]">
+              <p className="rounded-full border border-[#212945] bg-[#191F34]  py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7] md:text-[0.94rem]">
                 Earnings:{' '}
                 <span className="text-[#F6A50B]">{totalEarningsUSD}</span>
               </p>
-              <p className="rounded-full border border-[#212945] bg-[#191F34] py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7]">
+              <p className="rounded-full border border-[#212945] bg-[#191F34] py-[0.35rem] px-4 text-sm font-semibold text-[#9EAEC7] md:text-[0.94rem]">
                 Projects:{' '}
                 <span className="text-[#F6A50B]">{totalNumberOfProjects}</span>
               </p>
