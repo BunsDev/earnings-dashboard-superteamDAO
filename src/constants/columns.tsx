@@ -80,7 +80,7 @@ export const projectColumns = [
           textAlign: 'right',
         }}
       >
-        USD
+        Total Earning (USD)
       </div>
     ),
     accessor: 'fields.Total Earnings USD',
@@ -114,11 +114,12 @@ export const projectColumns = [
   {
     accessor: 'fields.Rainmaker',
   },
-  {
-    accessor: 'fields.Region',
-    Cell: ({ value }: { value: string[] }) =>
-      value && value.length > 0 ? getCountry(value[0]) : null,
-  },
+  // {
+  //   Header: 'Region',
+  //   accessor: 'fields.Region',
+  //   Cell: ({ value }: { value: string[] }) =>
+  //     value && value.length > 0 ? getCountry(value[0]) : null,
+  // },
   {
     Header: 'Date Given',
     accessor: 'fields.Date',
@@ -155,18 +156,13 @@ export const rainmakerColumns = [
           textAlign: 'right',
         }}
       >
-        USD
+        USD Earnings Generated
       </div>
     ),
-    accessor: 'USD',
-    headerClassName: 'text-right',
+    accessor: 'formattedUSD',
     Cell: ({ value }: { value: any }) => {
       if (value) return <p className="w-full text-right">{value}</p>;
     },
-  },
-  {
-    Header: '📈',
-    accessor: 'rankDifference',
   },
 ];
 
@@ -194,17 +190,13 @@ export const sponsorColumns = [
           textAlign: 'right',
         }}
       >
-        USD
+        Total USD Disbursed
       </div>
     ),
-    accessor: 'USD',
+    accessor: 'formattedUSD',
     headerClassName: 'text-right',
     Cell: ({ value }: { value: any }) => {
       if (value) return <p className="w-full text-right">{value}</p>;
     },
-  },
-  {
-    Header: '📈',
-    accessor: 'rankDifference',
   },
 ];

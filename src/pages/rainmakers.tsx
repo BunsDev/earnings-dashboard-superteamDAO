@@ -3,33 +3,11 @@ import useProjects from '@/utils/useProjects';
 import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
-import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
 import Head from 'next/head';
 
 export default function Rainmakers() {
   const projects = useProjects();
   const [groupedByRainmaker, setGroupedByRainmaker] = useState({});
-  const [weeklyRainmakerData, setWeeklyRainmakerData] = useState([]);
-
-  useEffect(() => {
-    const fetchHistoricalRainmakerData = async () => {
-      if (projects.length === 0) {
-        try {
-          const response = await fetch(
-            'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/rainmakers.json'
-          );
-          if (!response.ok) throw new Error('Error fetching data');
-
-          const jsonData = await response.json();
-          setWeeklyRainmakerData(jsonData);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-    };
-
-    fetchHistoricalRainmakerData();
-  }, [projects, setWeeklyRainmakerData]);
 
   useEffect(() => {
     const newGroupedByRainmaker = projects.reduce(
@@ -48,8 +26,9 @@ export default function Rainmakers() {
   }, [projects]);
 
   const rainmakers: any[] = useMemo(() => {
-    const sortedRainmakers = Object.entries(groupedByRainmaker)
-      .map(([rainmaker, projects], index) => {
+    return Object.entries(groupedByRainmaker)
+      .filter(([rainmaker, projects]) => rainmaker !== 'undefined') // Add this filter to exclude projects without the "Rainmaker" field.
+      .map(([rainmaker, projects]) => {
         const rainmadeSum = (projects as any).reduce(
           (sum: number, project: any) => {
             return sum + (project.fields['Total Earnings USD'] || 0);
@@ -59,31 +38,16 @@ export default function Rainmakers() {
         return {
           Name: rainmaker,
           USD: rainmadeSum,
+          formattedUSD: new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          }).format(Math.round(rainmadeSum)),
         };
       })
       .sort((a: any, b: any) => b.USD - a.USD);
-
-    return sortedRainmakers.map((rainmaker, index) => {
-      const currentRank = index + 1;
-      const rankDifference = calculateRankDifference(
-        rainmaker.Name,
-        currentRank,
-        weeklyRainmakerData
-      );
-
-      return {
-        Rank: currentRank,
-        Name: rainmaker.Name,
-        USD: new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-        }).format(Math.round(rainmaker.USD)),
-        rankDifference: getRankDifference(rankDifference),
-      };
-    });
-  }, [groupedByRainmaker, weeklyRainmakerData]);
+  }, [groupedByRainmaker]);
 
   const columns = useMemo(() => rainmakerColumns, []);
   const data: any[] = useMemo(() => rainmakers, [rainmakers]);
@@ -114,7 +78,7 @@ export default function Rainmakers() {
             </h1>
             <Box
               w="fit-content"
-              py={6}
+              py={2}
               px={4}
               my={8}
               mx="auto"
@@ -125,7 +89,7 @@ export default function Rainmakers() {
               <table
                 {...getTableProps}
                 className=" mx-auto w-[96%] table-fixed border-separate border-spacing-y-3 border-0
-        bg-[#121726] p-2 font-sans md:w-[900px]"
+        bg-[#121726] p-2 font-sans md:w-[1000px]"
               >
                 <thead className="sticky top-0 z-[500]">
                   {headerGroups.map((headerGroup: HeaderGroup, i) => (

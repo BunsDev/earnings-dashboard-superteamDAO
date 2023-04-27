@@ -141,7 +141,7 @@ export default function Projects() {
               fontFamily="Inter"
               className="text-neutral-100"
             >
-              {(rowInfo as any).fields.Name}
+              <p>{(rowInfo as any).fields.Name}</p>
             </ModalHeader>
             <ModalCloseButton color="#c1c2c3" />
             <ModalBody className="text-lg text-neutral-200" paddingBottom={8}>
@@ -235,8 +235,8 @@ export default function Projects() {
             <Box
               minW={{ base: '100%', md: '1200px' }}
               w={{ base: 'fit-content', md: 'fit-content' }}
-              py={{ base: 1, lg: 6 }}
-              px={{ base: 1, lg: 4 }}
+              py={{ base: 1, lg: 1 }}
+              px={{ base: 1, lg: 1 }}
               mt={8}
               mx="auto"
               rounded="lg"

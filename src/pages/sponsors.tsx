@@ -4,33 +4,11 @@ import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { PageNumber } from '@/components/PageNumber';
-import { calculateRankDifference, getRankDifference } from '@/utils/rankUtils';
 import Head from 'next/head';
 
 export default function Sponsors() {
   const projects = useProjects();
   const [groupedBySponsor, setGroupedBySponsor] = useState({});
-  const [weeklySponsorData, setWeeklySponsorData] = useState([]);
-
-  useEffect(() => {
-    const fetchHistoricalSponsorData = async () => {
-      if (projects.length === 0) {
-        try {
-          const response = await fetch(
-            'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/sponsors.json'
-          );
-          if (!response.ok) throw new Error('Error fetching data');
-
-          const jsonData = await response.json();
-          setWeeklySponsorData(jsonData);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-    };
-
-    fetchHistoricalSponsorData();
-  }, [projects, setWeeklySponsorData]);
 
   useEffect(() => {
     const newGroupedBySponsor = projects.reduce((groups: any, project: any) => {
@@ -46,8 +24,9 @@ export default function Sponsors() {
   }, [projects]);
 
   const sponsors: any[] = useMemo(() => {
-    const sortedSponsors = Object.entries(groupedBySponsor)
-      .map(([sponsor, projects], index) => {
+    return Object.entries(groupedBySponsor)
+      .filter(([sponsor, projects]) => sponsor !== 'undefined') // Add this filter to exclude projects without the "Rainmaker" field.
+      .map(([sponsor, projects]) => {
         const sponsoredSum = (projects as any).reduce(
           (sum: number, project: any) => {
             return sum + (project.fields['Total Earnings USD'] || 0);
@@ -57,31 +36,16 @@ export default function Sponsors() {
         return {
           Name: sponsor,
           USD: sponsoredSum,
+          formattedUSD: new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          }).format(Math.round(sponsoredSum)),
         };
       })
       .sort((a: any, b: any) => b.USD - a.USD);
-
-    return sortedSponsors.map((sponsor, index) => {
-      const currentRank = index + 1;
-      const rankDifference = calculateRankDifference(
-        sponsor.Name,
-        currentRank,
-        weeklySponsorData
-      );
-
-      return {
-        Rank: currentRank,
-        Name: sponsor.Name,
-        USD: new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-        }).format(Math.round(sponsor.USD)),
-        rankDifference: getRankDifference(rankDifference),
-      };
-    });
-  }, [groupedBySponsor, weeklySponsorData]);
+  }, [groupedBySponsor]);
 
   const columns = useMemo(() => sponsorColumns, []);
   const data: any[] = useMemo(() => sponsors, [sponsors]);

@@ -162,6 +162,7 @@ export default function Home() {
             border="1px"
             bg="#0F1320"
             p={{ base: 4, lg: 8 }}
+            mb={16}
             borderColor="#0E1218"
             boxShadow="0px 2px 1px rgba(255, 255, 255, 0.08), inset 0px 2px 4px rgba(0, 0, 0, 0.48)"
           >
