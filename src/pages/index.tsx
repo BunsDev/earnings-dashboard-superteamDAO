@@ -120,27 +120,38 @@ export default function Home() {
   }, [projects, getDatesAndEarnings]);
 
   useEffect(() => {
+    const dateLabelMap: { [key: string]: number } = {};
+
+    filteredDatesAndEarnings?.forEach((obj) => {
+      const date = moment(obj.date);
+      let newLabel = '';
+      if (selectedOption === 'Last30Days' || selectedOption === 'YTD') {
+        newLabel = date.format('DD MMM');
+      } else if (date.year() === moment().year()) {
+        newLabel = date.format('MMM');
+      } else {
+        newLabel = date.format('MMM YYYY');
+      }
+
+      dateLabelMap[newLabel] = obj.totalEarnings;
+    });
+
+    const labels = Object.keys(dateLabelMap);
+    const data = Object.values(dateLabelMap);
+
     const chartDataDetails = {
-      labels: filteredDatesAndEarnings?.map((obj, index) => {
-        const date = moment(obj.date);
-        if (selectedOption === 'Last30Days' || selectedOption === 'YTD') {
-          return date.format('DD MMM');
-        } else if (date.year() === moment().year()) {
-          return date.format('MMM');
-        } else {
-          return date.format('MMM YYYY');
-        }
-      }),
+      labels,
       datasets: [
         {
           label: '',
-          data: filteredDatesAndEarnings.map((obj) => obj.totalEarnings),
+          data,
           fill: false,
           borderColor: '#F6A50B',
           tension: 0.1,
         },
       ],
     };
+
     setChartData(chartDataDetails);
   }, [filteredDatesAndEarnings, selectedOption]);
 
