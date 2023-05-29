@@ -145,7 +145,7 @@ export default function Sponsors() {
                             <td
                               key={i}
                               {...cell.getCellProps}
-                              className={`h-20 whitespace-nowrap border-t border-[#21252a] bg-[#101523] px-6 text-[#DFE4EC]  drop-shadow-md first:rounded-l-lg first:border-l last:rounded-r-lg last:border-r last:text-right
+                              className={`h-12 whitespace-nowrap border-t border-[#21252a] bg-[#101523] px-6 text-[#DFE4EC]  drop-shadow-md first:rounded-l-lg first:border-l last:rounded-r-lg last:border-r last:text-right
                       md:py-4
                       md:px-16
                       `}

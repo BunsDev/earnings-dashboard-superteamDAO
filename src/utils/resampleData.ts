@@ -44,12 +44,6 @@ export function resampleData(
   }
 
   const today = moment().startOf('day');
-  if (!today.isSame(currentDate)) {
-    resampledData.push({
-      date: today.format(),
-      totalEarnings: totalEarningsUSD,
-    });
-  }
 
   return resampledData;
 }

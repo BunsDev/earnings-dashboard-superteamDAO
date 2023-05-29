@@ -279,7 +279,7 @@ export default function Projects() {
                             <td
                               key={i}
                               {...cell.getCellProps}
-                              className={`h-20 whitespace-nowrap border-t border-[#21252a] bg-[#101523] p-4 text-sm text-[#DFE4EC] drop-shadow-md first:rounded-l-lg first:border-l last:rounded-r-lg last:border-r md:px-6
+                              className={`h-[4.5rem] whitespace-nowrap border-t border-[#21252a] bg-[#101523] p-4 text-sm text-[#DFE4EC] drop-shadow-md first:rounded-l-lg first:border-l last:rounded-r-lg last:border-r md:px-6
                       md:text-base
                       `}
                             >
