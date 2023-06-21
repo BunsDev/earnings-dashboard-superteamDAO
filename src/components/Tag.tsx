@@ -25,6 +25,18 @@ export default function Tag({ value }: any) {
       displayValue = value;
       color = 'text-[#14d7a0] border-[#14d7a024] bg-[#162f30]';
       break;
+    case 'Misc. Expense':
+      displayValue = value;
+      color = 'text-[#A3A5FF] border-[#A3A5FF24] bg-[#131839]';
+      break;
+    case 'Travel Grant':
+      displayValue = value;
+      color = 'text-[#FF75AF] border-[#FF75AF24] bg-[#210D1C]';
+      break;
+    case 'Hackathon Award':
+      displayValue = value;
+      color = 'text-[#A3F000] border-[#A3F00024] bg-[#233300]';
+      break;
   }
 
   if (value) {
