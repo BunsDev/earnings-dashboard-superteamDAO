@@ -42,26 +42,39 @@ export default function Projects() {
       };
 
       fetchEarnerData();
-      let totalEarnings = data.reduce((total, item) => {
-        if (
-          item.fields.Region &&
-          item.fields.Region.length > 0 &&
-          item.fields.Region[0] === 'reckMKOOQ59TFRk6n'
-        ) {
-          if (typeof item.fields['Total Earnings USD'] === 'number') {
-            return total + item.fields['Total Earnings USD'];
-          } else {
-            console.error(
-              `Unexpected type for "Total Earnings USD": ${typeof item.fields[
-                'Total Earnings USD'
-              ]}, value: ${item.fields['Total Earnings USD']}`
-            );
-            return total;
+      const regions: Record<string, string> = {
+        reckMKOOQ59TFRk6n: 'India',
+        recJXKIOEDvUjIv9Z: 'Vietnam',
+        reciIV94eES6oiIY2: 'Turkey',
+        recEdv0ihUicz158R: 'Germany',
+        recQuDC0wLiJCdTiH: 'Mexico',
+      };
+
+      let totalEarnings = data.reduce(
+        (total: Record<string, number>, item: any) => {
+          if (
+            item.fields.Region &&
+            item.fields.Region.length > 0 &&
+            regions[item.fields.Region[0] as keyof typeof regions]
+          ) {
+            if (typeof item.fields['Total Earnings USD'] === 'number') {
+              if (
+                !total[regions[item.fields.Region[0] as keyof typeof regions]]
+              ) {
+                total[
+                  regions[item.fields.Region[0] as keyof typeof regions]
+                ] = 0;
+              }
+              total[regions[item.fields.Region[0] as keyof typeof regions]] +=
+                item.fields['Total Earnings USD'];
+            }
           }
-        } else {
           return total;
-        }
-      }, 0);
+        },
+        {}
+      );
+
+      console.log(totalEarnings);
 
       console.log(totalEarnings);
     }
