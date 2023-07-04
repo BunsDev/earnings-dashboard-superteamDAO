@@ -48,6 +48,7 @@ export default function Projects() {
         reciIV94eES6oiIY2: 'Turkey',
         recEdv0ihUicz158R: 'Germany',
         recQuDC0wLiJCdTiH: 'Mexico',
+        recw7ExFk21ttX8KT: 'UK',
       };
 
       let totalEarnings = data.reduce(
@@ -142,6 +143,7 @@ export default function Projects() {
     reciIV94eES6oiIY2: 'Turkey',
     recEdv0ihUicz158R: 'Germany',
     recQuDC0wLiJCdTiH: 'Mexico',
+    recw7ExFk21ttX8KT: 'UK',
   };
 
   return (

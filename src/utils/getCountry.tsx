@@ -1,4 +1,4 @@
-import { India, Vietnam, Turkey, Germany, Mexico } from '@/svgs/countries';
+import { India, Vietnam, Turkey, Germany, Mexico, UK } from '@/svgs/countries';
 
 export const getCountry = (value: string) => {
   switch (value) {
@@ -12,6 +12,8 @@ export const getCountry = (value: string) => {
       return <Germany />;
     case 'recQuDC0wLiJCdTiH':
       return <Mexico />;
+    case 'recw7ExFk21ttX8KT':
+      return <UK />;
     default:
       return null;
   }
