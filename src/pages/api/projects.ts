@@ -1,7 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDatabase } from '@/utils/getDatabase';
-import { supabase } from '@/lib/supabase';
-import { verifySignature } from '@upstash/qstash/nextjs';
 import axios from 'axios';
 
 function matchAbbreviations(data: any) {
@@ -50,13 +48,14 @@ async function fetchCryptoPrices() {
   }
 }
 
-const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function (req: NextApiRequest, res: NextApiResponse) {
   const base = getDatabase();
   const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
 
   try {
     const records = await table
       .select({
+        view: 'Earnings Info',
         sort: [
           {
             field: 'Date',
@@ -77,6 +76,8 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
     }
     const matchedPrices = matchAbbreviations(fetchedPrices.data);
 
+    let totalEarningsUSD = 0;
+
     for (let project of projectsData) {
       if (project.fields.Currency && project.fields.Currency !== 'USDC') {
         const currency = project.fields.Currency;
@@ -91,29 +92,11 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
 
         const amount = project.fields.Amount;
         if (tokenPrice && typeof amount === 'number') {
-          project.fields['Total Earnings USD'] = parseFloat(
-            (amount * tokenPrice).toFixed(2)
-          );
+          const totalEarnings = parseFloat((amount * tokenPrice).toFixed(2));
+          project.fields['Total Earnings USD'] = totalEarnings;
+          totalEarningsUSD += totalEarnings;
         }
       }
-    }
-
-    const jsonProjectsData = JSON.stringify(projectsData, null, 2);
-
-    const { error } = await supabase.storage
-      .from('earnings')
-      .upload(
-        'projects.json',
-        new Blob([jsonProjectsData], { type: 'application/json' }),
-        { upsert: true }
-      );
-
-    if (error) {
-      console.error('Error uploading file to Supabase:', error);
-      res
-        .status(500)
-        .json({ message: 'Error uploading file to Supabase', error });
-      return;
     }
 
     res.status(200).json(projectsData);
@@ -121,12 +104,4 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
     console.error('Error fetching projects data:', error);
     res.status(500).json({ message: 'Error fetching projects data' });
   }
-};
-
-export default verifySignature(getProjects);
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+}

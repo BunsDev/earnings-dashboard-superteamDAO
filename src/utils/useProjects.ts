@@ -4,14 +4,11 @@ import { projectsAtom } from '@/context/projectsAtom';
 
 const useProjects = () => {
   const [projects, setProjects] = useAtom(projectsAtom);
-  const projectsUrl =
-    'https://socftnkojidkvtmjmyha.supabase.co/storage/v1/object/public/earnings/projects.json';
-
   useEffect(() => {
     const fetchData = async () => {
       if (projects.length === 0) {
         try {
-          const response = await fetch(projectsUrl);
+          const response = await fetch('/api/projects');
           if (!response.ok) throw new Error('Error fetching data');
 
           const jsonData = await response.json();
@@ -27,5 +24,4 @@ const useProjects = () => {
 
   return projects;
 };
-
 export default useProjects;
