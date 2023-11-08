@@ -2,25 +2,27 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getDatabase } from '@/utils/getDatabase';
 import axios from 'axios';
 
+const abbreviations = {
+  SOL: 'solana',
+  ORCA: 'orca',
+  RAY: 'raydium',
+  BONK: 'bonk',
+  USDT: 'tether',
+  FIL: 'filecoin',
+  CBX: 'cropbytes',
+  SOLR: 'solrazr',
+  C98: 'coin98',
+  SLND: 'solend',
+  UXD: 'uxd-stablecoin',
+  PORT: 'port-finance',
+  LARIX: 'larix',
+  PRT: 'parrot-protocol',
+  GRAPE: 'grape',
+  DFL: 'defi-land',
+  EUROE: 'euroe-stablecoin',
+};
+
 function matchAbbreviations(data: any) {
-  const abbreviations = {
-    SOL: 'solana',
-    ORCA: 'orca',
-    RAY: 'raydium',
-    BONK: 'bonk',
-    USDT: 'tether',
-    FIL: 'filecoin',
-    CBX: 'cropbytes',
-    SOLR: 'solrazr',
-    C98: 'coin98',
-    SLND: 'solend',
-    UXD: 'uxd-stablecoin',
-    PORT: 'port-finance',
-    LARIX: 'larix',
-    PRT: 'parrot-protocol',
-    GRAPE: 'grape',
-    DFL: 'defi-land',
-  };
   const matchedData: { [key: string]: any } = {};
   for (const [abbr, name] of Object.entries(abbreviations)) {
     if (data[name]) {
@@ -31,12 +33,13 @@ function matchAbbreviations(data: any) {
 }
 
 async function fetchCryptoPrices() {
+  const cryptos = Object.values(abbreviations).join(',');
   try {
     const response = await axios.get(
       'https://api.coingecko.com/api/v3/simple/price',
       {
         params: {
-          ids: 'solana,orca,raydium,bonk,tether,filecoin,cropbytes,solrazr,coin98,solend,uxd-stablecoin,port-finance,larix,parrot-protocol,grape,defi-land',
+          ids: cryptos,
           vs_currencies: 'USD',
         },
       }
@@ -48,9 +51,12 @@ async function fetchCryptoPrices() {
   }
 }
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const base = getDatabase();
-  const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
+  const table = base(process.env.AIRTABLE_TABLE!);
 
   try {
     const records = await table
