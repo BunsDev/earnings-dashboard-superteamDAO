@@ -9,7 +9,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   const base = getDatabase();
-  const table = base(process.env.NEXT_PUBLIC_AIRTABLE_TABLE!);
+  const table = base(process.env.AIRTABLE_TABLE!);
   const projectsData = req.body.projects;
 
   const earners = [

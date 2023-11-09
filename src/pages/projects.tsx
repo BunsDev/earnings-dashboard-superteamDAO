@@ -16,6 +16,7 @@ import {
 import useProjects from '@/utils/useProjects';
 import { PageNumber } from '@/components/PageNumber';
 import Head from 'next/head';
+import axios from 'axios';
 
 export default function Projects() {
   const columns = useMemo(() => projectColumns, []);
@@ -28,17 +29,15 @@ export default function Projects() {
   useEffect(() => {
     if (data) {
       const fetchEarnerData = async () => {
-        const res = await fetch(`/api/earners`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ projects: data }),
-        });
-
-        const earnerData = await res.json();
-        const earners = earnerData.earnerData;
-        setEarners(earners);
+        try {
+          const response = await axios.post('/api/earners', {
+            projects: data,
+          });
+          const earners = response.data.earnerData;
+          setEarners(earners);
+        } catch (error: any) {
+          console.error('Error fetching data:', error.message);
+        }
       };
 
       fetchEarnerData();
