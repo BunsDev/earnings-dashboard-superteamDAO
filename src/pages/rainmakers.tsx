@@ -76,7 +76,7 @@ export default function Rainmakers() {
             <h1 className="mt-10 text-center text-2xl font-semibold text-white">
               Rainmaker Leaderboard
             </h1>
-            <h2 className="mt-10 text-center text-xl font-semibold text-white">
+            <h2 className="mt-10 text-center text-xl italic font-semibold text-white">
               Members who brought earning opportunities for other members
             </h2>
             <Box
