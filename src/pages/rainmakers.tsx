@@ -76,6 +76,9 @@ export default function Rainmakers() {
             <h1 className="mt-10 text-center text-2xl font-semibold text-white">
               Rainmaker Leaderboard
             </h1>
+            <h1 className="mt-10 text-center text-xl font-semibold text-white">
+              Members who brought earning opportunities for other members
+            </h1>
             <Box
               w="fit-content"
               py={2}
