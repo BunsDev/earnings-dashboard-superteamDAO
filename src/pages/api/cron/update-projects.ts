@@ -22,6 +22,7 @@ const abbreviations = {
   GRAPE: 'grape',
   DFL: 'defi-land',
   EUROE: 'euroe-stablecoin',
+  ISC: 'international-stable-currency',
 };
 
 function matchAbbreviations(data: any) {
