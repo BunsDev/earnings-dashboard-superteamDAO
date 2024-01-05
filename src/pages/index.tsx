@@ -178,9 +178,6 @@ export default function Home() {
             boxShadow="0px 2px 1px rgba(255, 255, 255, 0.08), inset 0px 2px 4px rgba(0, 0, 0, 0.48)"
           >
             <div className="mb-12 flex flex-col items-center justify-between lg:flex-row">
-              <h1 className="mb-4 text-xl text-[#DFE4EC] lg:mb-0 lg:font-semibold">
-                SuperteamDAO Earnings Graph
-              </h1>
               <ButtonGroup>
                 <TimeFilterButton
                   label="30 D"
