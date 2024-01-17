@@ -1,13 +1,15 @@
 import { sponsorColumns } from '@/constants/columns';
-import useProjects from '@/utils/useProjects';
 import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import { PageNumber } from '@/components/PageNumber';
 import Head from 'next/head';
+import { useAtomValue } from 'jotai';
+import { projectsAtom } from '@/context/projectsAtom';
 
 export default function Sponsors() {
-  const projects = useProjects();
+  const projects = useAtomValue(projectsAtom);
+
   const [groupedBySponsor, setGroupedBySponsor] = useState({});
 
   useEffect(() => {

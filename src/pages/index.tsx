@@ -25,7 +25,8 @@ ChartJS.register(
   Legend
 );
 import { useDatesAndEarnings } from '@/utils/getDatesAndEarnings';
-import useProjects from '@/utils/useProjects';
+import { projectsAtom } from '@/context/projectsAtom';
+import { useAtomValue } from 'jotai';
 
 const moment = require('moment');
 
@@ -60,7 +61,7 @@ const TimeFilterButton = ({
 type SelectedOption = 'Last30Days' | 'YTD' | 'Yearly' | 'All';
 
 export default function Home() {
-  const projects = useProjects();
+  const projects = useAtomValue(projectsAtom);
   const [chartData, setChartData] = useState<ChartData<'line'>>();
 
   const [selectedOption, setSelectedOption] =

@@ -20,8 +20,6 @@ const useProjects = () => {
 
     fetchData();
   }, [projects, setProjects]);
-
-  return projects;
 };
 
 export default useProjects;

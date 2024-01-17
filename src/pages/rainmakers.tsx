@@ -1,12 +1,13 @@
 import { rainmakerColumns } from '@/constants/columns';
-import useProjects from '@/utils/useProjects';
 import { Box } from '@chakra-ui/react';
 import React, { useEffect, useMemo, useState } from 'react';
 import { HeaderGroup, Row, usePagination, useTable } from 'react-table';
 import Head from 'next/head';
+import { projectsAtom } from '@/context/projectsAtom';
+import { useAtomValue } from 'jotai';
 
 export default function Rainmakers() {
-  const projects = useProjects();
+  const projects = useAtomValue(projectsAtom);
   const [groupedByRainmaker, setGroupedByRainmaker] = useState({});
 
   useEffect(() => {

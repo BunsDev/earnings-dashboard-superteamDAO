@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import Logo from '@/svgs/logo';
-import useProjects from '@/utils/useProjects';
 import { useRouter } from 'next/router';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
@@ -12,12 +11,15 @@ import {
   Collapse,
 } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
+import NextLink from 'next/link';
+import { useAtomValue } from 'jotai';
+import { projectsAtom } from '@/context/projectsAtom';
 
 const MotionIconButton = motion(IconButton);
 const MotionBox = motion(Box);
 
 export default function Navbar() {
-  const projects = useProjects();
+  const projects = useAtomValue(projectsAtom);
   const totalNumberOfProjects = projects.length;
   const totalEarningsUSD = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -76,15 +78,15 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden gap-8 whitespace-nowrap lg:flex">
-            <a href="/projects" className="text-white">
+            <NextLink href="/projects" className="text-white">
               <p className="text-[1.1rem]">Projects</p>
-            </a>
-            <a href="/rainmakers" className="text-white">
+            </NextLink>
+            <NextLink href="/rainmakers" className="text-white">
               <p className="text-[1.1rem]">Rainmakers</p>
-            </a>
-            <a href="/sponsors" className="text-white">
+            </NextLink>
+            <NextLink href="/sponsors" className="text-white">
               <p className="text-[1.1rem]">Sponsors</p>
-            </a>
+            </NextLink>
           </div>
           <div className="lg:hidden">
             <AnimatePresence mode="wait">
@@ -129,15 +131,24 @@ export default function Navbar() {
             variants={navLinksVariants}
           >
             <Stack as={'nav'} spacing={3}>
-              <a href="/projects" className="text-white">
-                <p className="text-[1.1rem] font-medium">Projects</p>
-              </a>
-              <a href="/rainmakers" className="text-white">
-                <p className="text-[1.1rem] font-medium">Rainmakers</p>
-              </a>
-              <a href="/sponsors" className="text-white">
-                <p className="text-[1.1rem] font-medium">Sponsors</p>
-              </a>
+              <NextLink
+                href="/projects"
+                className="text-[1.1rem] font-medium text-white"
+              >
+                Projects
+              </NextLink>
+              <NextLink
+                href="/rainmakers"
+                className="text-[1.1rem] font-medium text-white"
+              >
+                Rainmakers
+              </NextLink>
+              <NextLink
+                href="/sponsors"
+                className="text-[1.1rem] font-medium text-white"
+              >
+                Sponsors
+              </NextLink>
             </Stack>
           </MotionBox>
         </Collapse>

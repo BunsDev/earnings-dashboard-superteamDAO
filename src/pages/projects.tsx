@@ -1,7 +1,7 @@
 import { useTable, usePagination, HeaderGroup, Row } from 'react-table';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { projectColumns } from '@/constants/columns';
-import { useAtom } from 'jotai';
+import { useAtom, useAtomValue } from 'jotai';
 import { earnerAtom } from '@/context/earnerAtom';
 import { rowAtom } from '@/context/rowInfoAtom';
 import {
@@ -13,14 +13,15 @@ import {
   ModalHeader,
   ModalOverlay,
 } from '@chakra-ui/react';
-import useProjects from '@/utils/useProjects';
 import { PageNumber } from '@/components/PageNumber';
 import Head from 'next/head';
 import axios from 'axios';
+import { projectsAtom } from '@/context/projectsAtom';
 
 export default function Projects() {
   const columns = useMemo(() => projectColumns, []);
-  const projects = useProjects();
+  const projects = useAtomValue(projectsAtom);
+
   const data = useMemo(() => projects, [projects]);
   const [earners, setEarners] = useAtom(earnerAtom);
   const [rowInfo, setRowInfo] = useAtom(rowAtom);
