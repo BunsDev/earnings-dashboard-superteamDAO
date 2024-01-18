@@ -74,9 +74,6 @@ export default function Projects() {
         },
         {}
       );
-
-      console.log(totalEarnings);
-
       console.log(totalEarnings);
     }
   }, [data, setEarners]);
