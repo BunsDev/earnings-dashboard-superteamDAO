@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDatabase } from '@/utils/getDatabase';
-import { supabase } from '@/lib/supabase';
 import { verifySignature } from '@upstash/qstash/nextjs';
 import axios from 'axios';
+import cloudinary from '@/utils/cloudinary';
 
 const abbreviations = {
   SOL: 'solana',
@@ -54,7 +54,7 @@ async function fetchCryptoPrices() {
   }
 }
 
-const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
+async function updateProjects(req: NextApiRequest, res: NextApiResponse) {
   const base = getDatabase();
   const table = base(process.env.AIRTABLE_TABLE!);
 
@@ -103,31 +103,26 @@ const getProjects = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const jsonProjectsData = JSON.stringify(projectsData, null, 2);
+    const buffer = Buffer.from(jsonProjectsData, 'utf-8');
 
-    const { error } = await supabase.storage
-      .from('earnings')
-      .upload(
-        'projects.json',
-        new Blob([jsonProjectsData], { type: 'application/json' }),
-        { upsert: true }
-      );
+    const dataURI = 'data:application/json;base64,' + buffer.toString('base64');
 
-    if (error) {
-      console.error('Error uploading file to Supabase:', error);
-      res
-        .status(500)
-        .json({ message: 'Error uploading file to Supabase', error });
-      return;
-    }
+    const cloudinaryResponse = await cloudinary.uploader.upload(dataURI, {
+      folder: 'earnings',
+      public_id: 'projects',
+      resource_type: 'raw',
+    });
 
-    res.status(200).json(projectsData);
+    res.status(200).json({
+      message: 'File uploaded successfully',
+    });
   } catch (error) {
     console.error('Error fetching projects data:', error);
     res.status(500).json({ message: 'Error fetching projects data' });
   }
-};
+}
 
-export default verifySignature(getProjects);
+export default verifySignature(updateProjects);
 
 export const config = {
   api: {
