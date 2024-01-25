@@ -13,7 +13,7 @@ export default function Tag({ value }: any) {
       break;
     case 'Bounty':
     case 'Permissionless Bounty':
-      displayValue = 'Permissionless Bounty';
+      displayValue = 'Bounty';
       color = 'text-[#ff61fa] border-[#ff61fa24] bg-[#1f0d26]';
       break;
     case 'Mission':
