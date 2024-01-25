@@ -24,7 +24,8 @@ export default function Tag({ value }: any) {
       color = 'text-[#00c3f0] border-[#00c3f024] bg-[#132b37]';
       break;
     case 'Instagrant':
-      displayValue = value;
+    case 'Grant':
+      displayValue = 'Grant';
       color = 'text-[#14d7a0] border-[#14d7a024] bg-[#162f30]';
       break;
     case 'Misc. Expense':
