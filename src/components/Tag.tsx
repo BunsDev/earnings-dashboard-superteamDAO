@@ -18,7 +18,9 @@ export default function Tag({ value }: any) {
       break;
     case 'Mission':
     case 'Permissioned Bounty':
-      displayValue = 'Permissioned Bounty';
+    case 'Contract':
+    case 'Project':
+      displayValue = 'Contract';
       color = 'text-[#00c3f0] border-[#00c3f024] bg-[#132b37]';
       break;
     case 'Instagrant':
@@ -29,7 +31,7 @@ export default function Tag({ value }: any) {
       displayValue = value;
       color = 'text-[#A3A5FF] border-[#A3A5FF24] bg-[#131839]';
       break;
-    case 'Travel Grant':
+    case 'Job':
       displayValue = value;
       color = 'text-[#FF75AF] border-[#FF75AF24] bg-[#210D1C]';
       break;
