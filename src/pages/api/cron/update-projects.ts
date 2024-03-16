@@ -61,6 +61,7 @@ async function updateProjects(req: NextApiRequest, res: NextApiResponse) {
   try {
     const records = await table
       .select({
+        view: 'Earnings Info [Main]',
         sort: [
           {
             field: 'Date',
