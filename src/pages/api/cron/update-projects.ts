@@ -23,6 +23,10 @@ const abbreviations = {
   DFL: 'defi-land',
   EUROE: 'euroe-stablecoin',
   ISC: 'international-stable-currency',
+  MNDE: 'marinade',
+  EUROE: 'euroe-stablecoin',
+  JUP: 'jupiter-exchange-solana',
+  DUST: 'dust-protocol'
 };
 
 function matchAbbreviations(data: any) {
