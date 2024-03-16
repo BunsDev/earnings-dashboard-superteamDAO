@@ -7,10 +7,6 @@ export default function Tag({ value }: any) {
   let displayValue = '';
 
   switch (value) {
-    case 'Job':
-      displayValue = value;
-      color = 'text-[#F8B535] border-[#F8B53524] bg-[#3d2900]';
-      break;
     case 'Bounty':
     case 'Permissionless Bounty':
       displayValue = 'Bounty';
